@@ -70,21 +70,21 @@
                         <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span data-feather="file"></span>
+                                <span data-feather="arrow-up"></span>
                                 Pemasukan
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
-                                <span data-feather="shopping-cart"></span>
+                                <span data-feather="arrow-down"></span>
                                 Pengeluaran
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span data-feather="users"></span>
+                                <span data-feather="dollar-sign"></span>
                                 Hutang
                             </a>
                         </li>
