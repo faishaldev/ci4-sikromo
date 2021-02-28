@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Sikromo - Login Page</title>
+    <title>Sikromo</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 
@@ -38,7 +38,6 @@
 </head>
 
 <body class="text-center">
-
     <div class="container">
 
         <main class="form-signin">
@@ -66,7 +65,6 @@
         </main>
 
     </div>
-
 </body>
 
 </html>
