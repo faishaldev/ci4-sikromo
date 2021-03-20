@@ -15,6 +15,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url('css/bootstrap.min.css') ?>" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <!-- <link href="<?= base_url('fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css"> -->
 
     <style>
         .bd-placeholder-img {

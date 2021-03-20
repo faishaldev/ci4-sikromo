@@ -98,3 +98,39 @@ body {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+.text-xs {
+  font-size: 0.7rem;
+}
+
+.pemasukan-h {
+  border-left: 0.25rem solid #4e73df !important;
+}
+
+.pemasukan-b {
+  border-left: 0.25rem solid #4e73df !important;
+}
+
+.pemasukan-t {
+  border-left: 0.25rem solid #4e73df !important;
+}
+
+.pemasukan-s {
+  border-left: 0.25rem solid #373840 !important;
+}
+
+.pengeluaran {
+  border-left: 0.25rem solid #be2617 !important;
+}
+
+.pengeluaran-s {
+  border-left: 0.25rem solid #373840 !important;
+}
+
+.progress-sm {
+  height: 0.5rem;
+}

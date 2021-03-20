@@ -30,6 +30,14 @@
                 font-size: 3.5rem;
             }
         }
+
+        .container {
+            border-radius: 12.5px;
+        }
+
+        .header {
+            border-radius: 12.5px;
+        }
     </style>
 
 
@@ -37,13 +45,13 @@
     <link href="<?= base_url('css/signin.css') ?>" rel="stylesheet">
 </head>
 
-<body class="text-center">
-    <div class="container">
+<body class="text-center bg-secondary">
+    <div class="container bg-white">
 
         <main class="form-signin">
 
             <form>
-                <h1>CV Romo</h1>
+                <h1 class="header bg-dark text-light">CV Romo</h1>
                 <hr>
                 <h1 class="h3 mb-3 fw-normal">Login Form</h1>
                 <label for="inputEmail" class="visually-hidden">Email address</label>
