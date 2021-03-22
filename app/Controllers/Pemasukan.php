@@ -8,9 +8,9 @@ class Pemasukan extends BaseController
 {
     public function index()
     {
-        $pemasukanModel = new PemasukanModel();
-        $pemasukan = $pemasukanModel->findAll();
-        dd($pemasukan);
+        //$pemasukanModel = new PemasukanModel();
+        //$pemasukan = $pemasukanModel->findAll();
+        //dd($pemasukan);
 
         return view('pages/pemasukan');
     }

@@ -104,10 +104,27 @@
                 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
             </div>
 
-            <a href="" class="btn btn-success plus mt-4">
+            <button type="button" class="btn btn-success plus mt-4" data-toggle="modal" data-target="#pemasukanModal">
                 <span data-feather="plus"></span>
                 Pemasukan
-            </a>
+            </button>
+
+            <div id="pemasukanModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-tittle">Bagian Heading Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Bagian Body Modal</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup Modal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="card mt-2">
                 <div class="card-header py-3">
