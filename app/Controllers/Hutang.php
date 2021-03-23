@@ -20,6 +20,6 @@ class Hutang extends BaseController
             'hutang' => $hutang
         ];
 
-        return view('pages/hutang', $data);
+        return view('hutang/index', $data);
     }
 }
