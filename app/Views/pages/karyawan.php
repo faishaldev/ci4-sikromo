@@ -12,11 +12,6 @@
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Karyawan</h1>
             </div>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#karyawanModal">
-                <span data-feather="plus"></span>
-                Tambah Karyawan
-            </button>
 
             <!-- Modal -->
             <div class="modal fade" id="karyawanModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -64,8 +59,17 @@
             </div>
     </div>
     <div class="card mt-2">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-success">Daftar Karyawan</h6>
+        <div class="row">
+            <div class="col card-header py-3">
+                <h6 class="m-0 font-weight-bold text-success">Daftar Karyawan</h6>
+            </div>
+            <!-- Button trigger modal -->
+            <div class="col-md-3 card-header text-center">
+                <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#karyawanModal">
+                    <span data-feather="plus"></span>
+                    Tambah Karyawan
+                </button>
+            </div>
         </div>
         <div class="table-responsive pt-2">
             <table class="table table-striped table-sm">

@@ -134,3 +134,7 @@ body {
 .progress-sm {
   height: 0.5rem;
 }
+
+.row {
+  padding: 0px 10px 10px 10px;
+}
