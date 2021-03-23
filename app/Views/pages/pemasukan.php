@@ -104,164 +104,189 @@
                 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
             </div>
 
-            <button type="button" class="btn btn-success plus mt-4" data-toggle="modal" data-target="#pemasukanModal">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary plus mt-4" data-bs-toggle="modal" data-bs-target="#pemasukanModal">
                 <span data-feather="plus"></span>
-                Pemasukan
+                Tambah Pemasukan
             </button>
 
-            <div id="pemasukanModal" class="modal fade" role="dialog">
+            <!-- Modal -->
+            <div class="modal fade" id="pemasukanModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-tittle">Bagian Heading Modal</h4>
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Pemasukan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
                         </div>
-                        <div class="modal-body">
-                            <p>Bagian Body Modal</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup Modal</button>
-                        </div>
+                        <form action="">
+                            <div class="modal-body">
+                                <div class="form-signin">
+
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="inputTanggal" class="">Tanggal :</label>
+                                            <input type="date" id="inputTanggal" class="form-control" name="tgl_pemasukan" required autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputJumlah" class="">Jumlah :</label>
+                                            <input type="number" id="inputJumlah" class="form-control" name="jumlah" required autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputSumber" class="">Sumber :</label>
+                                            <select id="inputSumber" class="form-control" name="sumber" required autofocus>
+                                                <option value="1">1. Pemerintah Daerah Kota Tegal</option>
+                                                <option value="2">2. Back BCA Kota Tegal</option>
+                                            </select>
+                                        </div>
+                                    </form>
+
+                                </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Tambah</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-
-            <div class="card mt-2">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Daftar Transaksi Masuk</h6>
-                </div>
-                <div class="table-responsive">
-                    <table class="table table-striped table-sm">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Tanggal</th>
-                                <th>Jumlah</th>
-                                <th>Sumber</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1,001</td>
-                                <td>random</td>
-                                <td>data</td>
-                                <td>placeholder</td>
-                                <td>
-                                    <a href="" class="btn btn-danger">Hapus</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1,002</td>
-                                <td>placeholder</td>
-                                <td>irrelevant</td>
-                                <td>visual</td>
-                                <td>layout</td>
-                            </tr>
-                            <tr>
-                                <td>1,003</td>
-                                <td>data</td>
-                                <td>rich</td>
-                                <td>dashboard</td>
-                                <td>tabular</td>
-                            </tr>
-                            <tr>
-                                <td>1,003</td>
-                                <td>information</td>
-                                <td>placeholder</td>
-                                <td>illustrative</td>
-                                <td>data</td>
-                            </tr>
-                            <tr>
-                                <td>1,004</td>
-                                <td>text</td>
-                                <td>random</td>
-                                <td>layout</td>
-                                <td>dashboard</td>
-                            </tr>
-                            <tr>
-                                <td>1,005</td>
-                                <td>dashboard</td>
-                                <td>irrelevant</td>
-                                <td>text</td>
-                                <td>placeholder</td>
-                            </tr>
-                            <tr>
-                                <td>1,006</td>
-                                <td>dashboard</td>
-                                <td>illustrative</td>
-                                <td>rich</td>
-                                <td>data</td>
-                            </tr>
-                            <tr>
-                                <td>1,007</td>
-                                <td>placeholder</td>
-                                <td>tabular</td>
-                                <td>information</td>
-                                <td>irrelevant</td>
-                            </tr>
-                            <tr>
-                                <td>1,008</td>
-                                <td>random</td>
-                                <td>data</td>
-                                <td>placeholder</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>1,009</td>
-                                <td>placeholder</td>
-                                <td>irrelevant</td>
-                                <td>visual</td>
-                                <td>layout</td>
-                            </tr>
-                            <tr>
-                                <td>1,010</td>
-                                <td>data</td>
-                                <td>rich</td>
-                                <td>dashboard</td>
-                                <td>tabular</td>
-                            </tr>
-                            <tr>
-                                <td>1,011</td>
-                                <td>information</td>
-                                <td>placeholder</td>
-                                <td>illustrative</td>
-                                <td>data</td>
-                            </tr>
-                            <tr>
-                                <td>1,012</td>
-                                <td>text</td>
-                                <td>placeholder</td>
-                                <td>layout</td>
-                                <td>dashboard</td>
-                            </tr>
-                            <tr>
-                                <td>1,013</td>
-                                <td>dashboard</td>
-                                <td>irrelevant</td>
-                                <td>text</td>
-                                <td>visual</td>
-                            </tr>
-                            <tr>
-                                <td>1,014</td>
-                                <td>dashboard</td>
-                                <td>illustrative</td>
-                                <td>rich</td>
-                                <td>data</td>
-                            </tr>
-                            <tr>
-                                <td>1,015</td>
-                                <td>random</td>
-                                <td>tabular</td>
-                                <td>information</td>
-                                <td>text</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
     </div>
-    </main>
+
+    <div class="card mt-2">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Daftar Transaksi Masuk</h6>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tanggal</th>
+                        <th>Jumlah</th>
+                        <th>Sumber</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1,001</td>
+                        <td>random</td>
+                        <td>data</td>
+                        <td>placeholder</td>
+                        <td>
+                            <a href="" class="btn btn-danger">Hapus</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1,002</td>
+                        <td>placeholder</td>
+                        <td>irrelevant</td>
+                        <td>visual</td>
+                        <td>layout</td>
+                    </tr>
+                    <tr>
+                        <td>1,003</td>
+                        <td>data</td>
+                        <td>rich</td>
+                        <td>dashboard</td>
+                        <td>tabular</td>
+                    </tr>
+                    <tr>
+                        <td>1,003</td>
+                        <td>information</td>
+                        <td>placeholder</td>
+                        <td>illustrative</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>1,004</td>
+                        <td>text</td>
+                        <td>random</td>
+                        <td>layout</td>
+                        <td>dashboard</td>
+                    </tr>
+                    <tr>
+                        <td>1,005</td>
+                        <td>dashboard</td>
+                        <td>irrelevant</td>
+                        <td>text</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <td>1,006</td>
+                        <td>dashboard</td>
+                        <td>illustrative</td>
+                        <td>rich</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>1,007</td>
+                        <td>placeholder</td>
+                        <td>tabular</td>
+                        <td>information</td>
+                        <td>irrelevant</td>
+                    </tr>
+                    <tr>
+                        <td>1,008</td>
+                        <td>random</td>
+                        <td>data</td>
+                        <td>placeholder</td>
+                        <td>text</td>
+                    </tr>
+                    <tr>
+                        <td>1,009</td>
+                        <td>placeholder</td>
+                        <td>irrelevant</td>
+                        <td>visual</td>
+                        <td>layout</td>
+                    </tr>
+                    <tr>
+                        <td>1,010</td>
+                        <td>data</td>
+                        <td>rich</td>
+                        <td>dashboard</td>
+                        <td>tabular</td>
+                    </tr>
+                    <tr>
+                        <td>1,011</td>
+                        <td>information</td>
+                        <td>placeholder</td>
+                        <td>illustrative</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>1,012</td>
+                        <td>text</td>
+                        <td>placeholder</td>
+                        <td>layout</td>
+                        <td>dashboard</td>
+                    </tr>
+                    <tr>
+                        <td>1,013</td>
+                        <td>dashboard</td>
+                        <td>irrelevant</td>
+                        <td>text</td>
+                        <td>visual</td>
+                    </tr>
+                    <tr>
+                        <td>1,014</td>
+                        <td>dashboard</td>
+                        <td>illustrative</td>
+                        <td>rich</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <td>1,015</td>
+                        <td>random</td>
+                        <td>tabular</td>
+                        <td>information</td>
+                        <td>text</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</main>
 </div>
 </div>
 <?= $this->endSection(); ?>
