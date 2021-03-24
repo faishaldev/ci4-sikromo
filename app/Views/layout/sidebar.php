@@ -7,42 +7,42 @@
             <h5 class="text-center">Admin</h5>
             <hr>
             <li class="nav-item">
-                <a href="<?= site_url('/') ?>" class="nav-link" aria-current="page">
+                <a href="/" class="nav-link" aria-current="page">
                     <span data-feather="home"></span>
                     Dashboard
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="<?= site_url('/pemasukan') ?>" class="nav-link">
+                <a href="/pemasukan" class="nav-link">
                     <span data-feather="arrow-up"></span>
                     Pemasukan
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="<?= site_url('/pengeluaran') ?>" class="nav-link">
+                <a href="/pengeluaran" class="nav-link">
                     <span data-feather="arrow-down"></span>
                     Pengeluaran
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="<?= site_url('/hutang') ?>" class="nav-link">
+                <a href="/hutang" class="nav-link">
                     <span data-feather="dollar-sign"></span>
                     Hutang
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="<?= site_url('/karyawan') ?>" class="nav-link">
+                <a href="/karyawan" class="nav-link">
                     <span data-feather="users"></span>
                     Karyawan
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="<?= site_url('/laporan') ?>" class="nav-link">
+                <a href="/laporan" class="nav-link">
                     <span data-feather="layers"></span>
                     Laporan
                 </a>
