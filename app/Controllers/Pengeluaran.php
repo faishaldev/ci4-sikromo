@@ -33,4 +33,11 @@ class Pengeluaran extends BaseController
 
         return redirect()->to('/pengeluaran');
     }
+
+    public function delete($id_pengeluaran)
+    {
+        $this->pengeluaranModel->delete($id_pengeluaran);
+
+        return redirect()->to('/pengeluaran');
+    }
 }

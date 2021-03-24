@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PemasukanModel;
+use Myth\Auth\Commands\Publish;
 
 class Pemasukan extends BaseController
 {
@@ -30,6 +31,13 @@ class Pemasukan extends BaseController
             'jumlah' => $this->request->getVar('jumlah'),
             'id_sumber' => $this->request->getVar('id_sumber')
         ]);
+
+        return redirect()->to('/pemasukan');
+    }
+
+    public function delete($id_pemasukan)
+    {
+        $this->pemasukanModel->delete($id_pemasukan);
 
         return redirect()->to('/pemasukan');
     }

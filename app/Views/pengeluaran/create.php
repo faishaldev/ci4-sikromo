@@ -21,6 +21,7 @@
                     <div class="form-group">
                         <label for="inputSumber" class="">Sumber :</label>
                         <select id="inputSumber" class="form-control" name="id_sumber" required autofocus>
+                            <option value="">--Pilih sumber pengeluaran--</option>
                             <option value="1">1. Pemerintah Daerah Kota Tegal</option>
                             <option value="2">2. Back BCA Kota Tegal</option>
                         </select>

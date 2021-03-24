@@ -56,7 +56,9 @@
                                     <td>Rp<?= number_format($pem['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $pem['id_sumber']; ?></td>
                                     <td>
-                                        <a href="" class="btn btn-danger">Hapus</a>
+                                        <form action="pemasukan/delete/<?= $pem['id_pemasukan']; ?>" method="post">
+                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
