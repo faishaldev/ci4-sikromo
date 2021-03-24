@@ -45,7 +45,7 @@
                                     <td scope="row"><?= $i++; ?></td>
                                     <td><?= $h['tgl_hutang']; ?></td>
                                     <td><?= $h['penghutang']; ?></td>
-                                    <td>Rp<?= number_format($h['jumlah'], 2, ',', .); ?></td>
+                                    <td>Rp<?= number_format($h['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $h['alasan']; ?></td>
                                     <td>text</td>
                                 </tr>
