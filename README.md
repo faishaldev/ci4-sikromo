@@ -1,18 +1,8 @@
-# CodeIgniter 4 Application Starter
+# Sikromo - Sistem Informasi Keuangan Percetakan CV Romo
 
-## What is CodeIgniter?
+## Apa itu Sikromo?
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
-
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
-
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
-
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+Sikromo adalah sebuah proyek Praktik Kerja Lapangan yang dikerjakan untuk Percetakan CV Romo Tegal yang berupa sistem informasi pengelolaan keuangan Percetakan CV Romo Tegal. Sistem Sikromo dapat menampilkan ringkasan pendapatan dan pengeluaran, serta grafik perbandingan pendapatan dan pengeluaran per bulannya. Selain itu, sistem Sikromo dilengkapi menu pemasukan, pengeluaran, hutang, dan karyawan yang dapat dikelola oleh admin, serta terdapat menu laporan untuk mengunduh laporan keuangan dalam format excel.
 
 ## Installation & updates
 
