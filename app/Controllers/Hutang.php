@@ -33,4 +33,11 @@ class Hutang extends BaseController
         ]);
         return redirect()->to('/hutang');
     }
+
+    public function delete($id_hutang)
+    {
+        $this->hutangModel->delete($id_hutang);
+
+        return redirect()->to('/hutang');
+    }
 }

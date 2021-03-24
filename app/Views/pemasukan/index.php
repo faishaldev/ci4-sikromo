@@ -35,6 +35,11 @@
                             Tambah Pemasukan
                         </button>
                     </div>
+                    <?php if (session()->getFlashdata('pesan')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('pesan'); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
@@ -56,7 +61,7 @@
                                     <td>Rp<?= number_format($pem['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $pem['id_sumber']; ?></td>
                                     <td>
-                                        <form action="pemasukan/delete/<?= $pem['id_pemasukan']; ?>" method="post">
+                                        <form action="pemasukan/delete/<?= $pem['id_pemasukan']; ?>" method="post" class="d-inline">
                                             <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
                                         </form>
                                     </td>

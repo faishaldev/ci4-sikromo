@@ -36,6 +36,11 @@
                             Tambah Pengeluaran
                         </button>
                     </div>
+                    <?php if (session()->getFlashdata('pesan')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('pesan'); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">

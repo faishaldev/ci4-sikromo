@@ -31,12 +31,16 @@ class Pengeluaran extends BaseController
             'id_sumber' => $this->request->getVar('id_sumber')
         ]);
 
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
+
         return redirect()->to('/pengeluaran');
     }
 
     public function delete($id_pengeluaran)
     {
         $this->pengeluaranModel->delete($id_pengeluaran);
+
+        session()->setFlashdata('pesan', 'Data berhasil dihapus!');
 
         return redirect()->to('/pengeluaran');
     }

@@ -32,12 +32,16 @@ class Pemasukan extends BaseController
             'id_sumber' => $this->request->getVar('id_sumber')
         ]);
 
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
+
         return redirect()->to('/pemasukan');
     }
 
     public function delete($id_pemasukan)
     {
         $this->pemasukanModel->delete($id_pemasukan);
+
+        session()->setFlashdata('pesan', 'Data berhasil dihapus!');
 
         return redirect()->to('/pemasukan');
     }

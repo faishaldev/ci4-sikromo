@@ -8,6 +8,7 @@
 
         <?= $this->include('layout/sidebar'); ?>
         <?= $this->include('hutang/create'); ?>
+        <?= $this->include('hutang/edit'); ?>
 
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -47,7 +48,9 @@
                                     <td><?= $h['penghutang']; ?></td>
                                     <td>Rp<?= number_format($h['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $h['alasan']; ?></td>
-                                    <td>text</td>
+                                    <td>
+                                        <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editHutangModal"></button>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
