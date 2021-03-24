@@ -22,4 +22,15 @@ class Hutang extends BaseController
 
         return view('hutang/index', $data);
     }
+
+    public function save()
+    {
+        $this->hutangModel->save([
+            'tgl_hutang' => $this->request->getVar('tgl_hutang'),
+            'penghutang' => $this->request->getVar('penghutang'),
+            'jumlah' => $this->request->getVar('jumlah'),
+            'alasan' => $this->request->getVar('alasan')
+        ]);
+        return redirect()->to('/hutang');
+    }
 }

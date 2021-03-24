@@ -53,7 +53,7 @@
                                 <tr>
                                     <td scope="row"><?= $i++; ?></td>
                                     <td><?= $pem['tgl_pemasukan']; ?></td>
-                                    <td><?= $pem['jumlah']; ?></td>
+                                    <td>Rp<?= number_format($pem['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $pem['id_sumber']; ?></td>
                                     <td>
                                         <a href="" class="btn btn-danger">Hapus</a>

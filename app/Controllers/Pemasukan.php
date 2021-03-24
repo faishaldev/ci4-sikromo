@@ -23,15 +23,6 @@ class Pemasukan extends BaseController
         return view('pemasukan/index', $data);
     }
 
-    public function create()
-    {
-        $data = [
-            $data => 'Form Tambah Pemasukan'
-        ];
-
-        return view('pemasukan/create', $data);
-    }
-
     public function save()
     {
         $this->pemasukanModel->save([

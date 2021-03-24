@@ -22,4 +22,17 @@ class Karyawan extends BaseController
 
         return view('karyawan/index', $data);
     }
+
+    public function save()
+    {
+        $this->karywanModel->save([
+            'nama' => $this->request->getVar('nama'),
+            'umur' => $this->request->getVar('umur'),
+            'posisi' => $this->request->getVar('posisi'),
+            'kontak' => $this->request->getVar('kontak'),
+            'alamat' => $this->request->getVar('alamat'),
+        ]);
+
+        return redirect()->to('/karyawan');
+    }
 }
