@@ -33,7 +33,7 @@ class Karyawan extends BaseController
             'alamat' => $this->request->getVar('alamat'),
         ]);
 
-        session()->setFlashdata('pesan', 'Data berhasil dihapus!');
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
 
         return redirect()->to('/karyawan');
     }
