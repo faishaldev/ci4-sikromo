@@ -107,15 +107,7 @@ body {
   font-size: 0.7rem;
 }
 
-.pemasukan-h {
-  border-left: 0.25rem solid #4e73df !important;
-}
-
-.pemasukan-b {
-  border-left: 0.25rem solid #4e73df !important;
-}
-
-.pemasukan-t {
+.pemasukan {
   border-left: 0.25rem solid #4e73df !important;
 }
 

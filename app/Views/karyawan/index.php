@@ -51,8 +51,9 @@
                                     <td><?= $k['kontak']; ?></td>
                                     <td><?= $k['alamat']; ?></td>
                                     <td>
-                                        <a href="" class="btn btn-primary">Ubah</a>
-                                        <a href="" class="btn btn-danger">Hapus</a>
+                                        <form action="">
+                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

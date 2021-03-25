@@ -31,12 +31,17 @@ class Hutang extends BaseController
             'jumlah' => $this->request->getVar('jumlah'),
             'alasan' => $this->request->getVar('alasan')
         ]);
+
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
+
         return redirect()->to('/hutang');
     }
 
     public function delete($id_hutang)
     {
         $this->hutangModel->delete($id_hutang);
+
+        session()->setFlashdata('pesan', 'Data berhasil dihapus!');
 
         return redirect()->to('/hutang');
     }

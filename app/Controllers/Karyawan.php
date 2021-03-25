@@ -35,4 +35,13 @@ class Karyawan extends BaseController
 
         return redirect()->to('/karyawan');
     }
+
+    public function delete($id_karyawan)
+    {
+        $this->karywanModel->delete($id_karyawan);
+
+        session()->setFlashdata('pesan', 'Data berhasil dihapus!');
+
+        return redirect()->to('/karyawan');
+    }
 }

@@ -8,25 +8,44 @@
 
         <?= $this->include('layout/sidebar'); ?>
         <?= $this->include('hutang/create'); ?>
-        <?= $this->include('hutang/edit'); ?>
 
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+            <!-- Judul -->
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Hutang</h1>
             </div>
+            <!-- Akhir Judul -->
+
             <div class="card mt-2">
                 <div class="row">
+
+                    <!-- Daftar Hutang -->
                     <div class="col card-header py-3">
                         <h6 class="m-0 font-weight-bold">Daftar Hutang</h6>
                     </div>
-                    <!-- Button trigger modal -->
+                    <!-- Akhir Daftar Hutang -->
+
+                    <!-- Tombol Tambah Hutang -->
                     <div class="col-md-3 card-header text-center">
                         <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#hutangModal">
                             <span data-feather="plus"></span>
                             Tambah Hutang
                         </button>
                     </div>
+                    <!-- Akhir Tombol Tambah Hutang -->
+
+                    <!-- Notifikasi Perubahan -->
+                    <?php if (session()->getFlashdata('pesan')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('pesan'); ?>
+                        </div>
+                    <?php endif; ?>
+                    <!-- Notifikasi Perubahan -->
+
                 </div>
+
+                <!-- Tabel Hutang -->
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -49,14 +68,20 @@
                                     <td>Rp<?= number_format($h['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $h['alasan']; ?></td>
                                     <td>
-                                        <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editHutangModal"></button>
+                                        <form action="hutang/delete/<?= $h['id_hutang']; ?>">
+                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger" data-bs-toggle="modal">Hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
+                <!-- Akhir Tabel Hutang -->
+
             </div>
         </div>
     </div>
-    <?= $this->endSection(); ?>
+</div>
+
+<?= $this->endSection(); ?>
