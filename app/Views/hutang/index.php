@@ -68,8 +68,8 @@
                                     <td>Rp<?= number_format($h['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $h['alasan']; ?></td>
                                     <td>
-                                        <form action="hutang/delete/<?= $h['id_hutang']; ?>">
-                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger" data-bs-toggle="modal">Hapus</button>
+                                        <form action="hutang/delete/<?= $h['id_hutang']; ?>" method="post">
+                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
                                         </form>
                                     </td>
                                 </tr>

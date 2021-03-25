@@ -51,7 +51,7 @@
                                     <td><?= $k['kontak']; ?></td>
                                     <td><?= $k['alamat']; ?></td>
                                     <td>
-                                        <form action="">
+                                        <form action="karyawan/delete/<?= $k['id_karyawan']; ?>" method="post">
                                             <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
                                         </form>
                                     </td>
