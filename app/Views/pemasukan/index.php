@@ -8,7 +8,6 @@
 
         <?= $this->include('layout/sidebar'); ?>
         <?= $this->include('pemasukan/create'); ?>
-        <?= $this->include('pemasukan/edit'); ?>
 
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
@@ -79,7 +78,7 @@
                                     <td>Rp<?= number_format($pem['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $pem['id_sumber']; ?></td>
                                     <td>
-                                        <form action="pemasukan/delete/<?= $pen['id_pemasukan']; ?>" method="post">
+                                        <form action="pemasukan/delete/<?= $pem['id_pemasukan']; ?>" method="post">
                                             <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
                                         </form>
                                     </td>
