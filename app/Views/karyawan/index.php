@@ -10,23 +10,42 @@
         <?= $this->include('karyawan/create'); ?>
 
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+            <!-- Judul -->
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Karyawan</h1>
             </div>
+            <!-- Akhir Judul -->
 
             <div class="card mt-2">
                 <div class="row">
+
+                    <!-- Daftar Karyawan -->
                     <div class="col card-header py-3">
                         <h6 class="m-0 font-weight-bold ">Daftar Karyawan</h6>
                     </div>
-                    <!-- Button trigger modal -->
+                    <!-- Akhir Daftar Karyawan -->
+
+                    <!-- Tombol Tambah Karyawan -->
                     <div class="col-md-3 card-header text-center">
                         <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#karyawanModal">
                             <span data-feather="plus"></span>
                             Tambah Karyawan
                         </button>
                     </div>
+                    <!-- Akhir Tombol Karyawan -->
+
+                    <!-- Notifikasi Perubahan -->
+                    <?php if (session()->getFlashdata('pesan')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('pesan'); ?>
+                        </div>
+                    <?php endif; ?>
+                    <!-- Notifikasi Perubahan -->
+
                 </div>
+
+                <!-- Tabel Karyawan -->
                 <div class="table-responsive pt-2">
                     <table class="table table-striped table-sm">
                         <thead>
@@ -59,8 +78,12 @@
                             <?php endforeach; ?>
                         </tbody>
                     </table>
+                    <!-- Akhir Tabel Karyawan -->
+
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <?= $this->endSection(); ?>
+<?= $this->endSection(); ?>
