@@ -62,7 +62,7 @@
                             <?php $i = 1; ?>
                             <?php foreach ($hutang as $h) : ?>
                                 <tr>
-                                    <td scope="row"><?= $i++; ?></td>
+                                    <td scope="row"><?= $i; ?></td>
                                     <td><?= $h['tgl_hutang']; ?></td>
                                     <td><?= $h['penghutang']; ?></td>
                                     <td>Rp<?= number_format($h['jumlah'], 2, ',', '.'); ?></td>
@@ -73,6 +73,7 @@
                                         </form>
                                     </td>
                                 </tr>
+                                <?php $i++; ?>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

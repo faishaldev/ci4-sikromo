@@ -63,7 +63,7 @@
                             <?php $i = 1; ?>
                             <?php foreach ($karyawan as $k) : ?>
                                 <tr>
-                                    <td scope="row"><?= $i++; ?></td>
+                                    <td scope="row"><?= $i; ?></td>
                                     <td><?= $k['nama']; ?></td>
                                     <td><?= $k['umur']; ?></td>
                                     <td><?= $k['posisi']; ?></td>
@@ -75,6 +75,7 @@
                                         </form>
                                     </td>
                                 </tr>
+                                <?php $i++; ?>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

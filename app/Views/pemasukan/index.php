@@ -62,7 +62,6 @@
                     <table class="table table-striped table-sm">
                         <thead>
                             <tr>
-                                <th>#</th>
                                 <th>Tanggal</th>
                                 <th>Jumlah</th>
                                 <th>Sumber</th>
@@ -70,10 +69,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $i = 1; ?>
                             <?php foreach ($pemasukan as $pem) : ?>
                                 <tr>
-                                    <td scope="row"><?= $i++; ?></td>
                                     <td><?= $pem['tgl_pemasukan']; ?></td>
                                     <td>Rp<?= number_format($pem['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $pem['id_sumber']; ?></td>

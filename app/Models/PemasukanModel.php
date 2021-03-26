@@ -10,4 +10,31 @@ class PemasukanModel extends Model
     protected $primaryKey = 'id_pemasukan';
     protected $useTimestamps = true;
     protected $allowedFields = ['tgl_pemasukan', 'jumlah', 'id_sumber'];
+
+    public function getPemasukan()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT * FROM pemasukan ORDER BY id_pemasukan DESC");
+        $results = $query->getResultArray();
+
+        return $results;
+    }
+
+    public function getPemasukanHariIni()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT jumlah FROM pemasukan WHERE tgl_pemasukan = CURDATE() ORDER BY id_pemasukan DESC");
+        $row = $query->getRow();
+
+        return $row->jumlah;
+    }
+
+    public function getSeluruhPemasukan()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT SUM(jumlah) as total FROM pemasukan");
+        $row = $query->getRow();
+
+        return $row->total;
+    }
 }

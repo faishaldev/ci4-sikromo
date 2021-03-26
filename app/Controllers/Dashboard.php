@@ -8,11 +8,13 @@ class Dashboard extends BaseController
 {
 	public function index()
 	{
-		$pemasukan = $this->pemasukanModel->findAll();
+		$pemasukanHariIni = $this->pemasukanModel->getPemasukanHariIni();
+		$seluruhPemasukan = $this->pemasukanModel->getSeluruhPemasukan();
 
 		$data = [
 			'title' => "Sikromo - Dashboard",
-			'pemasukan' => $pemasukan
+			'pemasukanHariIni' => $pemasukanHariIni,
+			'seluruhPemasukan' => $seluruhPemasukan
 		];
 
 		return view('dashboard/index', $data);

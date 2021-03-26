@@ -8,7 +8,7 @@ class Pemasukan extends BaseController
 {
     public function index()
     {
-        $pemasukan = $this->pemasukanModel->findAll();
+        $pemasukan = $this->pemasukanModel->getPemasukan();
 
         $data = [
             'title' => 'Sikromo - Pemasukan',
