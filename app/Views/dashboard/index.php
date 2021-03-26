@@ -18,24 +18,23 @@
 
             <div class="row">
 
-                <?= $this->include('dashboard/pemasukan'); ?>
+                <?= $this->include('dashboard/card pemasukan/pemasukanHariIni'); ?>
+                <?= $this->include('dashboard/card pemasukan/pemasukanBulanIni'); ?>
+                <?= $this->include('dashboard/card pemasukan/pemasukanTahunIni'); ?>
+                <?= $this->include('dashboard/card pemasukan/seluruhPemasukan'); ?>
 
             </div>
 
             <div class="row">
 
-                <?= $this->include('dashboard/pengeluaran'); ?>
+                <?= $this->include('dashboard/card pengeluaran/pengeluaranHariIni'); ?>
+                <?= $this->include('dashboard/card pengeluaran/pengeluaranBulanIni'); ?>
+                <?= $this->include('dashboard/card pengeluaran/pengeluaranTahunIni'); ?>
+                <?= $this->include('dashboard/card pengeluaran/seluruhPengeluaran'); ?>
 
             </div>
 
-            <!-- Grafik Pendapatan & Pengeluaran -->
-            <div class="card">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold">Grafik Pendapatan & Pengeluaran Per Bulan </h6>
-                </div>
-                <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-            </div>
-            <!-- Akhir Grafik Pendapatan & Pengeluaran -->
+            <?= $this->include('dashboard/grafikPerbandingan'); ?>
 
         </main>
     </div>

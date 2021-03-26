@@ -2,17 +2,10 @@
 
 namespace App\Controllers;
 
-use App\Models\PemasukanModel;
 use Myth\Auth\Commands\Publish;
 
 class Pemasukan extends BaseController
 {
-    protected $pemasukanModel;
-    public function __construct()
-    {
-        $this->pemasukanModel = new PemasukanModel();
-    }
-
     public function index()
     {
         $pemasukan = $this->pemasukanModel->findAll();
