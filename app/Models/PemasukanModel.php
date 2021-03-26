@@ -29,6 +29,24 @@ class PemasukanModel extends Model
         return $row->jumlah;
     }
 
+    public function getPemasukanBulanIni()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE MONTH(tgl_pemasukan) = MONTH(CURDATE())");
+        $row = $query->getRow();
+
+        return $row->total;
+    }
+
+    public function getPemasukanTahunIni()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = YEAR(CURDATE())");
+        $row = $query->getRow();
+
+        return $row->total;
+    }
+
     public function getSeluruhPemasukan()
     {
         $db = \Config\Database::connect();
