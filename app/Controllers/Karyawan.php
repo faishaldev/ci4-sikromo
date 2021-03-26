@@ -17,6 +17,7 @@ class Karyawan extends BaseController
         $karyawan = $this->karywanModel->findAll();
 
         $data = [
+            'title' => 'Sikromo - Karyawan',
             'karyawan' => $karyawan
         ];
 

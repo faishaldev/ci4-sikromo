@@ -11,6 +11,7 @@ class Pemasukan extends BaseController
         $pemasukan = $this->pemasukanModel->findAll();
 
         $data = [
+            'title' => 'Sikromo - Pemasukan',
             'pemasukan' => $pemasukan
         ];
 

@@ -17,6 +17,7 @@ class Hutang extends BaseController
         $hutang = $this->hutangModel->findAll();
 
         $data = [
+            'title' => 'Sikromo - Hutang',
             'hutang' => $hutang
         ];
 
