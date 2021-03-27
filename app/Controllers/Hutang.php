@@ -14,11 +14,9 @@ class Hutang extends BaseController
 
     public function index()
     {
-        $hutang = $this->hutangModel->findAll();
-
         $data = [
             'title' => 'Sikromo - Hutang',
-            'hutang' => $hutang
+            'hutang' => $this->hutangModel->getHutang()
         ];
 
         return view('hutang/index', $data);
@@ -34,6 +32,21 @@ class Hutang extends BaseController
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
+
+        return redirect()->to('/hutang');
+    }
+
+    public function update($id_hutang)
+    {
+        $this->hutangModel->save([
+            'id_hutang' => $id_hutang,
+            'tgl_hutang' => $this->request->getVar('tgl_hutang'),
+            'penghutang' => $this->request->getVar('penghutang'),
+            'jumlah' => $this->request->getVar('jumlah'),
+            'alasan' => $this->request->getVar('alasan')
+        ]);
+
+        session()->setFlashdata('pesan', 'Data berhasil diubah!');
 
         return redirect()->to('/hutang');
     }

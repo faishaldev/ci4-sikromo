@@ -11,10 +11,14 @@ class PemasukanModel extends Model
     protected $useTimestamps = true;
     protected $allowedFields = ['tgl_pemasukan', 'jumlah', 'id_sumber'];
 
+    public function __construct()
+    {
+        $this->db = db_connect();
+    }
+
     public function getPemasukan()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT * FROM pemasukan ORDER BY id_pemasukan DESC");
+        $query = $this->db->query("SELECT * FROM pemasukan ORDER BY id_pemasukan DESC");
         $results = $query->getResultArray();
 
         return $results;
@@ -22,8 +26,7 @@ class PemasukanModel extends Model
 
     public function getPemasukanHariIni()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE DAY(tgl_pemasukan) = DAY(CURDATE())");
+        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE DAY(tgl_pemasukan) = DAY(CURDATE())");
         $row = $query->getRow();
 
         return $row->total;
@@ -31,8 +34,7 @@ class PemasukanModel extends Model
 
     public function getPemasukanBulanIni()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE MONTH(tgl_pemasukan) = MONTH(CURDATE())");
+        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE MONTH(tgl_pemasukan) = MONTH(CURDATE())");
         $row = $query->getRow();
 
         return $row->total;
@@ -40,8 +42,7 @@ class PemasukanModel extends Model
 
     public function getPemasukanTahunIni()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = YEAR(CURDATE())");
+        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = YEAR(CURDATE())");
         $row = $query->getRow();
 
         return $row->total;
@@ -49,8 +50,7 @@ class PemasukanModel extends Model
 
     public function getSeluruhPemasukan()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT SUM(jumlah) as total FROM pemasukan");
+        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan");
         $row = $query->getRow();
 
         return $row->total;

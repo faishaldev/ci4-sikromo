@@ -51,7 +51,6 @@
                     <table class="table table-striped table-sm">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Tanggal</th>
                                 <th scope="col">Penghutang</th>
                                 <th scope="col">Jumlah</th>
@@ -60,22 +59,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $i = 1; ?>
                             <?php foreach ($hutang as $h) : ?>
                                 <tr>
-                                    <td scope="row"><?= $i; ?></td>
                                     <td><?= $h['tgl_hutang']; ?></td>
                                     <td><?= $h['penghutang']; ?></td>
                                     <td>Rp<?= number_format($h['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $h['alasan']; ?></td>
                                     <td>
-                                        <form action="hutang/delete/<?= $h['id_hutang']; ?>" method="post">
-                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
-                                        </form>
-                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editHutangModal">Edit</button>
+                                        <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editHutangModal<?= $h['id_hutang']; ?>" id="btn-edit"></button>
                                     </td>
                                 </tr>
-                                <?php $i++; ?>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

@@ -76,7 +76,7 @@
                                     <td><?= $pem['id_sumber']; ?></td>
                                     <td>
                                         <form action="pemasukan/delete/<?= $pem['id_pemasukan']; ?>" method="post">
-                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
+                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="fa fa-trash btn btn-danger"></button>
                                         </form>
                                     </td>
                                 </tr>

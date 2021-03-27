@@ -76,7 +76,7 @@
                                     <td><?= $pen['id_sumber']; ?></td>
                                     <td>
                                         <form action="pengeluaran/delete/<?= $pen['id_pengeluaran']; ?>" method="post">
-                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
+                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="fa fa-trash btn btn-danger"></button>
                                         </form>
                                     </td>
                                 </tr>

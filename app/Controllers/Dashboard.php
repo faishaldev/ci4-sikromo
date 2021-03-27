@@ -8,28 +8,18 @@ class Dashboard extends BaseController
 {
 	public function index()
 	{
-		$pemasukanHariIni = $this->pemasukanModel->getPemasukanHariIni();
-		$pemasukanBulanIni = $this->pemasukanModel->getPemasukanBulanIni();
-		$pemasukanTahunIni = $this->pemasukanModel->getPemasukanTahunIni();
-		$seluruhPemasukan = $this->pemasukanModel->getSeluruhPemasukan();
-
-		$pengeluaranHariIni = $this->pengeluaranModel->getPengeluaranHariIni();
-		$pengeluaranBulanIni = $this->pengeluaranModel->getPengeluranBulanIni();
-		$pengeluaranTahunIni = $this->pengeluaranModel->getPengeluaranTahunIni();
-		$seluruhPengeluaran = $this->pengeluaranModel->getSeluruhPengeluaran();
-
 		$data = [
 			'title' => "Sikromo - Dashboard",
 
-			'pemasukanHariIni' => $pemasukanHariIni,
-			'pemasukanBulanIni' => $pemasukanBulanIni,
-			'pemasukanTahunIni' => $pemasukanTahunIni,
-			'seluruhPemasukan' => $seluruhPemasukan,
+			'pemasukanHariIni' => $this->pemasukanModel->getPemasukanHariIni(),
+			'pemasukanBulanIni' => $this->pemasukanModel->getPemasukanBulanIni(),
+			'pemasukanTahunIni' => $this->pemasukanModel->getPemasukanTahunIni(),
+			'seluruhPemasukan' => $this->pemasukanModel->getSeluruhPemasukan(),
 
-			'pengeluaranHariIni' => $pengeluaranHariIni,
-			'pengeluaranBulanIni' => $pengeluaranBulanIni,
-			'pengeluaranTahunIni' => $pengeluaranTahunIni,
-			'seluruhPengeluaran' => $seluruhPengeluaran
+			'pengeluaranHariIni' => $this->pengeluaranModel->getPengeluaranHariIni(),
+			'pengeluaranBulanIni' => $this->pengeluaranModel->getPengeluaranBulanIni(),
+			'pengeluaranTahunIni' => $this->pengeluaranModel->getPengeluaranTahunIni(),
+			'seluruhPengeluaran' => $this->pengeluaranModel->getSeluruhPengeluaran()
 		];
 
 		return view('dashboard/index', $data);

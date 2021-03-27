@@ -11,10 +11,14 @@ class PengeluaranModel extends Model
     protected $useTimestamps = true;
     protected $allowedFields = ['tgl_pengeluaran', 'jumlah', 'id_sumber'];
 
+    public function __construct()
+    {
+        $this->db = db_connect();
+    }
+
     public function getPengeluaran()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT * FROM pengeluaran ORDER BY id_pengeluaran DESC");
+        $query = $this->db->query("SELECT * FROM pengeluaran ORDER BY id_pengeluaran DESC");
         $results = $query->getResultArray();
 
         return $results;
@@ -22,17 +26,15 @@ class PengeluaranModel extends Model
 
     public function getPengeluaranHariIni()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT SUM(jumlah) as total FROM pengeluaran WHERE DAY(tgl_pengeluaran) = DAY(CURDATE())");
+        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pengeluaran WHERE DAY(tgl_pengeluaran) = DAY(CURDATE())");
         $row = $query->getRow();
 
         return $row->total;
     }
 
-    public function getPengeluranBulanIni()
+    public function getPengeluaranBulanIni()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT SUM(jumlah) as total FROM pengeluaran WHERE MONTH(tgl_pengeluaran) = MONTH(CURDATE())");
+        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pengeluaran WHERE MONTH(tgl_pengeluaran) = MONTH(CURDATE())");
         $row = $query->getRow();
 
         return $row->total;
@@ -40,8 +42,7 @@ class PengeluaranModel extends Model
 
     public function getPengeluaranTahunIni()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT SUM(jumlah) as total FROM pengeluaran WHERE YEAR(tgl_pengeluaran) = YEAR(CURDATE())");
+        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pengeluaran WHERE YEAR(tgl_pengeluaran) = YEAR(CURDATE())");
         $row = $query->getRow();
 
         return $row->total;
@@ -49,8 +50,7 @@ class PengeluaranModel extends Model
 
     public function getSeluruhPengeluaran()
     {
-        $db = \Config\Database::connect();
-        $query = $db->query("SELECT SUM(jumlah) as total FROM pengeluaran");
+        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pengeluaran");
         $row = $query->getRow();
 
         return $row->total;

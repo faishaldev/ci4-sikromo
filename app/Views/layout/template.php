@@ -47,6 +47,8 @@
     <script src="<?= base_url('js/feather.min.js') ?>"></script>
     <script src="<?= base_url('js/Chart.min.js') ?>"></script>
     <script src="<?= base_url('js/dashboard.js') ?>"></script>
+    <script src="<?= base_url('js/jquery.min.js'); ?>"></script>
+    <script src="<?= base_url('js/modal.js'); ?>"></script>
 </body>
 
 </html>
