@@ -23,10 +23,10 @@ class PemasukanModel extends Model
     public function getPemasukanHariIni()
     {
         $db = \Config\Database::connect();
-        $query = $db->query("SELECT jumlah FROM pemasukan WHERE tgl_pemasukan = CURDATE() ORDER BY id_pemasukan DESC");
+        $query = $db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE DAY(tgl_pemasukan) = DAY(CURDATE())");
         $row = $query->getRow();
 
-        return $row->jumlah;
+        return $row->total;
     }
 
     public function getPemasukanBulanIni()
