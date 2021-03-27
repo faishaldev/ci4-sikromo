@@ -8,6 +8,7 @@
 
         <?= $this->include('layout/sidebar'); ?>
         <?= $this->include('hutang/create'); ?>
+        <?= $this->include('hutang/edit'); ?>
 
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
@@ -71,6 +72,7 @@
                                         <form action="hutang/delete/<?= $h['id_hutang']; ?>" method="post">
                                             <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
                                         </form>
+                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editHutangModal">Edit</button>
                                     </td>
                                 </tr>
                                 <?php $i++; ?>

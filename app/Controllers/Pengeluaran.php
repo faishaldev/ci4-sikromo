@@ -6,7 +6,7 @@ class Pengeluaran extends BaseController
 {
     public function index()
     {
-        $pengeluaran = $this->pengeluaranModel->findAll();
+        $pengeluaran = $this->pengeluaranModel->getPengeluaran();
 
         $data = [
             'title' => 'Sikromo - Pengeluaran',

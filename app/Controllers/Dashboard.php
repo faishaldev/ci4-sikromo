@@ -13,12 +13,23 @@ class Dashboard extends BaseController
 		$pemasukanTahunIni = $this->pemasukanModel->getPemasukanTahunIni();
 		$seluruhPemasukan = $this->pemasukanModel->getSeluruhPemasukan();
 
+		$pengeluaranHariIni = $this->pengeluaranModel->getPengeluaranHariIni();
+		$pengeluaranBulanIni = $this->pengeluaranModel->getPengeluranBulanIni();
+		$pengeluaranTahunIni = $this->pengeluaranModel->getPengeluaranTahunIni();
+		$seluruhPengeluaran = $this->pengeluaranModel->getSeluruhPengeluaran();
+
 		$data = [
 			'title' => "Sikromo - Dashboard",
+
 			'pemasukanHariIni' => $pemasukanHariIni,
 			'pemasukanBulanIni' => $pemasukanBulanIni,
 			'pemasukanTahunIni' => $pemasukanTahunIni,
-			'seluruhPemasukan' => $seluruhPemasukan
+			'seluruhPemasukan' => $seluruhPemasukan,
+
+			'pengeluaranHariIni' => $pengeluaranHariIni,
+			'pengeluaranBulanIni' => $pengeluaranBulanIni,
+			'pengeluaranTahunIni' => $pengeluaranTahunIni,
+			'seluruhPengeluaran' => $seluruhPengeluaran
 		];
 
 		return view('dashboard/index', $data);
