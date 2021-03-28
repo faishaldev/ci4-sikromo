@@ -36,6 +36,13 @@
                     </div>
                     <!-- Akhir Tombol Karyawan -->
 
+                    <!-- Input Pencarian -->
+                    <div class="card-header input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Masukkan keyword pencarian ..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Cari</button>
+                    </div>
+                    <!-- Akhir Input Pencarian -->
+
                     <!-- Notifikasi Perubahan -->
                     <?php if (session()->getFlashdata('pesan')) : ?>
                         <div class="alert alert-success" role="alert">
