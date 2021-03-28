@@ -7,6 +7,7 @@ class Laporan extends BaseController
     public function index()
     {
         $data = [
+            'currentMenu' => 'laporan',
             'title' => 'Sikromo - Laporan'
         ];
 

@@ -55,4 +55,12 @@ class PemasukanModel extends Model
 
         return $row->total;
     }
+
+    public function getPemasukanPerBulan()
+    {
+        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan GROUP BY MONTH(tgl_pemasukan)");
+        $row = $query->getRow();
+
+        return $row->total;
+    }
 }

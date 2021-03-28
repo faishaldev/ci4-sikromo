@@ -15,6 +15,7 @@ class Hutang extends BaseController
     public function index()
     {
         $data = [
+            'currentMenu' => 'hutang',
             'title' => 'Sikromo - Hutang',
             'hutang' => $this->hutangModel->getHutang()
         ];

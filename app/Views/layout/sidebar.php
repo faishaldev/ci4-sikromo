@@ -7,42 +7,42 @@
             <h5 class="text-center">Admin</h5>
             <hr>
             <li class="nav-item">
-                <a href="/" class="nav-link" aria-current="page">
+                <a href="/" class="nav-link <?= ($currentMenu == 'dashboard') ? 'active' : ''; ?>" aria-current="page">
                     <span data-feather="home"></span>
                     Dashboard
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="/pemasukan" class="nav-link">
+                <a href="/pemasukan" class="nav-link <?= ($currentMenu == 'pemasukan') ? 'active' : ''; ?>">
                     <span data-feather="arrow-up"></span>
                     Pemasukan
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="/pengeluaran" class="nav-link">
+                <a href="/pengeluaran" class="nav-link <?= ($currentMenu == 'pengeluaran') ? 'active' : ''; ?>">
                     <span data-feather="arrow-down"></span>
                     Pengeluaran
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="/hutang" class="nav-link">
+                <a href="/hutang" class="nav-link <?= ($currentMenu == 'hutang') ? 'active' : ''; ?>">
                     <span data-feather="dollar-sign"></span>
                     Hutang
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="/karyawan" class="nav-link">
+                <a href="/karyawan" class="nav-link <?= ($currentMenu == 'karyawan') ? 'active' : ''; ?>">
                     <span data-feather="users"></span>
                     Karyawan
                 </a>
             </li>
             <hr>
             <li class="nav-item">
-                <a href="/laporan" class="nav-link">
+                <a href="/laporan" class="nav-link <?= ($currentMenu == 'laporan') ? 'active' : ''; ?>">
                     <span data-feather="layers"></span>
                     Laporan
                 </a>

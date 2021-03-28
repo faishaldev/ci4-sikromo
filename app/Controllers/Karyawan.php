@@ -17,6 +17,7 @@ class Karyawan extends BaseController
         $karyawan = $this->karywanModel->getKaryawan();
 
         $data = [
+            'currentMenu' => 'karyawan',
             'title' => 'Sikromo - Karyawan',
             'karyawan' => $karyawan
         ];

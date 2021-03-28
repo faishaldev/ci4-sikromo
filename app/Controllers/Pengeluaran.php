@@ -9,6 +9,7 @@ class Pengeluaran extends BaseController
         $pengeluaran = $this->pengeluaranModel->getPengeluaran();
 
         $data = [
+            'currentMenu' => 'pengeluaran',
             'title' => 'Sikromo - Pengeluaran',
             'pengeluaran' => $pengeluaran
         ];
