@@ -14,7 +14,7 @@ class Karyawan extends BaseController
 
     public function index()
     {
-        $karyawan = $this->karywanModel->findAll();
+        $karyawan = $this->karywanModel->getKaryawan();
 
         $data = [
             'title' => 'Sikromo - Karyawan',
@@ -35,6 +35,22 @@ class Karyawan extends BaseController
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
+
+        return redirect()->to('/karyawan');
+    }
+
+    public function update($id_karyawan)
+    {
+        $this->karywanModel->save([
+            'id_karyawan' => $id_karyawan,
+            'nama' => $this->request->getVar('nama'),
+            'umur' => $this->request->getVar('umur'),
+            'posisi' => $this->request->getVar('posisi'),
+            'kontak' => $this->request->getVar('kontak'),
+            'alamat' => $this->request->getVar('alamat'),
+        ]);
+
+        session()->setFlashdata('pesan', 'Data berhasil diubah!');
 
         return redirect()->to('/karyawan');
     }

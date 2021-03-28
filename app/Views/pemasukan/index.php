@@ -7,7 +7,8 @@
     <div class="row">
 
         <?= $this->include('layout/sidebar'); ?>
-        <?= $this->include('pemasukan/create'); ?>
+        <?= $this->include('pemasukan/createModal'); ?>
+        <?= $this->include('pemasukan/editModal'); ?>
 
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
@@ -75,9 +76,7 @@
                                     <td>Rp<?= number_format($pem['jumlah'], 2, ',', '.'); ?></td>
                                     <td><?= $pem['id_sumber']; ?></td>
                                     <td>
-                                        <form action="pemasukan/delete/<?= $pem['id_pemasukan']; ?>" method="post">
-                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="fa fa-trash btn btn-danger"></button>
-                                        </form>
+                                        <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editPemasukanModal<?= $pem['id_pemasukan']; ?>" id="btn-edit"></button>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

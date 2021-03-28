@@ -7,8 +7,8 @@
     <div class="row">
 
         <?= $this->include('layout/sidebar'); ?>
-        <?= $this->include('hutang/create'); ?>
-        <?= $this->include('hutang/edit'); ?>
+        <?= $this->include('hutang/createModal'); ?>
+        <?= $this->include('hutang/editModal'); ?>
 
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 

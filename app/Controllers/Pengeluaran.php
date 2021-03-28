@@ -29,6 +29,20 @@ class Pengeluaran extends BaseController
         return redirect()->to('/pengeluaran');
     }
 
+    public function update($id_pengeluaran)
+    {
+        $this->pengeluaranModel->save([
+            'id_pengeluaran' => $id_pengeluaran,
+            'tgl_pengeluaran' => $this->request->getVar('tgl_pengeluaran'),
+            'jumlah' => $this->request->getVar('jumlah'),
+            'id_sumber' => $this->request->getVar('id_sumber')
+        ]);
+
+        session()->setFlashdata('pesan', 'Data berhasil diubah!');
+
+        return redirect()->to('/pengeluaran');
+    }
+
     public function delete($id_pengeluaran)
     {
         $this->pengeluaranModel->delete($id_pengeluaran);

@@ -7,7 +7,8 @@
     <div class="row">
 
         <?= $this->include('layout/sidebar'); ?>
-        <?= $this->include('karyawan/create'); ?>
+        <?= $this->include('karyawan/createModal'); ?>
+        <?= $this->include('karyawan/editModal'); ?>
 
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
@@ -70,9 +71,7 @@
                                     <td><?= $k['kontak']; ?></td>
                                     <td><?= $k['alamat']; ?></td>
                                     <td>
-                                        <form action="karyawan/delete/<?= $k['id_karyawan']; ?>" method="post">
-                                            <button type="submit" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger">Hapus</button>
-                                        </form>
+                                        <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editKaryawanModal<?= $k['id_karyawan']; ?>" id="btn-edit"></button>
                                     </td>
                                 </tr>
                                 <?php $i++; ?>

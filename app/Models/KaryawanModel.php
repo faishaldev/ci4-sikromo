@@ -10,4 +10,17 @@ class KaryawanModel extends Model
     protected $primaryKey = 'id_karyawan';
     protected $useTimestamps = true;
     protected $allowedFields = ['nama', 'umur', 'posisi', 'kontak', 'alamat'];
+
+    public function __construct()
+    {
+        $this->db = db_connect();
+    }
+
+    public function getKaryawan()
+    {
+        $query = $this->db->query("SELECT * FROM karyawan ORDER BY id_karyawan DESC");
+        $results = $query->getResultArray();
+
+        return $results;
+    }
 }
