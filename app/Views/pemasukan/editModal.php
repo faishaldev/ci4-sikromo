@@ -27,8 +27,9 @@
                             <label for="inputSumber" class="">Sumber :</label>
                             <select id="inputSumber" class="form-control" name="id_sumber" required autofocus>
                                 <option value="">--Pilih sumber pemasukan--</option>
-                                <option value="1">1. Pemerintah Daerah Kota Tegal</option>
-                                <option value="2">2. Back BCA Kota Tegal</option>
+                                <?php foreach ($sumberPemasukan as $sPem) : ?>
+                                    <option value="<?= $sPem['id_sumber']; ?>"><?= $sPem['id_sumber'] . '. ' . $sPem['nama']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                         <div class=" modal-footer">

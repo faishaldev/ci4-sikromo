@@ -7,11 +7,13 @@ class Pengeluaran extends BaseController
     public function index()
     {
         $pengeluaran = $this->pengeluaranModel->getPengeluaran();
+        $sumberPengeluaran = $this->sumberPengeluaranModel->findAll();
 
         $data = [
             'currentMenu' => 'pengeluaran',
             'title' => 'Sikromo - Pengeluaran',
-            'pengeluaran' => $pengeluaran
+            'pengeluaran' => $pengeluaran,
+            'sumberPengeluaran' => $sumberPengeluaran
         ];
 
         return view('pengeluaran/index', $data);

@@ -8,7 +8,6 @@ class Dashboard extends BaseController
 {
 	public function index()
 	{
-		$getPemasukanPerBulan = $this->pemasukanModel->getPemasukanPerBulan();
 		$data = [
 			'currentMenu' => 'dashboard',
 
@@ -23,8 +22,6 @@ class Dashboard extends BaseController
 			'pengeluaranBulanIni' => $this->pengeluaranModel->getPengeluaranBulanIni(),
 			'pengeluaranTahunIni' => $this->pengeluaranModel->getPengeluaranTahunIni(),
 			'seluruhPengeluaran' => $this->pengeluaranModel->getSeluruhPengeluaran(),
-
-			'pemasukanPerBulan' => $getPemasukanPerBulan
 		];
 
 		return view('dashboard/index', $data);

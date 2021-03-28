@@ -18,17 +18,7 @@
             </div>
             <!-- Akhir Judul -->
 
-            <div class="card">
-
-                <!-- Sumber Pendapatan -->
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold">Sumber Pendapatan</h6>
-                </div>
-                <div class="card-body">
-                </div>
-                <!-- Akhir Sumber Pendapatan -->
-
-            </div>
+            <?= $this->include('pemasukan/sumberPemasukan'); ?>
 
             <div class="card mt-4">
                 <div class="row">
