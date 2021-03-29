@@ -36,13 +36,7 @@
                     </div>
                     <!-- Akhir Tombol Tambah Hutang -->
 
-                    <!-- Notifikasi Perubahan -->
-                    <?php if (session()->getFlashdata('pesan')) : ?>
-                        <div class="alert alert-success" role="alert">
-                            <?= session()->getFlashdata('pesan'); ?>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Notifikasi Perubahan -->
+                    <?= $this->include('layout/messages'); ?>
 
                 </div>
 
