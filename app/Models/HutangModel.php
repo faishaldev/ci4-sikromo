@@ -11,13 +11,9 @@ class HutangModel extends Model
     protected $useTimestamps = true;
     protected $allowedFields = ['tgl_hutang', 'penghutang', 'jumlah', 'alasan'];
 
-    public function __construct()
-    {
-        $this->db = db_connect();
-    }
-
     public function getHutang()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT * FROM hutang ORDER BY id_hutang DESC");
         $results = $query->getResultArray();
 

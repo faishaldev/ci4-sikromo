@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use Config\App;
 
 class KaryawanModel extends Model
 {
@@ -11,13 +12,9 @@ class KaryawanModel extends Model
     protected $useTimestamps = true;
     protected $allowedFields = ['nama', 'umur', 'posisi', 'kontak', 'alamat'];
 
-    public function __construct()
-    {
-        $this->db = db_connect();
-    }
-
     public function getKaryawan()
     {
+        $db = \Config\Database::connect();
         $query = $this->db->query("SELECT * FROM karyawan ORDER BY id_karyawan DESC");
         $results = $query->getResultArray();
 

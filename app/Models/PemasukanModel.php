@@ -11,13 +11,9 @@ class PemasukanModel extends Model
     protected $useTimestamps = true;
     protected $allowedFields = ['tgl_pemasukan', 'jumlah', 'id_sumber'];
 
-    public function __construct()
-    {
-        $this->db = db_connect();
-    }
-
     public function getPemasukan()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT * FROM pemasukan ORDER BY id_pemasukan DESC");
         $results = $query->getResultArray();
 
@@ -26,6 +22,7 @@ class PemasukanModel extends Model
 
     public function getPemasukanHariIni()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE DAY(tgl_pemasukan) = DAY(CURDATE())");
         $row = $query->getRow();
 
@@ -34,6 +31,7 @@ class PemasukanModel extends Model
 
     public function getPemasukanBulanIni()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE MONTH(tgl_pemasukan) = MONTH(CURDATE())");
         $row = $query->getRow();
 
@@ -42,6 +40,7 @@ class PemasukanModel extends Model
 
     public function getPemasukanTahunIni()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = YEAR(CURDATE())");
         $row = $query->getRow();
 
@@ -50,6 +49,7 @@ class PemasukanModel extends Model
 
     public function getSeluruhPemasukan()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan");
         $row = $query->getRow();
 

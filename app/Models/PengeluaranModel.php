@@ -11,13 +11,9 @@ class PengeluaranModel extends Model
     protected $useTimestamps = true;
     protected $allowedFields = ['tgl_pengeluaran', 'jumlah', 'id_sumber'];
 
-    public function __construct()
-    {
-        $this->db = db_connect();
-    }
-
     public function getPengeluaran()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT * FROM pengeluaran ORDER BY id_pengeluaran DESC");
         $results = $query->getResultArray();
 
@@ -26,6 +22,7 @@ class PengeluaranModel extends Model
 
     public function getPengeluaranHariIni()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT SUM(jumlah) as total FROM pengeluaran WHERE DAY(tgl_pengeluaran) = DAY(CURDATE())");
         $row = $query->getRow();
 
@@ -34,6 +31,7 @@ class PengeluaranModel extends Model
 
     public function getPengeluaranBulanIni()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT SUM(jumlah) as total FROM pengeluaran WHERE MONTH(tgl_pengeluaran) = MONTH(CURDATE())");
         $row = $query->getRow();
 
@@ -42,6 +40,7 @@ class PengeluaranModel extends Model
 
     public function getPengeluaranTahunIni()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT SUM(jumlah) as total FROM pengeluaran WHERE YEAR(tgl_pengeluaran) = YEAR(CURDATE())");
         $row = $query->getRow();
 
@@ -50,6 +49,7 @@ class PengeluaranModel extends Model
 
     public function getSeluruhPengeluaran()
     {
+        $this->db = db_connect();
         $query = $this->db->query("SELECT SUM(jumlah) as total FROM pengeluaran");
         $row = $query->getRow();
 
