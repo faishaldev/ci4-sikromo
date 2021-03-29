@@ -74,7 +74,12 @@
     <script src="<?= base_url('js/jquery.dataTables.min.js'); ?>"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#tables').DataTable();
+            $('#tables').DataTable({
+                columnDefs: [{
+                    targets: 1,
+                    render: $.fn.DataTable.render.number('.', ',', 2, 'Rp')
+                }]
+            });
         });
     </script>
 </body>

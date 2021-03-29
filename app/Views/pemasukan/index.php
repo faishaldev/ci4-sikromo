@@ -63,7 +63,7 @@
                             <?php foreach ($pemasukan as $pem) : ?>
                                 <tr>
                                     <td><?= $pem['tgl_pemasukan']; ?></td>
-                                    <td>Rp<?= number_format($pem['jumlah'], 2, ',', '.'); ?></td>
+                                    <td><?= $pem['jumlah']; ?></td>
                                     <td><?= $pem['id_sumber']; ?></td>
                                     <td>
                                         <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editPemasukanModal<?= $pem['id_pemasukan']; ?>" id="btn-edit"></button>
