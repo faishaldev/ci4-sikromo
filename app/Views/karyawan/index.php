@@ -28,20 +28,13 @@
                     <!-- Akhir Daftar Karyawan -->
 
                     <!-- Tombol Tambah Karyawan -->
-                    <div class="col-md-3 card-header text-center">
-                        <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#karyawanModal">
+                    <div class="col card-header">
+                        <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#karyawanModal" id="tomboltambah">
                             <span data-feather="plus"></span>
                             Tambah Karyawan
                         </button>
                     </div>
                     <!-- Akhir Tombol Karyawan -->
-
-                    <!-- Input Pencarian -->
-                    <div class="card-header input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Masukkan keyword pencarian ..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Cari</button>
-                    </div>
-                    <!-- Akhir Input Pencarian -->
 
                     <!-- Notifikasi Perubahan -->
                     <?php if (session()->getFlashdata('pesan')) : ?>
@@ -55,7 +48,7 @@
 
                 <!-- Tabel Karyawan -->
                 <div class="table-responsive pt-2">
-                    <table class="table table-striped table-sm">
+                    <table class="table table-striped table-sm" id="tables">
                         <thead>
                             <tr>
                                 <th>#</th>

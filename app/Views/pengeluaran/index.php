@@ -40,8 +40,8 @@
                     <!-- Akhir Daftar Transaksi Masuk -->
 
                     <!-- Tombol Tambah Pengeluaran -->
-                    <div class="col-md-3 card-header text-center">
-                        <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#pengeluaranModal">
+                    <div class="col card-header">
+                        <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#pengeluaranModal" id="tomboltambah">
                             <span data-feather="plus"></span>
                             Tambah Pengeluaran
                         </button>
@@ -60,7 +60,7 @@
 
                 <!-- Tabel Daftar Transaksi Keluar -->
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
+                    <table class="table table-striped table-sm" id="tables">
                         <thead>
                             <tr>
                                 <th>Tanggal</th>

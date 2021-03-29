@@ -28,8 +28,8 @@
                     <!-- Akhir Daftar Hutang -->
 
                     <!-- Tombol Tambah Hutang -->
-                    <div class="col-md-3 card-header text-center">
-                        <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#hutangModal">
+                    <div class="col card-header">
+                        <button type="button" class="btn btn-success plus" data-bs-toggle="modal" data-bs-target="#hutangModal" id="tomboltambah">
                             <span data-feather="plus"></span>
                             Tambah Hutang
                         </button>
@@ -48,7 +48,7 @@
 
                 <!-- Tabel Hutang -->
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
+                    <table class="table table-striped table-sm" id="tables">
                         <thead>
                             <tr>
                                 <th scope="col">Tanggal</th>

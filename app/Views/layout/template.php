@@ -17,6 +17,8 @@
     <link href="<?= base_url('css/bootstrap.min.css') ?>" rel="stylesheet">
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('fontawesome-free-5.15.3-web/css/all.min.css') ?>" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
 
     <style>
         .bd-placeholder-img {
@@ -31,6 +33,26 @@
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
+        }
+
+        .dataTables_length {
+            margin-left: 1rem;
+        }
+
+        .dataTables_filter {
+            margin-right: 1rem;
+        }
+
+        .dataTables_info {
+            margin-left: 1rem;
+        }
+
+        .dataTables_paginate {
+            margin-right: 1rem;
+        }
+
+        #tomboltambah {
+            float: right;
         }
     </style>
 
@@ -49,6 +71,12 @@
     <script src="<?= base_url('js/dashboard.js') ?>"></script>
     <script src="<?= base_url('js/jquery.min.js'); ?>"></script>
     <script src="<?= base_url('js/modal.js'); ?>"></script>
+    <script src="<?= base_url('js/jquery.dataTables.min.js'); ?>"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#tables').DataTable();
+        });
+    </script>
 </body>
 
 </html>
