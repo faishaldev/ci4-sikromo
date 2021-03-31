@@ -11,7 +11,7 @@
                 </div>
                 <!-- Akhir Judul -->
 
-                <!-- Form Tambah Hutang -->
+                <!-- Form Edit Karyawan -->
                 <div class="modal-body">
                     <form action="/karyawan/update/<?= $k['id_karyawan']; ?>" method="post">
                         <?= csrf_field(); ?>
@@ -47,7 +47,7 @@
                 </div>
 
             </div>
-            <!-- Akhir Form Tambah Hutang -->
+            <!-- Akhir Form Edit Karyawan -->
 
         </div>
     </div>

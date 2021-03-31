@@ -28,6 +28,13 @@
             </li>
             <hr>
             <li class="nav-item">
+                <a href="/sumber" class="nav-link <?= ($currentMenu == 'sumber') ? 'active' : ''; ?>" aria-current="page">
+                    <span data-feather="database"></span>
+                    Sumber
+                </a>
+            </li>
+            <hr>
+            <li class="nav-item">
                 <a href="/hutang" class="nav-link <?= ($currentMenu == 'hutang') ? 'active' : ''; ?>">
                     <span data-feather="dollar-sign"></span>
                     Hutang

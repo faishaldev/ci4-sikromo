@@ -24,10 +24,10 @@
                     </div>
                     <div class="form-group">
                         <label for="inputSumber" class="">Sumber :</label>
-                        <select id="inputSumber" class="form-control" name="id_sumber" required autofocus>
+                        <select id="inputSumber" class="form-select" name="id_sumber" required autofocus>
                             <option value="">--Pilih sumber pemasukan--</option>
                             <?php foreach ($sumberPemasukan as $sPem) : ?>
-                                <option value="<?= $sPem['id_sumber']; ?>"><?= $sPem['id_sumber'] . '. ' . $sPem['nama']; ?></option>
+                                <option value="<?= $sPem['id_sumber_pemasukan']; ?>"><?= $sPem['id_sumber_pemasukan'] . '. ' . $sPem['nama']; ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>

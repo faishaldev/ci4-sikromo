@@ -54,6 +54,10 @@
         #tomboltambah {
             float: right;
         }
+
+        #sumberPemasukan {
+            float: right;
+        }
     </style>
 
 
@@ -74,7 +78,7 @@
     <script src="<?= base_url('js/jquery.dataTables.min.js'); ?>"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#tables').DataTable({
+            $('.tables1,.tables2').DataTable({
                 columnDefs: [{
                     targets: 1,
                     render: $.fn.DataTable.render.number('.', ',', 2, 'Rp')

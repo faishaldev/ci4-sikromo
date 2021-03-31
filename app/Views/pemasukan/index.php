@@ -1,6 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
+
 <?= $this->include('layout/navbar'); ?>
 
 <div class="container-fluid">
@@ -17,8 +18,6 @@
                 <h1 class="h2">Pemasukan</h1>
             </div>
             <!-- Akhir Judul -->
-
-            <?= $this->include('pemasukan/sumberPemasukan'); ?>
 
             <div class="card mt-4">
                 <div class="row">
@@ -42,33 +41,8 @@
 
                 </div>
 
-                <!-- Tabel Daftar Transaksi Masuk -->
-                <div class="table-responsive">
-                    <table class="table table-striped table-sm" id="tables">
-                        <thead>
-                            <tr>
-                                <th>Tanggal</th>
-                                <th>Jumlah</th>
-                                <th>Sumber</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($pemasukan as $pem) : ?>
-                                <tr>
-                                    <td><?= $pem['tgl_pemasukan']; ?></td>
-                                    <td><?= $pem['jumlah']; ?></td>
-                                    <td><?= $pem['id_sumber']; ?></td>
-                                    <td>
-                                        <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editPemasukanModal<?= $pem['id_pemasukan']; ?>" id="btn-edit"></button>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                    <!-- Akhir Tabel Daftar Transaksi Masuk -->
+                <?= $this->include('pemasukan/tabelPemasukan'); ?>
 
-                </div>
             </div>
         </div>
     </div>

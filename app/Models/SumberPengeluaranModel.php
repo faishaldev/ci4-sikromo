@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class SumberPengeluaranModel extends Model
 {
     protected $table = 'sumber_pengeluaran';
-    protected $primaryKey = 'id_sumber';
+    protected $primaryKey = 'id_sumber_pengeluaran';
     protected $useTimestamps = true;
     protected $allowedFields = ['nama'];
 }

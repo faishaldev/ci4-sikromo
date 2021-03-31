@@ -1,6 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
+
 <?= $this->include('layout/navbar'); ?>
 
 <div class="container-fluid">
