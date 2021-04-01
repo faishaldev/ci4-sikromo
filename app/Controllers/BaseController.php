@@ -47,7 +47,5 @@ class BaseController extends Controller
 		// E.g.: $this->session = \Config\Services::session();
 		$this->pemasukanModel = new \App\Models\PemasukanModel();
 		$this->pengeluaranModel = new \App\Models\PengeluaranModel();
-		$this->sumberPemasukanModel = new \App\Models\SumberPemasukanModel();
-		$this->sumberPengeluaranModel = new \App\Models\SumberPengeluaranModel();
 	}
 }

@@ -9,13 +9,15 @@ class Pemasukan extends BaseController
     public function index()
     {
         $pemasukan = $this->pemasukanModel->getPemasukan();
-        $sumberPemasukan = $this->sumberPemasukanModel->findAll();
+        $pemasukanPerBulan = $this->pemasukanModel->getPemasukanPerBulan();
+        $pengeluaranPerBulan = $this->pengeluaranModel->getPengeluaranPerBulan();
 
         $data = [
             'currentMenu' => 'pemasukan',
             'title' => 'Sikromo - Pemasukan',
             'pemasukan' => $pemasukan,
-            'sumberPemasukan' => $sumberPemasukan
+            'pemasukanPerBulan' => $pemasukanPerBulan,
+            'pengeluaranPerBulan' => $pengeluaranPerBulan,
         ];
 
         return view('pemasukan/index', $data);
@@ -26,7 +28,7 @@ class Pemasukan extends BaseController
         $this->pemasukanModel->save([
             'tgl_pemasukan' => $this->request->getVar('tgl_pemasukan'),
             'jumlah' => $this->request->getVar('jumlah'),
-            'id_sumber' => $this->request->getVar('id_sumber')
+            'sumber' => $this->request->getVar('sumber')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
@@ -40,7 +42,7 @@ class Pemasukan extends BaseController
             'id_pemasukan' => $id_pemasukan,
             'tgl_pemasukan' => $this->request->getVar('tgl_pemasukan'),
             'jumlah' => $this->request->getVar('jumlah'),
-            'id_sumber' => $this->request->getVar('id_sumber')
+            'sumber' => $this->request->getVar('sumber')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah!');

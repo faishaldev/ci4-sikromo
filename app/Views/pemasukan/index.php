@@ -35,7 +35,7 @@
                             Tambah Pemasukan
                         </button>
                     </div>
-                    <!-- Akhir Tombok Button Tambah -->
+                    <!-- Akhir Tombol Tambah Pemasukan -->
 
                     <?= $this->include('layout/messages'); ?>
 

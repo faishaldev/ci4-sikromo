@@ -14,7 +14,7 @@
                 <tr>
                     <td><?= $pen['tgl_pengeluaran']; ?></td>
                     <td><?= $pen['jumlah']; ?></td>
-                    <td><?= $pen['id_sumber']; ?></td>
+                    <td><?= $pen['sumber']; ?></td>
                     <td>
                         <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editPengeluaranModal<?= $pen['id_pengeluaran']; ?>" id="btn-edit"></button>
                     </td>

@@ -8,7 +8,9 @@ class Laporan extends BaseController
     {
         $data = [
             'currentMenu' => 'laporan',
-            'title' => 'Sikromo - Laporan'
+            'title' => 'Sikromo - Laporan',
+            'pemasukanPerBulan' => $this->pemasukanModel->getPemasukanPerBulan(),
+            'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan()
         ];
 
         return view('laporan/index', $data);

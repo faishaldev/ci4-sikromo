@@ -17,7 +17,9 @@ class Hutang extends BaseController
         $data = [
             'currentMenu' => 'hutang',
             'title' => 'Sikromo - Hutang',
-            'hutang' => $this->hutangModel->getHutang()
+            'hutang' => $this->hutangModel->getHutang(),
+            'pemasukanPerBulan' => $this->pemasukanModel->getPemasukanPerBulan(),
+            'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan()
         ];
 
         return view('hutang/index', $data);

@@ -13,6 +13,9 @@ class Dashboard extends BaseController
 
 			'title' => "Sikromo - Dashboard",
 
+			'pemasukanPerBulan' => $this->pemasukanModel->getPemasukanPerBulan(),
+			'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan(),
+
 			'pemasukanHariIni' => $this->pemasukanModel->getPemasukanHariIni(),
 			'pemasukanBulanIni' => $this->pemasukanModel->getPemasukanBulanIni(),
 			'pemasukanTahunIni' => $this->pemasukanModel->getPemasukanTahunIni(),

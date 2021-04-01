@@ -7,13 +7,15 @@ class Pengeluaran extends BaseController
     public function index()
     {
         $pengeluaran = $this->pengeluaranModel->getPengeluaran();
-        $sumberPengeluaran = $this->sumberPengeluaranModel->findAll();
+        $pemasukanPerBulan = $this->pemasukanModel->getPemasukanPerBulan();
+        $pengeluaranPerBulan = $this->pengeluaranModel->getPengeluaranPerBulan();
 
         $data = [
             'currentMenu' => 'pengeluaran',
             'title' => 'Sikromo - Pengeluaran',
             'pengeluaran' => $pengeluaran,
-            'sumberPengeluaran' => $sumberPengeluaran
+            'pemasukanPerBulan' => $pemasukanPerBulan,
+            'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan()
         ];
 
         return view('pengeluaran/index', $data);
@@ -24,7 +26,7 @@ class Pengeluaran extends BaseController
         $this->pengeluaranModel->save([
             'tgl_pengeluaran' => $this->request->getVar('tgl_pengeluaran'),
             'jumlah' => $this->request->getVar('jumlah'),
-            'id_sumber' => $this->request->getVar('id_sumber')
+            'sumber' => $this->request->getVar('sumber')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
@@ -38,7 +40,7 @@ class Pengeluaran extends BaseController
             'id_pengeluaran' => $id_pengeluaran,
             'tgl_pengeluaran' => $this->request->getVar('tgl_pengeluaran'),
             'jumlah' => $this->request->getVar('jumlah'),
-            'id_sumber' => $this->request->getVar('id_sumber')
+            'sumber' => $this->request->getVar('sumber')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah!');

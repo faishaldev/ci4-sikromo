@@ -33,8 +33,6 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Dashboard::index');
 
-$routes->get('/sumber', 'Sumber::index');
-
 $routes->get('/pemasukan', 'Pemasukan::index');
 $routes->delete('/pemasukan/(:num)', 'Pemasukan::delete/$1');
 $routes->get('/pemasukan/(:any)', 'Pemasukan::index');

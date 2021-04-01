@@ -19,7 +19,9 @@ class Karyawan extends BaseController
         $data = [
             'currentMenu' => 'karyawan',
             'title' => 'Sikromo - Karyawan',
-            'karyawan' => $karyawan
+            'karyawan' => $karyawan,
+            'pemasukanPerBulan' => $this->pemasukanModel->getPemasukanPerBulan(),
+            'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan()
         ];
 
         return view('karyawan/index', $data);
