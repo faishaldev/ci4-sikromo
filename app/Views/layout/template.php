@@ -78,60 +78,8 @@
     <script src="<?= base_url('js/modal.js'); ?>"></script>
     <script src="<?= base_url('js/jquery.dataTables.min.js'); ?>"></script>
 
-    <!-- Script Datatables -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.tables1,.tables2').DataTable({
-                columnDefs: [{
-                    targets: 1,
-                    render: $.fn.DataTable.render.number('.', ',', 2, 'Rp')
-                }]
-            });
-        });
-    </script>
-    <!-- Akhir Script Datatables -->
-
-    <!-- Script Clustered Bas Chart -->
-    <script>
-        var ctx = document.getElementById('Chart');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November',
-                    'Desember'
-                ],
-                datasets: [{
-                        label: 'Pemasukan',
-                        data: [<?php foreach ($pemasukanPerBulan as $pemPerBul) {
-                                    echo "'" . $pemPerBul['SUM(jumlah)'] . "', ";
-                                } ?>],
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Pengeluaran',
-                        data: [<?php foreach ($pengeluaranPerBulan as $penPerBul) {
-                                    echo "'" . $penPerBul['SUM(jumlah)'] . "', ";
-                                } ?>],
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 1
-                    }
-                ]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-    </script>
-    <!-- Akhir Script Clustered Bar Chart -->
+    <?= $this->include('layout/datatablesScript'); ?>
+    <?= $this->include('layout/chartScript'); ?>
 
 </body>
 
