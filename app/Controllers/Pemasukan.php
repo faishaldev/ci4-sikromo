@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\HTTP\Request;
 use Myth\Auth\Commands\Publish;
 
 class Pemasukan extends BaseController

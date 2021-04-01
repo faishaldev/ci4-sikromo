@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\HTTP\Request;
+use Myth\Auth\Commands\Publish;
 use App\Models\KaryawanModel;
 
 class Karyawan extends BaseController
@@ -19,7 +21,9 @@ class Karyawan extends BaseController
         $data = [
             'currentMenu' => 'karyawan',
             'title' => 'Sikromo - Karyawan',
+
             'karyawan' => $karyawan,
+
             'pemasukanPerBulan' => $this->pemasukanModel->getPemasukanPerBulan(),
             'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan()
         ];

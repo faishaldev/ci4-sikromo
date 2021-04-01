@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\HTTP\Request;
+use Myth\Auth\Commands\Publish;
+
 class Pengeluaran extends BaseController
 {
     public function index()
@@ -15,7 +18,7 @@ class Pengeluaran extends BaseController
             'title' => 'Sikromo - Pengeluaran',
             'pengeluaran' => $pengeluaran,
             'pemasukanPerBulan' => $pemasukanPerBulan,
-            'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan()
+            'pengeluaranPerBulan' => $pengeluaranPerBulan
         ];
 
         return view('pengeluaran/index', $data);

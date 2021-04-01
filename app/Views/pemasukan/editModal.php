@@ -35,10 +35,9 @@
                     </form>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
+                <!-- Akhir Form Edit Pemasukan -->
 
             </div>
-            <!-- Akhir Form Edit Pemasukan -->
-
         </div>
     </div>
     </div>

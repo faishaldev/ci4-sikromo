@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
-use Config\App;
 
 class KaryawanModel extends Model
 {

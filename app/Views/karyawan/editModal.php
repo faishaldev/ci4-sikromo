@@ -45,12 +45,11 @@
 
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
+                <!-- Akhir Form Edit Karyawan -->
 
             </div>
-            <!-- Akhir Form Edit Karyawan -->
-
         </div>
     </div>
     </div>
-    <!-- Akhir Modal -->
 <?php endforeach; ?>
+<!-- Akhir Modal -->

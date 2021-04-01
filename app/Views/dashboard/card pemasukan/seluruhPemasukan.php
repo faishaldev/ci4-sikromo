@@ -4,8 +4,7 @@
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-grey text-uppercase mb-1">
-                        Seluruh Pemasukan</div>
+                    <div class="text-xs font-weight-bold text-grey text-uppercase mb-1">Seluruh Pemasukan</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">Rp<?= number_format($seluruhPemasukan, 2, ',', '.'); ?></div>
                 </div>
                 <div class="col-auto">

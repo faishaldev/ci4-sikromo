@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\HTTP\Request;
+use Myth\Auth\Commands\Publish;
 use App\Models\HutangModel;
 
 class Hutang extends BaseController
@@ -14,10 +16,14 @@ class Hutang extends BaseController
 
     public function index()
     {
+        $hutang = $this->hutangModel->getHutang();
+
         $data = [
             'currentMenu' => 'hutang',
             'title' => 'Sikromo - Hutang',
-            'hutang' => $this->hutangModel->getHutang(),
+
+            'hutang' => $hutang,
+
             'pemasukanPerBulan' => $this->pemasukanModel->getPemasukanPerBulan(),
             'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan()
         ];

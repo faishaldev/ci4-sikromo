@@ -17,6 +17,7 @@
     <link href="<?= base_url('css/bootstrap.min.css') ?>" rel="stylesheet">
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('fontawesome-free-5.15.3-web/css/all.min.css') ?>" rel="stylesheet" type="text/css">
+    <!-- Datatable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
 
@@ -58,10 +59,6 @@
         #sumberPemasukan {
             float: right;
         }
-
-        #tombolwaktu {
-            float: right;
-        }
     </style>
 
 
@@ -80,6 +77,8 @@
     <script src="<?= base_url('js/jquery.min.js'); ?>"></script>
     <script src="<?= base_url('js/modal.js'); ?>"></script>
     <script src="<?= base_url('js/jquery.dataTables.min.js'); ?>"></script>
+
+    <!-- Script Datatables -->
     <script type="text/javascript">
         $(document).ready(function() {
             $('.tables1,.tables2').DataTable({
@@ -90,12 +89,17 @@
             });
         });
     </script>
+    <!-- Akhir Script Datatables -->
+
+    <!-- Script Clustered Bas Chart -->
     <script>
         var ctx = document.getElementById('Chart');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+                labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November',
+                    'Desember'
+                ],
                 datasets: [{
                         label: 'Pemasukan',
                         data: [<?php foreach ($pemasukanPerBulan as $pemPerBul) {
@@ -127,6 +131,8 @@
             }
         });
     </script>
+    <!-- Akhir Script Clustered Bar Chart -->
+
 </body>
 
 </html>
