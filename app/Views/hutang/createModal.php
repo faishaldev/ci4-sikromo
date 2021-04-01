@@ -24,7 +24,12 @@
                     </div>
                     <div class="form-group">
                         <label for="inputJumlah" class="">Jumlah :</label>
-                        <input type="number" id="inputJumlah" class="form-control" name="jumlah" required autofocus>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rp</div>
+                            </div>
+                            <input type="number" id="inputJumlah" class="form-control" name="jumlah" required autofocus>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="inputAlasan" class="">Alasan :</label>
