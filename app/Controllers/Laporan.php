@@ -14,7 +14,10 @@ class Laporan extends BaseController
             'title'                 => 'Sikromo - Laporan',
 
             'pemasukanPerBulan'     => $this->pemasukanModel->getPemasukanPerBulan(),
-            'pengeluaranPerBulan'   => $this->pengeluaranModel->getPengeluaranPerBulan()
+            'pemasukanPerTahun'     => $this->pemasukanModel->getPemasukanPerTahun(),
+
+            'pengeluaranPerBulan'   => $this->pengeluaranModel->getPengeluaranPerBulan(),
+            'pengeluaranPerTahun'   => $this->pengeluaranModel->getPengeluaranPerTahun()
         ];
 
         return view('laporan/index', $data);

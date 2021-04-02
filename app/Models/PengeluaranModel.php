@@ -90,4 +90,16 @@ class PengeluaranModel extends Model
 
         return $results;
     }
+
+    public function getPengeluaranPerTahun()
+    {
+        $tahun      = @$_POST['tahun'];
+        $tahun      = ($tahun ? $tahun : date('Y'));
+        $this->db   = db_connect();
+        $sql        = "SELECT SUM(jumlah) as total FROM pengeluaran WHERE YEAR(tgl_pengeluaran) = '" . $tahun . "'";
+        $query      = $this->db->query($sql);
+        $results    = $query->getRow();
+
+        return $results->total;
+    }
 }

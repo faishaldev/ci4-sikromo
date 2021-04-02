@@ -98,8 +98,8 @@ class PemasukanModel extends Model
         $this->db   = db_connect();
         $sql        = "SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = '" . $tahun . "'";
         $query      = $this->db->query($sql);
-        $results    = $query->getResultArray();
+        $results    = $query->getRow();
 
-        return $results;
+        return $results->total;
     }
 }

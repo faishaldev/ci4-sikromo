@@ -23,7 +23,10 @@ class Hutang extends BaseController
             'hutang'                    => $this->hutangModel->getHutang(),
 
             'pemasukanPerBulan'         => $this->pemasukanModel->getPemasukanPerBulan(),
-            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan()
+            'pemasukanPerTahun'         => $this->pemasukanModel->getPemasukanPerTahun(),
+
+            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan(),
+            'pengeluaranPerTahun'       => $this->pengeluaranModel->getPengeluaranPerTahun()
         ];
 
         return view('hutang/index', $data);

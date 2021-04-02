@@ -23,7 +23,10 @@ class Karyawan extends BaseController
             'karyawan'                  => $this->karywanModel->getKaryawan(),
 
             'pemasukanPerBulan'         => $this->pemasukanModel->getPemasukanPerBulan(),
-            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan()
+            'pemasukanPerTahun'         => $this->pemasukanModel->getPemasukanPerTahun(),
+
+            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan(),
+            'pengeluaranPerTahun'       => $this->pengeluaranModel->getPengeluaranPerTahun()
         ];
 
         return view('karyawan/index', $data);

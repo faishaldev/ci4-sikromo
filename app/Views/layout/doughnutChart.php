@@ -1,34 +1,20 @@
 <!-- Script Doughnut Bar Chart -->
 <script>
-    var ctx = document.getElementById('DoughnutChart');
-    var myChart = new Chart(ctx, {
+    var ctx = document.getElementById("DoughnutChart");
+    var myPieChart = new Chart(ctx, {
         type: 'doughnut',
-        data = {
-            labels: ['Pemasukan', 'Pengeluaran'],
+        data: {
+            labels: ["Pemasukan", "Pengeluaran"],
             datasets: [{
-                data: [10000, 5000],
-                backgroundColor: ['#4e73df', '#e74a3b'],
-                hoverBackgroundColor: ['#2e59d9', '#e74a3b'],
-                hoverBorderColor: "rgba(234, 236, 244, 1)"
+                data: [<?= $pemasukanPerTahun; ?>, <?= $pengeluaranPerTahun; ?>],
+                backgroundColor: ['rgba(54, 162, 235, 0.2)', 'rgba(255, 99, 132, 0.2)'],
+                borderColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)'],
+                borderWidth: 1
             }],
         },
         options: {
-            maintainAspectRatio: false,
-            tooltips: {
-                backgroundColor: "rgb(255,255,255)",
-                bodyFontColor: "#858796",
-                borderColor: '#dddfeb',
-                borderWidth: 1,
-                xPadding: 15,
-                yPadding: 15,
-                displayColors: false,
-                caretPadding: 10,
-            },
-            legend: {
-                display: false
-            },
-            cutoutPercentage: 80,
-        },
+            cutoutPercentage: 75
+        }
     });
 </script>
 <!-- Akhir Script Doughnut Bar Chart -->

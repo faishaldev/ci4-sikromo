@@ -76,7 +76,7 @@
 
     <script src="<?= base_url('js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= base_url('js/feather.min.js') ?>"></script>
-    <script src="<?= base_url('js/Chart.min.js') ?>"></script>
+    <script src="<?= base_url('js/chart.min.js') ?>"></script>
     <script src="<?= base_url('js/dashboard.js') ?>"></script>
     <script src="<?= base_url('js/jquery.min.js'); ?>"></script>
     <script src="<?= base_url('js/modal.js'); ?>"></script>
@@ -84,6 +84,7 @@
 
     <?= $this->include('layout/datatables'); ?>
     <?= $this->include('layout/barChart'); ?>
+    <?= $this->include('layout/doughnutChart'); ?>
 
 </body>
 

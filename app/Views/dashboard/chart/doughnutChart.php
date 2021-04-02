@@ -29,7 +29,7 @@
             <!-- Akhir Tombol Tahun -->
 
             <!-- Grafik Lingkaran -->
-            <canvas class="my-4 w-100" id="DoughnutChart" width="410" height="380"></canvas>
+            <canvas class="my-4 w-100" id="DoughnutChart" width="437" height="380"></canvas>
             <!-- Grafik Lingkaran -->
 
         </div>

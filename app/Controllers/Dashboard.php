@@ -26,7 +26,8 @@ class Dashboard extends BaseController
 			'pemasukanPerBulan'			=> $this->pemasukanModel->getPemasukanPerBulan(),
 			'pemasukanPerTahun'			=> $this->pemasukanModel->getPemasukanPerTahun(),
 
-			'pengeluaranPerBulan'		=> $this->pengeluaranModel->getPengeluaranPerBulan()
+			'pengeluaranPerBulan'		=> $this->pengeluaranModel->getPengeluaranPerBulan(),
+			'pengeluaranPerTahun'		=> $this->pengeluaranModel->getPengeluaranPerTahun()
 		];
 
 		return view('dashboard/index', $data);

@@ -15,7 +15,10 @@ class Pemasukan extends BaseController
 
             'pemasukan'                 => $this->pemasukanModel->getPemasukan(),
             'pemasukanPerBulan'         => $this->pemasukanModel->getPemasukanPerBulan(),
-            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan()
+            'pemasukanPerTahun'         => $this->pemasukanModel->getPemasukanPerTahun(),
+
+            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan(),
+            'pengeluaranPerTahun'       => $this->pengeluaranModel->getPengeluaranPerTahun()
         ];
 
         return view('pemasukan/index', $data);
