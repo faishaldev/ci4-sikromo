@@ -10,8 +10,8 @@ class Dashboard extends BaseController
 	public function index()
 	{
 		$data = [
-			'currentMenu' => 'dashboard',
-			'title' => "Sikromo - Dashboard",
+			'currentMenu'				=> 'dashboard',
+			'title'						=> "Sikromo - Dashboard",
 
 			'pemasukanHariIni'			=> $this->pemasukanModel->getPemasukanHariIni(),
 			'pemasukanBulanIni'			=> $this->pemasukanModel->getPemasukanBulanIni(),
@@ -24,6 +24,8 @@ class Dashboard extends BaseController
 			'seluruhPengeluaran'		=> $this->pengeluaranModel->getSeluruhPengeluaran(),
 
 			'pemasukanPerBulan'			=> $this->pemasukanModel->getPemasukanPerBulan(),
+			'pemasukanPerTahun'			=> $this->pemasukanModel->getPemasukanPerTahun(),
+
 			'pengeluaranPerBulan'		=> $this->pengeluaranModel->getPengeluaranPerBulan()
 		];
 

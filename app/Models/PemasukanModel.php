@@ -6,52 +6,52 @@ use CodeIgniter\Model;
 
 class PemasukanModel extends Model
 {
-    protected $table = 'pemasukan';
-    protected $primaryKey = 'id_pemasukan';
-    protected $useTimestamps = true;
-    protected $allowedFields = ['tgl_pemasukan', 'jumlah', 'sumber'];
+    protected $table            = 'pemasukan';
+    protected $primaryKey       = 'id_pemasukan';
+    protected $useTimestamps    = true;
+    protected $allowedFields    = ['tgl_pemasukan', 'jumlah', 'sumber'];
 
     public function getPemasukan()
     {
-        $this->db = db_connect();
-        $query = $this->db->query("SELECT * FROM pemasukan ORDER BY id_pemasukan DESC");
-        $results = $query->getResultArray();
+        $this->db   = db_connect();
+        $query      = $this->db->query("SELECT * FROM pemasukan ORDER BY id_pemasukan DESC");
+        $results    = $query->getResultArray();
 
         return $results;
     }
 
     public function getPemasukanHariIni()
     {
-        $this->db = db_connect();
-        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE tgl_pemasukan = CURDATE()");
-        $row = $query->getRow();
+        $this->db   = db_connect();
+        $query      = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE tgl_pemasukan = CURDATE()");
+        $row        = $query->getRow();
 
         return $row->total;
     }
 
     public function getPemasukanBulanIni()
     {
-        $this->db = db_connect();
-        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE MONTH(tgl_pemasukan) = MONTH(CURDATE()) && YEAR(tgl_pemasukan) = YEAR(CURDATE())");
-        $row = $query->getRow();
+        $this->db   = db_connect();
+        $query      = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE MONTH(tgl_pemasukan) = MONTH(CURDATE()) && YEAR(tgl_pemasukan) = YEAR(CURDATE())");
+        $row        = $query->getRow();
 
         return $row->total;
     }
 
     public function getPemasukanTahunIni()
     {
-        $this->db = db_connect();
-        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = YEAR(CURDATE())");
-        $row = $query->getRow();
+        $this->db   = db_connect();
+        $query      = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = YEAR(CURDATE())");
+        $row        = $query->getRow();
 
         return $row->total;
     }
 
     public function getSeluruhPemasukan()
     {
-        $this->db = db_connect();
-        $query = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan");
-        $row = $query->getRow();
+        $this->db   = db_connect();
+        $query      = $this->db->query("SELECT SUM(jumlah) as total FROM pemasukan");
+        $row        = $query->getRow();
 
         return $row->total;
     }
@@ -85,6 +85,18 @@ class PemasukanModel extends Model
                     UNION ALL
                     SELECT SUM(jumlah) as total, '12' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '12' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
                     ";
+        $query      = $this->db->query($sql);
+        $results    = $query->getResultArray();
+
+        return $results;
+    }
+
+    public function getPemasukanPerTahun()
+    {
+        $tahun      = @$_POST['tahun'];
+        $tahun      = ($tahun ? $tahun : date('Y'));
+        $this->db   = db_connect();
+        $sql        = "SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = '" . $tahun . "'";
         $query      = $this->db->query($sql);
         $results    = $query->getResultArray();
 

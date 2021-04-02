@@ -35,7 +35,8 @@
             </div>
             <div class="row">
 
-                <?= $this->include('dashboard/grafikPerbandingan'); ?>
+                <?= $this->include('dashboard/chart/barChart'); ?>
+                <?= $this->include('dashboard/chart/doughnutChart'); ?>
 
             </div>
         </main>
