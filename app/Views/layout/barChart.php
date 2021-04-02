@@ -1,4 +1,4 @@
-<!-- Script Clustered Bas Chart -->
+<!-- Script Clustered Bar Chart -->
 <script>
     function addCommas(nStr) {
         nStr += '';
@@ -11,17 +11,15 @@
         }
         return x1 + x2;
     }
-    var ctx = document.getElementById('Chart');
+    var ctx = document.getElementById('BarChart');
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November',
-                'Desember'
-            ],
+            labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
             datasets: [{
                     label: 'Pemasukan',
                     data: [<?php foreach ($pemasukanPerBulan as $pemPerBul) {
-                                echo "'" . $pemPerBul['SUM(jumlah)'] . "', ";
+                                echo "'" . $pemPerBul['total'] . "', ";
                             } ?>],
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgba(54, 162, 235, 1)',
@@ -30,7 +28,7 @@
                 {
                     label: 'Pengeluaran',
                     data: [<?php foreach ($pengeluaranPerBulan as $penPerBul) {
-                                echo "'" . $penPerBul['SUM(jumlah)'] . "', ";
+                                echo "'" . $penPerBul['total'] . "', ";
                             } ?>],
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgba(255, 99, 132, 1)',

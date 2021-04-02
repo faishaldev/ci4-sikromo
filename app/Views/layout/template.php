@@ -59,6 +59,10 @@
         #sumberPemasukan {
             float: right;
         }
+
+        #tombolwaktu {
+            float: right;
+        }
     </style>
 
 
@@ -78,8 +82,8 @@
     <script src="<?= base_url('js/modal.js'); ?>"></script>
     <script src="<?= base_url('js/jquery.dataTables.min.js'); ?>"></script>
 
-    <?= $this->include('layout/datatablesScript'); ?>
-    <?= $this->include('layout/chartScript'); ?>
+    <?= $this->include('layout/datatables'); ?>
+    <?= $this->include('layout/barChart'); ?>
 
 </body>
 

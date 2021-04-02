@@ -9,16 +9,13 @@ class Pemasukan extends BaseController
 {
     public function index()
     {
-        $pemasukan = $this->pemasukanModel->getPemasukan();
-        $pemasukanPerBulan = $this->pemasukanModel->getPemasukanPerBulan();
-        $pengeluaranPerBulan = $this->pengeluaranModel->getPengeluaranPerBulan();
-
         $data = [
-            'currentMenu' => 'pemasukan',
-            'title' => 'Sikromo - Pemasukan',
-            'pemasukan' => $pemasukan,
-            'pemasukanPerBulan' => $pemasukanPerBulan,
-            'pengeluaranPerBulan' => $pengeluaranPerBulan,
+            'currentMenu'               => 'pemasukan',
+            'title'                     => 'Sikromo - Pemasukan',
+
+            'pemasukan'                 => $this->pemasukanModel->getPemasukan(),
+            'pemasukanPerBulan'         => $this->pemasukanModel->getPemasukanPerBulan(),
+            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan()
         ];
 
         return view('pemasukan/index', $data);
@@ -28,8 +25,8 @@ class Pemasukan extends BaseController
     {
         $this->pemasukanModel->save([
             'tgl_pemasukan' => $this->request->getVar('tgl_pemasukan'),
-            'jumlah' => $this->request->getVar('jumlah'),
-            'sumber' => $this->request->getVar('sumber')
+            'jumlah'        => $this->request->getVar('jumlah'),
+            'sumber'        => $this->request->getVar('sumber')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
@@ -40,10 +37,10 @@ class Pemasukan extends BaseController
     public function update($id_pemasukan)
     {
         $this->pemasukanModel->save([
-            'id_pemasukan' => $id_pemasukan,
+            'id_pemasukan'  => $id_pemasukan,
             'tgl_pemasukan' => $this->request->getVar('tgl_pemasukan'),
-            'jumlah' => $this->request->getVar('jumlah'),
-            'sumber' => $this->request->getVar('sumber')
+            'jumlah'        => $this->request->getVar('jumlah'),
+            'sumber'        => $this->request->getVar('sumber')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah!');

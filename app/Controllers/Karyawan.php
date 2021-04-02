@@ -16,16 +16,14 @@ class Karyawan extends BaseController
 
     public function index()
     {
-        $karyawan = $this->karywanModel->getKaryawan();
-
         $data = [
-            'currentMenu' => 'karyawan',
-            'title' => 'Sikromo - Karyawan',
+            'currentMenu'               => 'karyawan',
+            'title'                     => 'Sikromo - Karyawan',
 
-            'karyawan' => $karyawan,
+            'karyawan'                  => $this->karywanModel->getKaryawan(),
 
-            'pemasukanPerBulan' => $this->pemasukanModel->getPemasukanPerBulan(),
-            'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan()
+            'pemasukanPerBulan'         => $this->pemasukanModel->getPemasukanPerBulan(),
+            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan()
         ];
 
         return view('karyawan/index', $data);
@@ -34,11 +32,11 @@ class Karyawan extends BaseController
     public function save()
     {
         $this->karywanModel->save([
-            'nama' => $this->request->getVar('nama'),
-            'umur' => $this->request->getVar('umur'),
-            'posisi' => $this->request->getVar('posisi'),
-            'kontak' => $this->request->getVar('kontak'),
-            'alamat' => $this->request->getVar('alamat'),
+            'nama'      => $this->request->getVar('nama'),
+            'umur'      => $this->request->getVar('umur'),
+            'posisi'    => $this->request->getVar('posisi'),
+            'kontak'    => $this->request->getVar('kontak'),
+            'alamat'    => $this->request->getVar('alamat'),
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
@@ -49,12 +47,12 @@ class Karyawan extends BaseController
     public function update($id_karyawan)
     {
         $this->karywanModel->save([
-            'id_karyawan' => $id_karyawan,
-            'nama' => $this->request->getVar('nama'),
-            'umur' => $this->request->getVar('umur'),
-            'posisi' => $this->request->getVar('posisi'),
-            'kontak' => $this->request->getVar('kontak'),
-            'alamat' => $this->request->getVar('alamat'),
+            'id_karyawan'   => $id_karyawan,
+            'nama'          => $this->request->getVar('nama'),
+            'umur'          => $this->request->getVar('umur'),
+            'posisi'        => $this->request->getVar('posisi'),
+            'kontak'        => $this->request->getVar('kontak'),
+            'alamat'        => $this->request->getVar('alamat'),
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah!');

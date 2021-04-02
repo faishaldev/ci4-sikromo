@@ -16,16 +16,14 @@ class Hutang extends BaseController
 
     public function index()
     {
-        $hutang = $this->hutangModel->getHutang();
-
         $data = [
-            'currentMenu' => 'hutang',
-            'title' => 'Sikromo - Hutang',
+            'currentMenu'               => 'hutang',
+            'title'                     => 'Sikromo - Hutang',
 
-            'hutang' => $hutang,
+            'hutang'                    => $this->hutangModel->getHutang(),
 
-            'pemasukanPerBulan' => $this->pemasukanModel->getPemasukanPerBulan(),
-            'pengeluaranPerBulan' => $this->pengeluaranModel->getPengeluaranPerBulan()
+            'pemasukanPerBulan'         => $this->pemasukanModel->getPemasukanPerBulan(),
+            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan()
         ];
 
         return view('hutang/index', $data);
@@ -34,10 +32,10 @@ class Hutang extends BaseController
     public function save()
     {
         $this->hutangModel->save([
-            'tgl_hutang' => $this->request->getVar('tgl_hutang'),
-            'penghutang' => $this->request->getVar('penghutang'),
-            'jumlah' => $this->request->getVar('jumlah'),
-            'alasan' => $this->request->getVar('alasan')
+            'tgl_hutang'    => $this->request->getVar('tgl_hutang'),
+            'penghutang'    => $this->request->getVar('penghutang'),
+            'jumlah'        => $this->request->getVar('jumlah'),
+            'alasan'        => $this->request->getVar('alasan')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
@@ -48,11 +46,11 @@ class Hutang extends BaseController
     public function update($id_hutang)
     {
         $this->hutangModel->save([
-            'id_hutang' => $id_hutang,
-            'tgl_hutang' => $this->request->getVar('tgl_hutang'),
-            'penghutang' => $this->request->getVar('penghutang'),
-            'jumlah' => $this->request->getVar('jumlah'),
-            'alasan' => $this->request->getVar('alasan')
+            'id_hutang'     => $id_hutang,
+            'tgl_hutang'    => $this->request->getVar('tgl_hutang'),
+            'penghutang'    => $this->request->getVar('penghutang'),
+            'jumlah'        => $this->request->getVar('jumlah'),
+            'alasan'        => $this->request->getVar('alasan')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah!');

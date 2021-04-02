@@ -25,7 +25,6 @@
                 <?= $this->include('dashboard/card pemasukan/seluruhPemasukan'); ?>
 
             </div>
-
             <div class="row">
 
                 <?= $this->include('dashboard/card pengeluaran/pengeluaranHariIni'); ?>
@@ -34,9 +33,11 @@
                 <?= $this->include('dashboard/card pengeluaran/seluruhPengeluaran'); ?>
 
             </div>
+            <div class="row">
 
-            <?= $this->include('dashboard/grafikPerbandingan'); ?>
+                <?= $this->include('dashboard/grafikPerbandingan'); ?>
 
+            </div>
         </main>
     </div>
 </div>
