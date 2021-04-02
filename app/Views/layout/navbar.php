@@ -14,7 +14,7 @@
     <!-- Tombol Sign Out -->
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" href="/logout">Sign out</a>
+            <a class="nav-link" href="/logout" onclick="return confirm('Apakah anda yakin?')">Sign out</a>
         </li>
     </ul>
     <!-- Akhir Tombol Sign Out -->
