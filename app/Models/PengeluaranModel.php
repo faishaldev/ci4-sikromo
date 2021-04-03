@@ -59,8 +59,9 @@ class PengeluaranModel extends Model
     public function getPengeluaranPerBulan()
     {
         $this->db   = db_connect();
+
         $tahun      = @$_POST['tahunBar'];
-        $tahun      = ($tahun ? $tahun : date('Y'));
+        $tahun      = ($tahun ? $tahun : @$_SESSION['tahunBar']);
         $sql        = "SELECT SUM(jumlah) as total, '01' as bulan FROM pengeluaran WHERE MONTH(tgl_pengeluaran) = '01' AND YEAR(tgl_pengeluaran) = '" . $tahun . "'
                     UNION ALL
                     SELECT SUM(jumlah) as total, '02' as bulan FROM pengeluaran WHERE MONTH(tgl_pengeluaran) = '02' AND YEAR(tgl_pengeluaran) = '" . $tahun . "'
@@ -94,7 +95,7 @@ class PengeluaranModel extends Model
     public function getPengeluaranPerTahun()
     {
         $tahun      = @$_POST['tahunDoughnut'];
-        $tahun      = ($tahun ? $tahun : date('Y'));
+        $tahun      = ($tahun ? $tahun : @$_SESSION['tahunDoughnut']);
         $this->db   = db_connect();
         $sql        = "SELECT SUM(jumlah) as total FROM pengeluaran WHERE YEAR(tgl_pengeluaran) = '" . $tahun . "'";
         $query      = $this->db->query($sql);

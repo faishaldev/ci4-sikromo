@@ -15,11 +15,20 @@
                     <select name="tahunDoughnut" class="btn btn-sm btn-outline-secondary dropdown-toggle" onchange="this.form.submit()" id="tombolwaktu">
                         <?php
                         $tahun_sekarang = date('Y');
-                        $tahun_post     = @$_POST['tahunDoughnut'];
-                        $tahun_post     = ($tahun_post ? $tahun_post : $tahun_sekarang);
+                        $tahun_session = @$_SESSION['tahunDoughnut'];
+                        $tahun_post = @$_POST['tahunDoughnut'];
+
+                        if ($tahun_post) {
+                            $tahun_filter = $tahun_post;
+                            $_SESSION['tahunDoughnut'] = $tahun_post;
+                        } else if ($tahun_session) {
+                            $tahun_filter = $tahun_session;
+                        } else {
+                            $tahun_filter = $tahun_sekarang;
+                        }
 
                         for ($i = ($tahun_sekarang - 10); $i <= $tahun_sekarang; $i++) {
-                            $selected = ($i == $tahun_post ? 'selected' : '');
+                            $selected = ($i == $tahun_filter ? 'selected' : '');
                             echo '<option value="' . $i . '" ' . $selected . '>' . $i . '</option>';
                         }
                         ?>
