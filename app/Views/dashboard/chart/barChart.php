@@ -12,10 +12,10 @@
             <!-- Tombol Tahun -->
             <div class="col card-header">
                 <form method="POST" action="#">
-                    <select name="tahun" class="btn btn-sm btn-outline-secondary dropdown-toggle" onchange="this.form.submit()" id="tombolwaktu">
+                    <select name="tahunBar" class="btn btn-sm btn-outline-secondary dropdown-toggle" onchange="this.form.submit()" id="tombolwaktu">
                         <?php
                         $tahun_sekarang = date('Y');
-                        $tahun_post     = @$_POST['tahun'];
+                        $tahun_post     = @$_POST['tahunBar'];
                         $tahun_post     = ($tahun_post ? $tahun_post : $tahun_sekarang);
 
                         for ($i = ($tahun_sekarang - 10); $i <= $tahun_sekarang; $i++) {
