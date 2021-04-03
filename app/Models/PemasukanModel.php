@@ -58,32 +58,43 @@ class PemasukanModel extends Model
 
     public function getPemasukanPerBulan()
     {
-        $tahun      = @$_POST['tahunBar'];
-        $tahun      = ($tahun ? $tahun : @$_SESSION['tahunBar']);
+        $tahun_sekarang = date('Y');
+        $tahun_session = @$_SESSION['tahunBar'];
+        $tahun_post = @$_POST['tahunBar'];
+
+        if ($tahun_post) {
+            $tahun_filter = $tahun_post;
+            $_SESSION['tahunBar'] = $tahun_post;
+        } else if ($tahun_session) {
+            $tahun_filter = $tahun_session;
+        } else {
+            $tahun_filter = $tahun_sekarang;
+        }
+
         $this->db   = db_connect();
-        $sql        = "SELECT SUM(jumlah) as total, '01' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '01' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+        $sql        = "SELECT SUM(jumlah) as total, '01' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '01' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '02' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '02' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '02' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '02' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '03' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '03' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '03' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '03' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '04' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '04' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '04' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '04' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '05' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '05' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '05' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '05' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '06' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '06' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '06' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '06' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '07' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '07' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '07' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '07' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '08' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '08' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '08' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '08' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '09' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '09' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '09' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '09' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '10' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '10' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '10' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '10' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '11' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '11' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '11' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '11' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
-                    SELECT SUM(jumlah) as total, '12' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '12' AND YEAR(tgl_pemasukan) = '" . $tahun . "'
+                    SELECT SUM(jumlah) as total, '12' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '12' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     ";
         $query      = $this->db->query($sql);
         $results    = $query->getResultArray();
@@ -93,10 +104,21 @@ class PemasukanModel extends Model
 
     public function getPemasukanPerTahun()
     {
-        $tahun      = @$_POST['tahunDoughnut'];
-        $tahun      = ($tahun ? $tahun : @$_SESSION['tahunDoughnut']);
+        $tahun_sekarang = date('Y');
+        $tahun_session = @$_SESSION['tahunDoughnut'];
+        $tahun_post = @$_POST['tahunDoughnut'];
+
+        if ($tahun_post) {
+            $tahun_filter = $tahun_post;
+            $_SESSION['tahunDoughnut'] = $tahun_post;
+        } else if ($tahun_session) {
+            $tahun_filter = $tahun_session;
+        } else {
+            $tahun_filter = $tahun_sekarang;
+        }
+
         $this->db   = db_connect();
-        $sql        = "SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = '" . $tahun . "'";
+        $sql        = "SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = '" . $tahun_filter . "'";
         $query      = $this->db->query($sql);
         $results    = $query->getRow();
 
