@@ -109,22 +109,22 @@ body {
 
 .pemasukan {
   border-left: 0.25rem solid #4e73df !important;
+  border-radius: 25px;
 }
 
 .pemasukan-s {
   border-left: 0.25rem solid #373840 !important;
+  border-radius: 25px;
 }
 
 .pengeluaran {
   border-left: 0.25rem solid #be2617 !important;
+  border-radius: 25px;
 }
 
 .pengeluaran-s {
   border-left: 0.25rem solid #373840 !important;
-}
-
-.progress-sm {
-  height: 0.5rem;
+  border-radius: 25px;
 }
 
 .row {
