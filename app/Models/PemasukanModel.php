@@ -58,9 +58,10 @@ class PemasukanModel extends Model
 
     public function getPemasukanPerBulan()
     {
+        $this->db   = db_connect();
         $tahun_sekarang = date('Y');
-        $tahun_session = @$_SESSION['tahunBar'];
-        $tahun_post = @$_POST['tahunBar'];
+        $tahun_session  = @$_SESSION['tahunBar'];
+        $tahun_post     = @$_POST['tahunBar'];
 
         if ($tahun_post) {
             $tahun_filter = $tahun_post;
@@ -71,7 +72,7 @@ class PemasukanModel extends Model
             $tahun_filter = $tahun_sekarang;
         }
 
-        $this->db   = db_connect();
+
         $sql        = "SELECT SUM(jumlah) as total, '01' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '01' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
                     UNION ALL
                     SELECT SUM(jumlah) as total, '02' as bulan FROM pemasukan WHERE MONTH(tgl_pemasukan) = '02' AND YEAR(tgl_pemasukan) = '" . $tahun_filter . "'
@@ -104,9 +105,10 @@ class PemasukanModel extends Model
 
     public function getPemasukanPerTahun()
     {
+        $this->db       = db_connect();
         $tahun_sekarang = date('Y');
-        $tahun_session = @$_SESSION['tahunDoughnut'];
-        $tahun_post = @$_POST['tahunDoughnut'];
+        $tahun_session  = @$_SESSION['tahunDoughnut'];
+        $tahun_post     = @$_POST['tahunDoughnut'];
 
         if ($tahun_post) {
             $tahun_filter = $tahun_post;
@@ -117,7 +119,6 @@ class PemasukanModel extends Model
             $tahun_filter = $tahun_sekarang;
         }
 
-        $this->db   = db_connect();
         $sql        = "SELECT SUM(jumlah) as total FROM pemasukan WHERE YEAR(tgl_pemasukan) = '" . $tahun_filter . "'";
         $query      = $this->db->query($sql);
         $results    = $query->getRow();

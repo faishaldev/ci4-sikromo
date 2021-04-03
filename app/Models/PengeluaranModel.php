@@ -58,11 +58,10 @@ class PengeluaranModel extends Model
 
     public function getPengeluaranPerBulan()
     {
-        $this->db   = db_connect();
-
+        $this->db       = db_connect();
         $tahun_sekarang = date('Y');
-        $tahun_session = @$_SESSION['tahunBar'];
-        $tahun_post = @$_POST['tahunBar'];
+        $tahun_session  = @$_SESSION['tahunBar'];
+        $tahun_post     = @$_POST['tahunBar'];
 
         if ($tahun_post) {
             $tahun_filter = $tahun_post;
@@ -105,9 +104,10 @@ class PengeluaranModel extends Model
 
     public function getPengeluaranPerTahun()
     {
+        $this->db       = db_connect();
         $tahun_sekarang = date('Y');
-        $tahun_session = @$_SESSION['tahunDoughnut'];
-        $tahun_post = @$_POST['tahunDoughnut'];
+        $tahun_session  = @$_SESSION['tahunDoughnut'];
+        $tahun_post     = @$_POST['tahunDoughnut'];
 
         if ($tahun_post) {
             $tahun_filter = $tahun_post;
@@ -118,7 +118,6 @@ class PengeluaranModel extends Model
             $tahun_filter = $tahun_sekarang;
         }
 
-        $this->db   = db_connect();
         $sql        = "SELECT SUM(jumlah) as total FROM pengeluaran WHERE YEAR(tgl_pengeluaran) = '" . $tahun_filter . "'";
         $query      = $this->db->query($sql);
         $results    = $query->getRow();
