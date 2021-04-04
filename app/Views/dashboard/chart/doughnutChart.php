@@ -27,7 +27,7 @@
                             $tahun_filter = $tahun_sekarang;
                         }
 
-                        for ($i = ($tahun_sekarang - 10); $i <= $tahun_sekarang; $i++) {
+                        for ($i = ($tahun_sekarang - 5); $i <= $tahun_sekarang; $i++) {
                             $selected = ($i == $tahun_filter ? 'selected' : '');
                             echo '<option value="' . $i . '" ' . $selected . '>' . $i . '</option>';
                         }
