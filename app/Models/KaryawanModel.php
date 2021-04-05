@@ -13,7 +13,7 @@ class KaryawanModel extends Model
 
     public function getKaryawan()
     {
-        $db         = \Config\Database::connect();
+        $this->db = db_connect();
         $query      = $this->db->query("SELECT * FROM karyawan ORDER BY id_karyawan DESC");
         $results    = $query->getResultArray();
 

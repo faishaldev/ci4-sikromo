@@ -83,8 +83,8 @@
     <script src="<?= base_url('js/jquery.dataTables.min.js'); ?>"></script>
 
     <?= $this->include('layout/datatables'); ?>
-    <?= $this->include('layout/barChart'); ?>
-    <?= $this->include('layout/doughnutChart'); ?>
+    <?= $this->include('layout/chart/barChart'); ?>
+    <?= $this->include('layout/chart/doughnutChart'); ?>
 
 </body>
 

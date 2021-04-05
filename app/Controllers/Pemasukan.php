@@ -10,15 +10,15 @@ class Pemasukan extends BaseController
     public function index()
     {
         $data = [
-            'currentMenu'               => 'pemasukan',
-            'title'                     => 'Sikromo - Pemasukan',
+            'currentMenu'           => 'pemasukan',
+            'title'                 => 'Sikromo - Pemasukan',
 
-            'pemasukan'                 => $this->pemasukanModel->getPemasukan(),
-            'pemasukanPerBulan'         => $this->pemasukanModel->getPemasukanPerBulan(),
-            'pemasukanPerTahun'         => $this->pemasukanModel->getPemasukanPerTahun(),
+            'pemasukan'             => $this->pemasukanModel->getPemasukan(),
+            'pemasukanPerBulan'     => $this->pemasukanModel->getPemasukanPerBulan(),
+            'pemasukanPerTahun'     => $this->pemasukanModel->getPemasukanPerTahun(),
 
-            'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan(),
-            'pengeluaranPerTahun'       => $this->pengeluaranModel->getPengeluaranPerTahun()
+            'pengeluaranPerBulan'   => $this->pengeluaranModel->getPengeluaranPerBulan(),
+            'pengeluaranPerTahun'   => $this->pengeluaranModel->getPengeluaranPerTahun()
         ];
 
         return view('pemasukan/index', $data);

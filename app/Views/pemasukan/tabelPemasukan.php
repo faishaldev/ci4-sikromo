@@ -1,6 +1,6 @@
 <!-- Tabel Daftar Transaksi Masuk -->
 <div class="table-responsive">
-    <table class="table table-striped table-sm tables1">
+    <table class="table table-striped table-sm tables1 text-center">
         <thead>
             <tr>
                 <th>Tanggal</th>

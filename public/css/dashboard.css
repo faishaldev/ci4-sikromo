@@ -127,6 +127,16 @@ body {
   border-radius: 25px;
 }
 
+.filtertanggal {
+  border-top: 0.25rem solid #4e73df !important;
+  border-radius: 25px;
+}
+
+.filterlaporan {
+  border-bottom: 0.25rem solid #4e73df !important;
+  border-radius: 25px;
+}
+
 .row {
   padding: 0px 10px 10px 10px;
 }
