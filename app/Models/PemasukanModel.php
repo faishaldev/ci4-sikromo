@@ -58,7 +58,7 @@ class PemasukanModel extends Model
 
     public function getPemasukanPerBulan()
     {
-        $this->db   = db_connect();
+        $this->db       = db_connect();
         $tahun_sekarang = date('Y');
         $tahun_session  = @$_SESSION['tahunBar'];
         $tahun_post     = @$_POST['tahunBar'];
@@ -124,5 +124,19 @@ class PemasukanModel extends Model
         $results    = $query->getRow();
 
         return $results->total;
+    }
+
+    public function getPemasukanPerRange()
+    {
+        $this->db = db_connect();
+
+        $mulai_tanggal = @$_GET['mulai_tanggal'];
+        $sampai_tanggal = @$_GET['sampai_tanggal'];
+
+        $sql = "SELECT * FROM pemasukan WHERE tgl_pemasukan BETWEEN '" . $mulai_tanggal . "' AND '" . $sampai_tanggal . "'";
+        $query = $this->db->query($sql);
+        $results = $query->getResultArray();
+
+        return $results;
     }
 }

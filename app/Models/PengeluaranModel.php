@@ -124,4 +124,8 @@ class PengeluaranModel extends Model
 
         return $results->total;
     }
+
+    public function getPengeluaranPerTanggal()
+    {
+    }
 }

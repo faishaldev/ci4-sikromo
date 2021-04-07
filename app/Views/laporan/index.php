@@ -31,27 +31,6 @@
                         </div>
                         <!-- Akhir Sub Judul -->
 
-                        <!-- Filtered Laporan -->
-                        <div class="col-md-4">
-                            <table class="table table-bordered border-light">
-                                <tbody>
-                                    <tr>
-                                        <td class="font-weight-bold">Mulai Tanggal</td>
-                                        <td class="font-weight-bold text-center">:</td>
-                                        <td><?php echo DATE('D, M Y'); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-weight-bold">Sampai Tanggal</td>
-                                        <td class="font-weight-bold text-center">:</td>
-                                        <td><?php echo DATE('D, M Y'); ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <button type="button" class="btn btn-success">Save</button>
-                            <button type="button" class="btn btn-primary">Cetak</button>
-                        </div>
-                        <!-- Akhir Filtered Laporan -->
-
                         <?= $this->include('laporan/tabelLaporan'); ?>
 
                     </div>

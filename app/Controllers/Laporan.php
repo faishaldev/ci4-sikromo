@@ -13,9 +13,10 @@ class Laporan extends BaseController
             'currentMenu'           => 'laporan',
             'title'                 => 'Sikromo - Laporan',
 
-            'pemasukan' => $this->pemasukanModel->getPemasukan(),
+            'pemasukan'             => $this->pemasukanModel->getPemasukan(),
             'pemasukanPerBulan'     => $this->pemasukanModel->getPemasukanPerBulan(),
             'pemasukanPerTahun'     => $this->pemasukanModel->getPemasukanPerTahun(),
+            'pemasukanPerRange'     => $this->pemasukanModel->getPemasukanPerRange(),
 
             'pengeluaranPerBulan'   => $this->pengeluaranModel->getPengeluaranPerBulan(),
             'pengeluaranPerTahun'   => $this->pengeluaranModel->getPengeluaranPerTahun()
