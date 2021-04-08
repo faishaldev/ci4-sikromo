@@ -3,6 +3,7 @@
     <table class="table table-striped table-sm tables1 text-center">
         <thead>
             <tr>
+                <th>#</th>
                 <th>Tanggal</th>
                 <th>Jumlah</th>
                 <th>Sumber</th>
@@ -10,8 +11,10 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($pemasukan as $pem) : ?>
+            <?php $i = 1;
+            foreach ($pemasukan as $pem) : ?>
                 <tr>
+                    <td><?= $i++; ?></td>
                     <td><?= $pem['tgl_pemasukan']; ?></td>
                     <td><?= $pem['jumlah']; ?></td>
                     <td><?= $pem['sumber']; ?></td>

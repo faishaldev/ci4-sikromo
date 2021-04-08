@@ -125,7 +125,31 @@ class PengeluaranModel extends Model
         return $results->total;
     }
 
-    public function getPengeluaranPerTanggal()
+    public function getPengeluaranPerRange()
     {
+        $this->db = db_connect();
+
+        $mulai_tanggal = @$_GET['mulai_tanggal'];
+        $sampai_tanggal = @$_GET['sampai_tanggal'];
+
+        $sql = "SELECT * FROM pengeluaran WHERE tgl_pengeluaran BETWEEN '" . $mulai_tanggal . "' AND '" . $sampai_tanggal . "'";
+        $query = $this->db->query($sql);
+        $results = $query->getResultArray();
+
+        return $results;
+    }
+
+    public function getTotalPengeluaranPerRange()
+    {
+        $this->db = db_connect();
+
+        $mulai_tanggal = @$_GET['mulai_tanggal'];
+        $sampai_tanggal = @$_GET['sampai_tanggal'];
+
+        $sql = "SELECT SUM(jumlah) as total FROM pengeluaran WHERE tgl_pengeluaran BETWEEN '" . $mulai_tanggal . "' AND '" . $sampai_tanggal . "'";
+        $query = $this->db->query($sql);
+        $results = $query->getRow();
+
+        return $results->total;
     }
 }

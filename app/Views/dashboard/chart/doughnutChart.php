@@ -13,6 +13,7 @@
             <div class="col card-header">
                 <form method="POST" action="#">
                     <select name="tahunDoughnut" class="btn btn-sm btn-outline-secondary dropdown-toggle" onchange="this.form.submit()" id="tombolwaktu">
+
                         <?php
                         $tahun_sekarang = date('Y');
                         $tahun_session = @$_SESSION['tahunDoughnut'];
@@ -32,6 +33,7 @@
                             echo '<option value="' . $i . '" ' . $selected . '>' . $i . '</option>';
                         }
                         ?>
+
                     </select>
                 </form>
             </div>

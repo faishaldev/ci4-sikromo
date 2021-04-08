@@ -3,6 +3,7 @@
     <table class="table table-striped table-sm tables1 text-center">
         <thead>
             <tr>
+                <th scope="col">#</th>
                 <th scope="col">Tanggal</th>
                 <th scope="col">Jumlah</th>
                 <th scope="col">Penghutang</th>
@@ -11,8 +12,10 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($hutang as $h) : ?>
+            <?php $i = 1;
+            foreach ($hutang as $h) : ?>
                 <tr>
+                    <td><?= $i++; ?></td>
                     <td><?= $h['tgl_hutang']; ?></td>
                     <td><?= $h['jumlah']; ?></td>
                     <td><?= $h['penghutang']; ?></td>

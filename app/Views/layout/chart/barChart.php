@@ -11,6 +11,7 @@
         }
         return x1 + x2;
     }
+
     var ctx = document.getElementById('BarChart');
     var myChart = new Chart(ctx, {
         type: 'bar',

@@ -3,7 +3,7 @@
     $(document).ready(function() {
         $('.tables1,.tables2').DataTable({
             columnDefs: [{
-                targets: 1,
+                targets: 2,
                 render: $.fn.DataTable.render.number('.', ',', 2, 'Rp')
             }]
         });

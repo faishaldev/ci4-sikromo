@@ -17,7 +17,7 @@
             ?>
 
             <!-- Filter Laporan -->
-            <form action="?" method="post"></form>
+            <form action="" method="post"></form>
             <div class="container align-items-center">
                 <form action="">
                     <div class="row">

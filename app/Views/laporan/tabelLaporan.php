@@ -1,10 +1,6 @@
 <!-- Tabel Laporan -->
-<div class="container text-center">
-    <button type="button" class="btn btn-success">Save</button>
-    <button type="button" class="btn btn-primary">Cetak</button>
-</div>
 <div class="table-responsive mt-3">
-    <table class="table table-bordered table-sm text-center">
+    <table class="table table-bordered table-sm text-center tables1">
         <thead class="bg-light">
             <tr>
                 <th>No</th>
@@ -14,9 +10,9 @@
                 <th>Saldo</th>
             </tr>
         </thead>
-        <?php $i = 1;
-        foreach ($pemasukanPerRange as $pemPeRan) : ?>
-            <tbody>
+        <tbody>
+            <?php $i = 1;
+            foreach ($pemasukanPerRange as $pemPeRan) : ?>
                 <tr>
                     <td><?= $i++; ?></td>
                     <td><?= $pemPeRan['tgl_pemasukan']; ?></td>
@@ -24,14 +20,18 @@
                     <td>0</td>
                     <td>1000000</td>
                 </tr>
-            </tbody>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </tbody>
         <tfoot>
             <th class="bg-light" colspan="2">Total</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th>Rp<?= number_format($totalPemasukanPerRange, 2, ',', '.'); ?></th>
+            <th>Rp<?= number_format($totalPengeluaranPerRange, 2, ',', '.'); ?></th>
+            <th>Rp<?= number_format(($totalPemasukanPerRange - $totalPengeluaranPerRange), 2, ',', '.'); ?></th>
         </tfoot>
     </table>
+    <div class="container text-center">
+        <button type="button" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-primary">Cetak</button>
+    </div>
 </div>
 <!-- Akhir Tabel Laporan -->
