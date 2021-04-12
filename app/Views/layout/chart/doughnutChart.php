@@ -13,6 +13,21 @@
             }],
         },
         options: {
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var dataLabel = data.labels[tooltipItem.index];
+                        var value = ': ' + 'Rp' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString();
+                        if (Chart.helpers.isArray(dataLabel)) {
+                            dataLabel = dataLabel.slice();
+                            dataLabel[0] += value;
+                        } else {
+                            dataLabel += value;
+                        }
+                        return dataLabel;
+                    }
+                }
+            },
             cutoutPercentage: 75
         }
     });

@@ -40,13 +40,23 @@
             ]
         },
         options: {
+            tooltips: {
+                callbacks: {
+                    label: function(t, d) {
+                        var xLabel = d.datasets[t.datasetIndex].label;
+                        var yLabel = t.yLabel >= 1000 ? 'Rp' + t.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : '$' + t.yLabel;
+                        return xLabel + ': ' + yLabel;
+                    }
+                }
+            },
             scales: {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
                         fontSize: 10,
                         callback: function(value, index, values) {
-                            return addCommas(value);
+                            return 'Rp' +
+                                addCommas(value);
                         }
                     }
                 }]
