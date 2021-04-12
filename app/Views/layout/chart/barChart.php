@@ -1,5 +1,6 @@
 <!-- Script Clustered Bar Chart -->
 <script>
+    /* Fungsi Mata Uang */
     function addCommas(nStr) {
         nStr += '';
         x = nStr.split('.');
@@ -11,6 +12,7 @@
         }
         return x1 + x2;
     }
+    /* Akhir Fungsi Mata Uang */
 
     var ctx = document.getElementById('BarChart');
     var myChart = new Chart(ctx, {

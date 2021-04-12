@@ -125,30 +125,27 @@ class PemasukanModel extends Model
         return $results->total;
     }
 
-    public function getPemasukanPerRange()
+    public function getPemasukanSummaryByTanggal($tanggal)
+    {
+        $this->db   = db_connect();
+
+        $sql        = "SELECT COALESCE(SUM(jumlah), 0) as jumlah FROM pemasukan WHERE tgl_pemasukan = '" . $tanggal . "'";
+        $query      = $this->db->query($sql);
+        $results    = $query->getRowArray();
+
+        return $results['jumlah'];
+    }
+
+    public function getTotalPemasukanPerRange()
     {
         $this->db       = db_connect();
 
         $mulai_tanggal  = @$_GET['mulai_tanggal'];
         $sampai_tanggal = @$_GET['sampai_tanggal'];
 
-        $sql            = "SELECT * FROM pemasukan WHERE tgl_pemasukan BETWEEN '" . $mulai_tanggal . "' AND '" . $sampai_tanggal . "'";
+        $sql            = "SELECT SUM(jumlah) as total FROM pemasukan WHERE tgl_pemasukan BETWEEN '" . $mulai_tanggal . "' AND '" . $sampai_tanggal . "'";
         $query          = $this->db->query($sql);
-        $results        = $query->getResultArray();
-
-        return $results;
-    }
-
-    public function getTotalPemasukanPerRange()
-    {
-        $this->db = db_connect();
-
-        $mulai_tanggal = @$_GET['mulai_tanggal'];
-        $sampai_tanggal = @$_GET['sampai_tanggal'];
-
-        $sql = "SELECT SUM(jumlah) as total FROM pemasukan WHERE tgl_pemasukan BETWEEN '" . $mulai_tanggal . "' AND '" . $sampai_tanggal . "'";
-        $query = $this->db->query($sql);
-        $results = $query->getRow();
+        $results        = $query->getRow();
 
         return $results->total;
     }

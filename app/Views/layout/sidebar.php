@@ -73,5 +73,8 @@
 
         </ul>
     </div>
+
+    <?= $this->include('layout/footer'); ?>
+
 </nav>
 <!-- Akhir Sidebar -->

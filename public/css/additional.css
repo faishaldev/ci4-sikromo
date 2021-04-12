@@ -1,0 +1,41 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.dataTables_length {
+  margin-left: 1rem;
+}
+
+.dataTables_filter {
+  margin-right: 1rem;
+}
+
+.dataTables_info {
+  margin-left: 1rem;
+}
+
+.dataTables_paginate {
+  margin-right: 1rem;
+}
+
+#tomboltambah {
+  float: right;
+}
+
+#sumberPemasukan {
+  float: right;
+}
+
+#tombolwaktu {
+  float: right;
+}

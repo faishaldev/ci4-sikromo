@@ -33,6 +33,15 @@
 
                         <?= $this->include('laporan/tabelLaporan'); ?>
 
+                        <hr>
+
+                        <!-- Tombol -->
+                        <div class="container text-center">
+                            <button type="button" class="btn btn-success">Save</button>
+                            <button type="button" class="btn btn-primary">Cetak</button>
+                        </div>
+                        <!-- Akhir Tombol -->
+
                     </div>
                 </div>
             </div>

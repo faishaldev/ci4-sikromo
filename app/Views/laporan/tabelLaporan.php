@@ -1,6 +1,6 @@
 <!-- Tabel Laporan -->
 <div class="table-responsive mt-3">
-    <table class="table table-bordered table-sm text-center tables1">
+    <table class="table table-bordered table-sm text-center tables3">
         <thead class="bg-light">
             <tr>
                 <th>No</th>
@@ -12,13 +12,13 @@
         </thead>
         <tbody>
             <?php $i = 1;
-            foreach ($pemasukanPerRange as $pemPeRan) : ?>
+            foreach ($income as $dr => $value) : ?>
                 <tr>
                     <td><?= $i++; ?></td>
-                    <td><?= $pemPeRan['tgl_pemasukan']; ?></td>
-                    <td><?= $pemPeRan['jumlah']; ?></td>
-                    <td>0</td>
-                    <td>1000000</td>
+                    <td><?php echo $value['tanggal']; ?></td>
+                    <td><?php echo $value['total_pemasukan']; ?></td>
+                    <td><?php echo $value['total_pengeluaran']; ?></td>
+                    <td><?php echo $value['total_pemasukan'] - $value['total_pengeluaran']; ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -29,9 +29,5 @@
             <th>Rp<?= number_format(($totalPemasukanPerRange - $totalPengeluaranPerRange), 2, ',', '.'); ?></th>
         </tfoot>
     </table>
-    <div class="container text-center">
-        <button type="button" class="btn btn-success">Save</button>
-        <button type="button" class="btn btn-primary">Cetak</button>
-    </div>
 </div>
 <!-- Akhir Tabel Laporan -->
