@@ -16,7 +16,7 @@
             foreach ($hutang as $h) : ?>
                 <tr>
                     <td><?= $i++; ?></td>
-                    <td><?= $h['tgl_hutang']; ?></td>
+                    <td><?= date('d/m/Y', strtotime($h['tgl_hutang'])); ?></td>
                     <td><?= $h['jumlah']; ?></td>
                     <td><?= $h['penghutang']; ?></td>
                     <td><?= $h['alasan']; ?></td>

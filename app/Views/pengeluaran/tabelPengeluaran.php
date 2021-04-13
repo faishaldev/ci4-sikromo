@@ -15,7 +15,7 @@
             foreach ($pengeluaran as $pen) : ?>
                 <tr>
                     <td><?= $i++; ?></td>
-                    <td><?= $pen['tgl_pengeluaran']; ?></td>
+                    <td><?= date('d/m/Y', strtotime($pen['tgl_pengeluaran'])); ?></td>
                     <td><?= $pen['jumlah']; ?></td>
                     <td><?= $pen['sumber']; ?></td>
                     <td>
