@@ -1,6 +1,6 @@
 <!-- Tabel Karyawan -->
 <div class="table-responsive pt-2">
-    <table class="table table-striped table-sm tables1 text-center">
+    <table class="table table-striped table-sm tables2 text-center">
         <thead>
             <tr>
                 <th>#</th>

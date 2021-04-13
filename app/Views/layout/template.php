@@ -34,6 +34,7 @@
     <script src="<?= base_url('js/jquery.dataTables.min.js'); ?>"></script>
 
     <?= $this->include('layout/datatables/datatablesUmum'); ?>
+    <?= $this->include('layout/datatables/datatablesKaryawan'); ?>
     <?= $this->include('layout/datatables/datatablesLaporan'); ?>
     <?= $this->include('layout/chart/barChart'); ?>
     <?= $this->include('layout/chart/doughnutChart'); ?>
