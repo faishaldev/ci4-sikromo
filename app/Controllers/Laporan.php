@@ -4,9 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\HTTP\Request;
 use Myth\Auth\Commands\Publish;
-use DateTime;
-use DateInterval;
-use DatePeriod;
+use DateTime, DateInterval, DatePeriod;
 
 class Laporan extends BaseController
 {
