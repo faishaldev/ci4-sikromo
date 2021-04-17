@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Musthafa Kamal Faishal (24060118120042) - Informatika '18 UNDIP">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
 
     <!-- Judul -->
     <title><?= $title; ?></title>
