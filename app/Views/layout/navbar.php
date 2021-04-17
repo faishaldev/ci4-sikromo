@@ -3,7 +3,7 @@
 
     <!-- Judul -->
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-center" href="/">
-        <img width=480 src="public/logo/Sikromo_logo.png">
+        <img width=125 src="logo/Sikromo_logo.png">
     </a>
     <!-- Akhir Judul -->
 
