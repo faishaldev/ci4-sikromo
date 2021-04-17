@@ -21,14 +21,9 @@ dan pengeluaran, serta grafik perbandingan pemasukan dan pengeluaran per bulan d
 * Sistem Sikromo dapat melakukan pengelolaan karyawan pada menu karyawan.
 * Sistem Sikromo dapat melakukan ekspor laporan laba-rugi berdasarkan interval tanggal masukan.
 
-## Installation & updates
+## Instalasi
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
-
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+`git clone https://github.com/Musshal/ci4-sikromo.git` kemudian `php spark migrate -all` untuk migrasi basis data yang dibutuhkan.
 
 ## Setup
 
