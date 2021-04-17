@@ -1,8 +1,20 @@
-# Sikromo - Sistem Informasi Keuangan Percetakan CV Romo
+# Sikromo
+<br>
+<p align="center">
+  <img width=480 src="public/logo/Sikromo_logo.png">
+</p>
+<br>
+<p align="center"> Sistem Informasi Keuangan Percetakan CV Romo
+<br>
 
 ## Apa itu Sikromo?
-
-Sikromo adalah sebuah proyek Praktik Kerja Lapangan yang dikerjakan untuk Percetakan CV Romo Tegal yang berupa sistem informasi pengelolaan keuangan Percetakan CV Romo Tegal. Sistem Sikromo dapat menampilkan ringkasan pemaukan dan pengeluaran, serta grafik perbandingan pemasukan dan pengeluaran per bulannya. Selain itu, sistem Sikromo dilengkapi menu pemasukan, pengeluaran, hutang, dan karyawan yang dapat dikelola oleh admin, serta terdapat menu laporan untuk mengunduh laporan keuangan.
+**Sikromo** adalah sebuah proyek Praktik Kerja Lapangan yang dikerjakan untuk
+**Percetakan CV Romo Tegal** yang berupa sistem informasi pengelolaan keuangan
+Percetakan CV Romo Tegal. Sistem Sikromo dapat menampilkan ringkasan pemaukan
+dan pengeluaran, serta grafik perbandingan pemasukan dan pengeluaran per bulannya.
+Selain itu, sistem Sikromo dilengkapi menu pemasukan, pengeluaran, hutang, dan
+karyawan yang dapat dikelola oleh admin, serta terdapat menu laporan untuk
+mengunduh laporan keuangan.
 
 ## Installation & updates
 
