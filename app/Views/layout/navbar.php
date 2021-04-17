@@ -2,7 +2,9 @@
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
 
     <!-- Judul -->
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-center" href="/">CV Romo</a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-center" href="/">
+        <img width=480 src="public/logo/Sikromo_logo.png">
+    </a>
     <!-- Akhir Judul -->
 
     <!-- Tombol Navigasi -->
