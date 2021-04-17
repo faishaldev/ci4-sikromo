@@ -3,15 +3,9 @@
 
     <!-- Judul -->
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-center" href="/">
-        <img width=125 src="logo/Sikromo_logo_dark.png">
+        <img width=100 src="logo/Sikromo_logo_dark.png">
     </a>
     <!-- Akhir Judul -->
-
-    <!-- Tombol Navigasi -->
-    <button class="navbar-toggler position-static d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Akhir Tombol Navigasi -->
 
     <!-- Tombol Sign Out -->
     <ul class="navbar-nav px-3">
