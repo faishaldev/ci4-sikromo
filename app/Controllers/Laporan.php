@@ -70,6 +70,7 @@ class Laporan extends BaseController
         $dompdf->render();
 
         // Output the generated PDF to Browser
+        date_default_timezone_set("Asia/Bangkok");
         $dompdf->stream(date("d-m-Y") . ' ' . "Income Statement CV Romo.pdf");
     }
 }
