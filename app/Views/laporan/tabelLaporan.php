@@ -48,6 +48,7 @@
     <!-- Tombol -->
     <div class="container text-center">
         <button type="submit" class="btn btn-success">Save</button>
+        <button type="submit" class="btn btn-primary" formaction="laporan/print" formtarget="_blank">Print</button>
     </div>
     <!-- Akhir Tombol -->
 
