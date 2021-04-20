@@ -22,15 +22,6 @@
                 <div class="card border-left-success h-100 py-2 filterlaporan">
                     <div class="card-body">
 
-                        <!-- Sub Judul -->
-                        <div class="no-gutters align-items-center text-center">
-                            <div class="mr-2">
-                                <div class="text-md font-weight-bold text-uppercase mb-1">Income Statement</div>
-                            </div>
-                            <hr>
-                        </div>
-                        <!-- Akhir Sub Judul -->
-
                         <?= $this->include('laporan/tabelLaporan'); ?>
 
                     </div>

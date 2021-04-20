@@ -1,3 +1,12 @@
+<!-- Sub Judul -->
+<div class="no-gutters align-items-center text-center">
+    <div class="mr-2">
+        <div class="text-md font-weight-bold text-uppercase mb-1">Income Statement</div>
+    </div>
+    <hr>
+</div>
+<!-- Akhir Sub Judul -->
+
 <!-- Tabel Laporan -->
 <form action="laporan/export" method="GET">
     <input type="hidden" name="mulai_tanggal" value="<?= isset($_GET['mulai_tanggal']) ? $_GET['mulai_tanggal'] : '' ?>">
