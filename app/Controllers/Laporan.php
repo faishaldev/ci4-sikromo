@@ -5,10 +5,11 @@ namespace App\Controllers;
 use CodeIgniter\HTTP\Request;
 use Myth\Auth\Commands\Publish;
 use DateTime, DateInterval, DatePeriod;
+use Dompdf\Dompdf, Dompdf\Options;
 
 class Laporan extends BaseController
 {
-    public function index()
+    public function getData()
     {
         $begin  = new DateTime(@$_GET['mulai_tanggal']);
         $end    = new DateTime(@$_GET['sampai_tanggal']);
@@ -45,6 +46,32 @@ class Laporan extends BaseController
             'totalPengeluaranPerRange'  => $this->pengeluaranModel->getTotalPengeluaranPerRange()
         ];
 
+        return $data;
+    }
+    public function index()
+    {
+        $data = $this->getData();
+
         return view('laporan/index', $data);
+    }
+
+    public function export()
+    {
+        $data = $this->getData();
+
+        $view = view('laporan/exportLaporan', $data);
+
+        // instantiate and use the dompdf class
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($view);
+
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A4', 'potrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser
+        $dompdf->stream();
     }
 }

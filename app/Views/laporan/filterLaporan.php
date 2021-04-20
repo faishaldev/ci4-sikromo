@@ -17,21 +17,18 @@
             ?>
 
             <!-- Filter Laporan -->
-            <form action="" method="post"></form>
             <div class="container align-items-center">
-                <form action="">
-                    <div class="row">
-                        <div class="col form-group">
-                            <label for="inputMulaiTanggal" class="font-weight-bold">Mulai Tanggal :</label>
-                            <input type="date" id="inputMulaiTanggal" class="form-control" name="mulai_tanggal" value="<?php echo $mulai_tanggal ?>" required>
-                        </div>
-                        <div class="col form-group">
-                            <label for="inputSampaiTanggal" class="font-weight-bold">Sampai Tanggal :</label>
-                            <input type="date" id="inputSampaiTanggal" class="form-control" name="sampai_tanggal" value="<?php echo $sampai_tanggal ?>" required>
-                        </div>
-                        <button type=" submit" class="col btn btn-success mt-3">Tampilkan</button>
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="inputMulaiTanggal" class="font-weight-bold">Mulai Tanggal :</label>
+                        <input type="date" id="inputMulaiTanggal" class="form-control" name="mulai_tanggal" value="<?php echo $mulai_tanggal ?>" required>
                     </div>
-                </form>
+                    <div class="col form-group">
+                        <label for="inputSampaiTanggal" class="font-weight-bold">Sampai Tanggal :</label>
+                        <input type="date" id="inputSampaiTanggal" class="form-control" name="sampai_tanggal" value="<?php echo $sampai_tanggal ?>" required>
+                    </div>
+                    <button type="submit" class="col btn btn-success mt-3">Tampilkan</button>
+                </div>
             </div>
             <!-- Akhir Filter Laporan -->
 

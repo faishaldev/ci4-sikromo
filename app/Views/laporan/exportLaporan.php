@@ -1,4 +1,4 @@
-<!-- Tabel Laporan -->
+<!-- Export Laporan -->
 <form action="laporan/export" method="GET">
     <input type="hidden" name="mulai_tanggal" value="<?= isset($_GET['mulai_tanggal']) ? $_GET['mulai_tanggal'] : '' ?>">
     <input type="hidden" name="sampai_tanggal" value="<?= isset($_GET['sampai_tanggal']) ? $_GET['sampai_tanggal'] : '' ?>">
@@ -33,15 +33,5 @@
             </tfoot>
         </table>
     </div>
-
-    <hr>
-
-    <!-- Tombol -->
-    <div class="container text-center">
-        <button type="submit" class="btn btn-success">Save</button>
-        <button type="button" class="btn btn-primary">Cetak</button>
-    </div>
-    <!-- Akhir Tombol -->
-
 </form>
-<!-- Akhir Tabel Laporan -->
+<!-- Akhir Export Laporan -->
