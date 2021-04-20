@@ -48,7 +48,6 @@
     <!-- Tombol -->
     <div class="container text-center">
         <button type="submit" class="btn btn-success">Save</button>
-        <button type="button" class="btn btn-primary">Cetak</button>
     </div>
     <!-- Akhir Tombol -->
 
