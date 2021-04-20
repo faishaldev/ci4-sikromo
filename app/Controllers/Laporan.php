@@ -70,6 +70,6 @@ class Laporan extends BaseController
         $dompdf->render();
 
         // Output the generated PDF to Browser
-        $dompdf->stream();
+        $dompdf->stream(date("d-m-Y") . ' ' . "Income Statement CV Romo.pdf");
     }
 }
