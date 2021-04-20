@@ -2,9 +2,6 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\HTTP\Request;
-use Myth\Auth\Commands\Publish;
-
 class Pengeluaran extends BaseController
 {
     public function index()
