@@ -59,17 +59,13 @@ class Laporan extends BaseController
 
         $view = view('laporan/exportLaporan', $data);
 
-        // instantiate and use the dompdf class
         $dompdf = new Dompdf();
         $dompdf->loadHtml($view);
 
-        // (Optional) Setup the paper size and orientation
         $dompdf->setPaper('A4', 'potrait');
 
-        // Render the HTML as PDF
         $dompdf->render();
 
-        // Output the generated PDF to Browser
         date_default_timezone_set("Asia/Bangkok");
         $dompdf->stream(date("d-m-Y") . ' ' . "Income Statement CV Romo.pdf");
     }
@@ -80,17 +76,13 @@ class Laporan extends BaseController
 
         $view = view('laporan/exportLaporan', $data);
 
-        // instantiate and use the dompdf class
         $dompdf = new Dompdf();
         $dompdf->loadHtml($view);
 
-        // (Optional) Setup the paper size and orientation
         $dompdf->setPaper('A4', 'potrait');
 
-        // Render the HTML as PDF
         $dompdf->render();
 
-        // Output the generated PDF to Browser
         date_default_timezone_set("Asia/Bangkok");
         $dompdf->stream(date("d-m-Y") . ' ' . "Income Statement CV Romo.pdf", array("Attachment" => 0));
     }
