@@ -26,7 +26,7 @@ class Pengeluaran extends BaseController
         $this->pengeluaranModel->save([
             'tgl_pengeluaran'   => $this->request->getVar('tgl_pengeluaran'),
             'jumlah'            => $this->request->getVar('jumlah'),
-            'sumber'            => $this->request->getVar('sumber')
+            'keterangan'            => $this->request->getVar('keterangan')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
@@ -40,7 +40,7 @@ class Pengeluaran extends BaseController
             'id_pengeluaran'    => $id_pengeluaran,
             'tgl_pengeluaran'   => $this->request->getVar('tgl_pengeluaran'),
             'jumlah'            => $this->request->getVar('jumlah'),
-            'sumber'            => $this->request->getVar('sumber')
+            'keterangan'            => $this->request->getVar('keterangan')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah!');

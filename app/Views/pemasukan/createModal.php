@@ -31,6 +31,10 @@
                         <label for="inputSumber" class="">Sumber :</label>
                         <input type="text" id="inputSumber" class="form-control" name="sumber" required autofocus>
                     </div>
+                    <div class="form-group">
+                        <label for="inputKeterangan" class="">Keterangan :</label>
+                        <input type="text" id="inputKeterangan" class="form-control" name="keterangan" required autofocus>
+                    </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Tambah</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

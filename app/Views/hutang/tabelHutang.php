@@ -7,7 +7,7 @@
                 <th scope="col">Tanggal</th>
                 <th scope="col">Jumlah</th>
                 <th scope="col">Penghutang</th>
-                <th scope="col">Alasan</th>
+                <th scope="col">Keterangan</th>
                 <th scope="col">Aksi</th>
             </tr>
         </thead>

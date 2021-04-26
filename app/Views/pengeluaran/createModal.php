@@ -28,8 +28,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputSumber" class="">Sumber :</label>
-                        <input type="text" id="inputSumber" class="form-control" name="sumber" required autofocus>
+                        <label for="inputKeterangan" class="">Keterangan :</label>
+                        <input type="text" id="inputKeterangan" class="form-control" name="keterangan" required autofocus>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Tambah</button>

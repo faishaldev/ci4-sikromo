@@ -51,7 +51,7 @@
             <hr>
             <!-- Akhir Tombol Menu Hutang -->
 
-            <!-- Tombol Menu Karyawan -->
+            <!-- Tombol Menu Karyawan
             <li class="nav-item">
                 <a href="/karyawan" class="nav-link <?= ($currentMenu == 'karyawan') ? 'active' : ''; ?>">
                     <span data-feather="users"></span>
@@ -59,7 +59,7 @@
                 </a>
             </li>
             <hr>
-            <!-- Akhir Tombol Menu Karyawan -->
+            Akhir Tombol Menu Karyawan -->
 
             <!-- Tombol Menu Laporan -->
             <li class="nav-item">

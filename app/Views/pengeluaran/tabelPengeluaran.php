@@ -6,7 +6,7 @@
                 <th>#</th>
                 <th>Tanggal</th>
                 <th>Jumlah</th>
-                <th>Sumber</th>
+                <th>Keterangan</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -17,7 +17,7 @@
                     <td><?= $i++; ?></td>
                     <td><?= date('d/m/Y', strtotime($pen['tgl_pengeluaran'])); ?></td>
                     <td><?= $pen['jumlah']; ?></td>
-                    <td><?= $pen['sumber']; ?></td>
+                    <td><?= $pen['keterangan']; ?></td>
                     <td>
                         <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editPengeluaranModal<?= $pen['id_pengeluaran']; ?>" id="btn-edit"></button>
                     </td>

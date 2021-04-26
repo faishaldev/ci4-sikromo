@@ -21,6 +21,14 @@
                 <form action="laporan" method="GET">
                     <div class="row">
                         <div class="col form-group">
+                            <label for="inputPeriode" class="font-weight-bold">Periode :</label>
+                            <select name="periode" id="inputPeriode" class="form-select">
+                                <option value="">--Pilih Periode--</option>
+                                <option value="1">Harian</option>
+                                <option value="1">Bulanan</option>
+                            </select>
+                        </div>
+                        <div class="col form-group">
                             <label for="inputMulaiTanggal" class="font-weight-bold">Mulai Tanggal :</label>
                             <input type="date" id="inputMulaiTanggal" class="form-control" name="mulai_tanggal" value="<?php echo $mulai_tanggal ?>" required>
                         </div>

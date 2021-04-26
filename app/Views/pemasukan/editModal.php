@@ -32,6 +32,10 @@
                             <label for="inputSumber" class="">Sumber :</label>
                             <input type="text" id="inputSumber" class="form-control" name="sumber" value="<?= $pem['sumber']; ?>" required autofocus>
                         </div>
+                        <div class="form-group">
+                            <label for="inputKeterangan" class="">Keterangan :</label>
+                            <input type="text" id="inputKeterangan" class="form-control" name="keterangan" value="<?= $pem['keterangan']; ?>" required autofocus>
+                        </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success">Ubah</button>
                     </form>
