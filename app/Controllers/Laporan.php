@@ -7,7 +7,7 @@ use Dompdf\Dompdf, Dompdf\Options;
 
 class Laporan extends BaseController
 {
-    public function getData()
+    public function getDataHarian()
     {
         $begin  = new DateTime(@$_GET['mulai_tanggal']);
         $end    = new DateTime(@$_GET['sampai_tanggal']);
@@ -48,14 +48,14 @@ class Laporan extends BaseController
     }
     public function index()
     {
-        $data = $this->getData();
+        $data = $this->getDataHarian();
 
         return view('laporan/index', $data);
     }
 
     public function export()
     {
-        $data = $this->getData();
+        $data = $this->getDataHarian();
 
         $view = view('laporan/exportLaporan', $data);
 
@@ -72,7 +72,7 @@ class Laporan extends BaseController
 
     public function print()
     {
-        $data = $this->getData();
+        $data = $this->getDataHarian();
 
         $view = view('laporan/exportLaporan', $data);
 

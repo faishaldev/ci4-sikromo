@@ -18,16 +18,30 @@
 
             <!-- Filter Laporan -->
             <div class="container align-items-center">
-                <form action="laporan" method="GET">
+                <div class="row">
+                    <div class="col form-group">
+                        <select name="periode" id="inputPeriode" class="form-select">
+                            <option value="" selected="selected">--Pilih Periode--</option>
+                            <option value="harian">Harian</option>
+                            <option value="bulanan">Bulanan</option>
+                        </select>
+                    </div>
+                </div>
+                <form name="bulanan" id="bulanan" action="laporan" method="GET" style="display: none;">
                     <div class="row">
                         <div class="col form-group">
-                            <label for="inputPeriode" class="font-weight-bold">Periode :</label>
-                            <select name="periode" id="inputPeriode" class="form-select">
-                                <option value="">--Pilih Periode--</option>
-                                <option value="1">Harian</option>
-                                <option value="1">Bulanan</option>
-                            </select>
+                            <label for="inputMulaiBulan" class="font-weight-bold">Mulai Bulan :</label>
+                            <input type="month" id="inputMulaiBulan" class="form-control" name="mulai_bulan" value="<?php echo $mulai_tanggal ?>" required>
                         </div>
+                        <div class="col form-group">
+                            <label for="inputSampaiTanggal" class="font-weight-bold">Sampai Bulan :</label>
+                            <input type="month" id="inputSampaiBulan" class="form-control" name="sampai_bulan" value="<?php echo $sampai_tanggal ?>" required>
+                        </div>
+                        <button type="submit" class="col btn btn-success mt-3">Tampilkan</button>
+                    </div>
+                </form>
+                <form name="harian" id="harian" action="laporan" method="GET" style="display: none;">
+                    <div class="row">
                         <div class="col form-group">
                             <label for="inputMulaiTanggal" class="font-weight-bold">Mulai Tanggal :</label>
                             <input type="date" id="inputMulaiTanggal" class="form-control" name="mulai_tanggal" value="<?php echo $mulai_tanggal ?>" required>

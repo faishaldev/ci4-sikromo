@@ -39,6 +39,11 @@
     <?= $this->include('layout/datatables/datatablesLaporan'); ?>
     <?= $this->include('layout/chart/barChart'); ?>
     <?= $this->include('layout/chart/doughnutChart'); ?>
+    <script>
+        $("select").on("change", function() {
+            $('#' + $(this).val()).show('form').siblings('form').hide();
+        })
+    </script>
 
 </body>
 
