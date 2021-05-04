@@ -27,6 +27,10 @@ class Pemasukan extends Migration
 				'type' => 'INT',
 				'constraint' => 11,
 			],
+			'keterangan' => [
+				'type' => 'TEXT',
+				'collation' => 'latin1_swedish_ci',
+			],
 			'created_at' => [
 				'type' => 'DATETIME',
 				'null' => TRUE,

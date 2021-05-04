@@ -19,7 +19,7 @@
                     <td><?= date('d/m/Y', strtotime($h['tgl_hutang'])); ?></td>
                     <td><?= $h['jumlah']; ?></td>
                     <td><?= $h['penghutang']; ?></td>
-                    <td><?= $h['alasan']; ?></td>
+                    <td><?= $h['keterangan']; ?></td>
                     <td>
                         <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editHutangModal<?= $h['id_hutang']; ?>" id="btn-edit"></button>
                     </td>

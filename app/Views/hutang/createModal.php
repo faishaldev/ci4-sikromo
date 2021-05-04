@@ -32,8 +32,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputAlasan" class="">Alasan :</label>
-                        <input type="text" id="inputAlasan" class="form-control" name="alasan" required autofocus>
+                        <label for="inputKeterangan" class="">Keterangan :</label>
+                        <input type="text" id="inputKeterangan" class="form-control" name="keterangan" required autofocus>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Tambah</button>

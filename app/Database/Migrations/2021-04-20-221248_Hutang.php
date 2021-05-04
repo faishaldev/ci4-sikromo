@@ -27,7 +27,7 @@ class Hutang extends Migration
 				'type' => 'INT',
 				'constraint' => 11,
 			],
-			'alasan' => [
+			'keterangan' => [
 				'type' => 'TEXT',
 				'collation' => 'latin1_swedish_ci'
 			],

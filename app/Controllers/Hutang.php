@@ -36,7 +36,7 @@ class Hutang extends BaseController
             'tgl_hutang'    => $this->request->getVar('tgl_hutang'),
             'penghutang'    => $this->request->getVar('penghutang'),
             'jumlah'        => $this->request->getVar('jumlah'),
-            'alasan'        => $this->request->getVar('alasan')
+            'alasan'        => $this->request->getVar('keterangan')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
@@ -51,7 +51,7 @@ class Hutang extends BaseController
             'tgl_hutang'    => $this->request->getVar('tgl_hutang'),
             'penghutang'    => $this->request->getVar('penghutang'),
             'jumlah'        => $this->request->getVar('jumlah'),
-            'alasan'        => $this->request->getVar('alasan')
+            'alasan'        => $this->request->getVar('keterangan')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah!');

@@ -18,9 +18,8 @@ class Pengeluaran extends Migration
 			'tgl_pengeluaran'       => [
 				'type'       => 'DATE',
 			],
-			'sumber' => [
-				'type' => 'VARCHAR',
-				'constraint' => 40,
+			'keterangan' => [
+				'type' => 'TEXT',
 				'collation' => 'latin1_swedish_ci',
 			],
 			'jumlah' => [
