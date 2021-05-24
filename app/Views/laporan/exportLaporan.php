@@ -51,7 +51,7 @@
             <thead style="background-color: lightgray">
                 <tr>
                     <th>#</th>
-                    <th>Tanggal</th>
+                    <th>Tanggal/Bulan</th>
                     <th>Pemasukan</th>
                     <th>Pengeluaran</th>
                     <th>Saldo</th>
@@ -62,7 +62,7 @@
                 foreach ($income as $dr => $value) : ?>
                     <tr>
                         <th scope="row"><?= $i++; ?></th>
-                        <td><?php echo $value['tanggal']; ?></td>
+                        <td><?php echo $value['periode']; ?></td>
                         <td align="right">Rp<?php echo number_format($value['total_pemasukan'], 2, ',', '.'); ?></td>
                         <td align="right">Rp<?php echo number_format($value['total_pengeluaran'], 2, ',', '.'); ?></td>
                         <td align="right">Rp<?php echo number_format($value['total_pemasukan'] - $value['total_pengeluaran'], 2, ',', '.'); ?></td>
@@ -73,9 +73,9 @@
             <tfoot>
                 <tr>
                     <td colspan="2" align="center" style="background-color: lightgray">Total</td>
-                    <td align=" right">Rp<?= number_format($totalPemasukanPerRange, 2, ',', '.'); ?></td>
-                    <td align="right">Rp<?= number_format($totalPengeluaranPerRange, 2, ',', '.'); ?></td>
-                    <td align="right">Rp<?= number_format(($totalPemasukanPerRange - $totalPengeluaranPerRange), 2, ',', '.'); ?></td>
+                    <td align=" right">Rp<?= number_format($total_pemasukan, 2, ',', '.'); ?></td>
+                    <td align="right">Rp<?= number_format($total_pengeluaran, 2, ',', '.'); ?></td>
+                    <td align="right">Rp<?= number_format(($total_saldo), 2, ',', '.'); ?></td>
                 </tr>
             </tfoot>
         </table>

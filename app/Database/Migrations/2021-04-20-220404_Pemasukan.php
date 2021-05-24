@@ -9,35 +9,35 @@ class Pemasukan extends Migration
 	public function up()
 	{
 		$this->forge->addField([
-			'id_pemasukan'          => [
-				'type'           => 'INT',
-				'constraint'     => 11,
-				'unsigned'       => true,
-				'auto_increment' => true,
+			'id_pemasukan' => [
+				'type'				=> 'INT',
+				'constraint'		=> 11,
+				'unsigned'			=> true,
+				'auto_increment'	=> true,
 			],
-			'tgl_pemasukan'       => [
-				'type'       => 'DATE',
+			'tgl_pemasukan' => [
+				'type'	=> 'DATE',
 			],
 			'sumber' => [
-				'type' => 'VARCHAR',
-				'constraint' => 40,
-				'collation' => 'latin1_swedish_ci',
+				'type'			=> 'VARCHAR',
+				'constraint'	=> 40,
+				'collation'		=> 'latin1_swedish_ci',
 			],
 			'jumlah' => [
-				'type' => 'INT',
-				'constraint' => 11,
+				'type'			=> 'INT',
+				'constraint'	=> 11,
 			],
 			'keterangan' => [
-				'type' => 'TEXT',
-				'collation' => 'latin1_swedish_ci',
+				'type'		=> 'TEXT',
+				'collation'	=> 'latin1_swedish_ci',
 			],
 			'created_at' => [
-				'type' => 'DATETIME',
-				'null' => TRUE,
+				'type'	=> 'DATETIME',
+				'null'	=> TRUE,
 			],
 			'updated_at' => [
-				'type' => 'DATETIME',
-				'null' => TRUE,
+				'type'	=> 'DATETIME',
+				'null'	=> TRUE,
 			]
 		]);
 		$this->forge->addKey('id_pemasukan', true);

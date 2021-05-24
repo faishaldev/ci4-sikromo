@@ -136,6 +136,17 @@ class PemasukanModel extends Model
         return $results['jumlah'];
     }
 
+    public function getPemasukanSummaryByBulan($bulan, $tahun)
+    {
+        $this->db   = db_connect();
+
+        $sql        = "SELECT COALESCE(SUM(jumlah), 0) as jumlah FROM pemasukan WHERE MONTH(tgl_pemasukan) = '" . $bulan . "' AND YEAR(tgl_pemasukan) = '" . $tahun . "'";
+        $query      = $this->db->query($sql);
+        $results    = $query->getRowArray();
+
+        return $results['jumlah'];
+    }
+
     public function getTotalPemasukanPerRange()
     {
         $this->db       = db_connect();

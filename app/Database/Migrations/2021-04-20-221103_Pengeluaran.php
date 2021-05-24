@@ -9,30 +9,30 @@ class Pengeluaran extends Migration
 	public function up()
 	{
 		$this->forge->addField([
-			'id_pengeluaran'          => [
+			'id_pengeluaran' => [
 				'type'           => 'INT',
 				'constraint'     => 11,
 				'unsigned'       => true,
 				'auto_increment' => true,
 			],
-			'tgl_pengeluaran'       => [
-				'type'       => 'DATE',
+			'tgl_pengeluaran' => [
+				'type'	=> 'DATE',
 			],
 			'keterangan' => [
-				'type' => 'TEXT',
+				'type'		=> 'TEXT',
 				'collation' => 'latin1_swedish_ci',
 			],
 			'jumlah' => [
-				'type' => 'INT',
-				'constraint' => 11,
+				'type'			=> 'INT',
+				'constraint'	=> 11,
 			],
 			'created_at' => [
-				'type' => 'DATETIME',
-				'null' => TRUE,
+				'type'	=> 'DATETIME',
+				'null'	=> TRUE,
 			],
 			'updated_at' => [
-				'type' => 'DATETIME',
-				'null' => TRUE,
+				'type'	=> 'DATETIME',
+				'null'	=> TRUE,
 			]
 		]);
 		$this->forge->addKey('id_pengeluaran', true);

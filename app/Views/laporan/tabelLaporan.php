@@ -29,7 +29,7 @@
                 foreach ($income as $dr => $value) : ?>
                     <tr>
                         <td><?= $i++; ?></td>
-                        <td><?php echo $value['tanggal']; ?></td>
+                        <td><?php echo $value['periode']; ?></td>
                         <td><?php echo $value['total_pemasukan']; ?></td>
                         <td><?php echo $value['total_pengeluaran']; ?></td>
                         <td><?php echo $value['total_pemasukan'] - $value['total_pengeluaran']; ?></td>
@@ -38,9 +38,9 @@
             </tbody>
             <tfoot>
                 <th class="bg-light" colspan="2">Total</th>
-                <th>Rp<?= number_format($totalPemasukanPerRange, 2, ',', '.'); ?></th>
-                <th>Rp<?= number_format($totalPengeluaranPerRange, 2, ',', '.'); ?></th>
-                <th>Rp<?= number_format(($totalPemasukanPerRange - $totalPengeluaranPerRange), 2, ',', '.'); ?></th>
+                <th>Rp<?= number_format($total_pemasukan, 2, ',', '.'); ?></th>
+                <th>Rp<?= number_format($total_pengeluaran, 2, ',', '.'); ?></th>
+                <th>Rp<?= number_format(($total_saldo), 2, ',', '.'); ?></th>
             </tfoot>
         </table>
     </div>

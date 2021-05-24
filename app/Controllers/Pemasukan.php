@@ -27,7 +27,7 @@ class Pemasukan extends BaseController
             'tgl_pemasukan' => $this->request->getVar('tgl_pemasukan'),
             'jumlah'        => $this->request->getVar('jumlah'),
             'sumber'        => $this->request->getVar('sumber'),
-            'keterangan'        => $this->request->getVar('keterangan')
+            'keterangan'    => $this->request->getVar('keterangan')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan!');
@@ -42,7 +42,7 @@ class Pemasukan extends BaseController
             'tgl_pemasukan' => $this->request->getVar('tgl_pemasukan'),
             'jumlah'        => $this->request->getVar('jumlah'),
             'sumber'        => $this->request->getVar('sumber'),
-            'keterangan'        => $this->request->getVar('keterangan')
+            'keterangan'    => $this->request->getVar('keterangan')
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah!');

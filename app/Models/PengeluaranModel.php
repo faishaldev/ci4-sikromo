@@ -136,16 +136,27 @@ class PengeluaranModel extends Model
         return $results['jumlah'];
     }
 
+    public function getPengeluaranSummaryByBulan($bulan, $tahun)
+    {
+        $this->db   = db_connect();
+
+        $sql        = "SELECT COALESCE(SUM(jumlah), 0) as jumlah FROM pengeluaran WHERE MONTH(tgl_pengeluaran) = '" . $bulan . "' AND YEAR(tgl_pengeluaran) = '" . $tahun . "'";
+        $query      = $this->db->query($sql);
+        $results    = $query->getRowArray();
+
+        return $results['jumlah'];
+    }
+
     public function getTotalPengeluaranPerRange()
     {
-        $this->db = db_connect();
+        $this->db       = db_connect();
 
-        $mulai_tanggal = @$_GET['mulai_tanggal'];
+        $mulai_tanggal  = @$_GET['mulai_tanggal'];
         $sampai_tanggal = @$_GET['sampai_tanggal'];
 
-        $sql = "SELECT SUM(jumlah) as total FROM pengeluaran WHERE tgl_pengeluaran BETWEEN '" . $mulai_tanggal . "' AND '" . $sampai_tanggal . "'";
-        $query = $this->db->query($sql);
-        $results = $query->getRow();
+        $sql            = "SELECT SUM(jumlah) as total FROM pengeluaran WHERE tgl_pengeluaran BETWEEN '" . $mulai_tanggal . "' AND '" . $sampai_tanggal . "'";
+        $query          = $this->db->query($sql);
+        $results        = $query->getRow();
 
         return $results->total;
     }
