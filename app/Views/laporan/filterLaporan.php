@@ -19,7 +19,7 @@
             $sampai_tanggal = @$_GET['sampai_tanggal'];
             ?>
 
-
+            <!-- Filter Laporan -->
             <div class="container align-items-center">
                 <form action="laporan" method="GET">
                     <div class="row">
@@ -58,6 +58,7 @@
                         </div>
                     </div>
                 </form>
+                <!-- Akhir Filter Laporan -->
 
             </div>
         </div>

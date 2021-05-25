@@ -92,12 +92,8 @@ class Laporan extends BaseController
             'pemasukanPerBulan'         => $this->pemasukanModel->getPemasukanPerBulan(),
             'pemasukanPerTahun'         => $this->pemasukanModel->getPemasukanPerTahun(),
 
-            'totalPemasukanPerRange'    => $this->pemasukanModel->getTotalPemasukanPerRange(),
-
             'pengeluaranPerBulan'       => $this->pengeluaranModel->getPengeluaranPerBulan(),
-            'pengeluaranPerTahun'       => $this->pengeluaranModel->getPengeluaranPerTahun(),
-
-            'totalPengeluaranPerRange'  => $this->pengeluaranModel->getTotalPengeluaranPerRange()
+            'pengeluaranPerTahun'       => $this->pengeluaranModel->getPengeluaranPerTahun()
         ];
 
         return $data;
