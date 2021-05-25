@@ -33,10 +33,53 @@
                 <?= $this->include('dashboard/card pengeluaran/seluruhPengeluaran'); ?>
 
             </div>
-            <div class="row">
+            <div class="row mb-4">
 
                 <?= $this->include('dashboard/chart/barChart'); ?>
                 <?= $this->include('dashboard/chart/doughnutChart'); ?>
+
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card radius">
+
+                        <!-- Judul -->
+                        <div class="card-header" style="border-top-left-radius: 25px; border-top-right-radius: 25px">
+                            <h6 class="m-0 font-weight-bold">Daftar Hutang</h6>
+                        </div>
+                        <!-- Akhir Judul -->
+
+                        <!-- Tabel Hutang -->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-sm text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Tanggal</th>
+                                        <th scope="col">Jumlah</th>
+                                        <th scope="col">Penghutang</th>
+                                        <th scope="col">Keterangan</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $i = 1;
+                                    foreach ($hutang as $h) : ?>
+                                        <tr>
+                                            <td><?= $i++; ?></td>
+                                            <td><?= date('d/m/Y', strtotime($h['tgl_hutang'])); ?></td>
+                                            <td><?= $h['jumlah']; ?></td>
+                                            <td><?= $h['penghutang']; ?></td>
+                                            <td><?= $h['keterangan']; ?></td>
+                                            <td>Belum Lunas</td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Akhir Tabel Hutang -->
 
             </div>
         </main>

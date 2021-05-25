@@ -1,16 +1,16 @@
 <!-- Doughnut Chart -->
 <div class="col-md-4">
-    <div class="card">
+    <div class="card radius">
         <div class="row">
 
             <!-- Judul -->
-            <div class="col card-header py-3">
-                <h6 class="m-0 font-weight-bold">Grafik Per Tahun</h6>
+            <div class="col card-header" style="border-top-left-radius: 25px;">
+                <h6 class="m-0 font-weight-bold">Grafik Tahunan</h6>
             </div>
             <!-- Akhir Judul -->
 
             <!-- Tombol Tahun -->
-            <div class="col card-header">
+            <div class="col card-header" style="border-top-right-radius: 25px;">
                 <form method="POST" action="#">
                     <select name="tahunDoughnut" class="btn btn-sm btn-outline-secondary dropdown-toggle" onchange="this.form.submit()" id="tombolwaktu">
 

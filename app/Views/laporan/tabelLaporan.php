@@ -9,6 +9,7 @@
 
 <!-- Tabel Laporan -->
 <form action="laporan/export" method="GET">
+    <input type="hidden" name="periode" value="<?= isset($_GET['periode']) ? $_GET['periode'] : ''; ?>">
     <input type="hidden" name="mulai_tanggal" value="<?= isset($_GET['mulai_tanggal']) ? $_GET['mulai_tanggal'] : '' ?>">
     <input type="hidden" name="sampai_tanggal" value="<?= isset($_GET['sampai_tanggal']) ? $_GET['sampai_tanggal'] : '' ?>">
     <input type="hidden" name="mulai_bulan" value="<?= isset($_GET['mulai_bulan']) ? $_GET['mulai_bulan'] : '' ?>">

@@ -18,6 +18,9 @@ class Laporan extends BaseController
         $total_saldo = 0;
 
         if ($filter_tipe == 'harian') {
+            unset($_GET['mulai_bulan']);
+            unset($_GET['sampai_bulan']);
+
             $begin = new DateTime(@$_GET['mulai_tanggal']);
             $end = new DateTime(@$_GET['sampai_tanggal']);
             $end->setTime(0, 0, 1);
@@ -43,6 +46,9 @@ class Laporan extends BaseController
                 $total_pengeluaran += $row_total_pengeluaran;
             endforeach;
         } else {
+            unset($_GET['mulai_tanggal']);
+            unset($_GET['sampai_tanggal']);
+
             $begin = new DateTime(@$_GET['mulai_bulan']);
             $end = new DateTime(@$_GET['sampai_bulan']);
             $end->setTime(0, 0, 1);
