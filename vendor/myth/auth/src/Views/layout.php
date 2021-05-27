@@ -22,6 +22,10 @@
         .card {
             width: 25rem;
         }
+
+        .tombol:hover {
+            font-weight: 500;
+        }
     </style>
 
     <?= $this->renderSection('pageStyles') ?>

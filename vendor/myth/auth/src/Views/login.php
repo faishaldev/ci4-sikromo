@@ -69,10 +69,10 @@
 					<?php if ($config->allowRegistration) : ?>
 						<hr>
 						<div class="row">
-							<p class="col text-center"><a style="color:gray; text-decoration:none" href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a></p>
+							<p class="col text-center tombol"><a style="color:gray; text-decoration:none" href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a></p>
 						<?php endif; ?>
 						<?php if ($config->activeResetter) : ?>
-							<p class="col text-center"><a style="color:gray; text-decoration:none" href="<?= route_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a></p>
+							<p class="col text-center tombol"><a style="color:gray; text-decoration:none" href="<?= route_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a></p>
 						</div>
 					<?php endif; ?>
 				</div>

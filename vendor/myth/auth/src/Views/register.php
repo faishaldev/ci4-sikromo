@@ -43,7 +43,7 @@
 
                     <hr>
 
-                    <p class="text-center"><?= lang('Auth.alreadyRegistered') ?> <a style="color:gray; text-decoration:none" href="<?= route_to('login') ?>"><?= lang('Auth.signIn') ?></a></p>
+                    <p class="text-center"><?= lang('Auth.alreadyRegistered') ?> <a style="color:gray; text-decoration:none" href="<?= route_to('login') ?>" class="tombol"><?= lang('Auth.signIn') ?></a></p>
                 </div>
             </div>
 
