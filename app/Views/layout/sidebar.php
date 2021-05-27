@@ -79,7 +79,7 @@
                 </a>
             </li>
             <hr>
-            <!-- Akhir Tombol Menu Karyawan -->
+            <!-- Akhir Tombol Menu Pengguna -->
 
         </ul>
     </div>

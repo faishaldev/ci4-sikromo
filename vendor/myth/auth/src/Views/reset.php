@@ -36,7 +36,7 @@
 
                         <div class="form-group">
                             <label for="password"><?= lang('Auth.newPassword') ?></label>
-                            <input type="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" name="password">
+                            <input type="password" id="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" name="password">
                             <div class="invalid-feedback">
                                 <?= session('errors.password') ?>
                             </div>
@@ -44,7 +44,7 @@
 
                         <div class="form-group">
                             <label for="pass_confirm"><?= lang('Auth.newPasswordRepeat') ?></label>
-                            <input type="password" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" name="pass_confirm">
+                            <input type="password" id="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" name="pass_confirm">
                             <div class="invalid-feedback">
                                 <?= session('errors.pass_confirm') ?>
                             </div>

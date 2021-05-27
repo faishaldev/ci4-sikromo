@@ -29,6 +29,10 @@
                         <button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.sendInstructions') ?></button>
                     </form>
 
+                    <hr>
+
+                    <p class="text-center"><a style="color:gray; text-decoration:none" href="<?= route_to('login') ?>" class="tombol"><?= lang('Auth.signIn') ?></a></p>
+
                 </div>
             </div>
 

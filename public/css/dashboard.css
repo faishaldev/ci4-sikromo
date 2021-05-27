@@ -110,21 +110,25 @@ body {
 .pemasukan {
   border-left: 0.25rem solid #4e73df !important;
   border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .pemasukan-s {
   border-left: 0.25rem solid #373840 !important;
   border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .pengeluaran {
   border-left: 0.25rem solid #be2617 !important;
   border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .pengeluaran-s {
   border-left: 0.25rem solid #373840 !important;
   border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .filtertanggal {
