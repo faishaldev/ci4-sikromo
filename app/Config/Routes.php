@@ -51,6 +51,10 @@ $routes->get('/karyawan/(:any)', 'Karyawan::index');
 
 $routes->get('/laporan', 'Laporan::index');
 
+$routes->get('/pengguna', 'Pengguna::index', ['filter' => 'role:admin']);
+$routes->delete('/pengguna/(:num)', 'Pengguna::delete/$1', ['filter' => 'role:admin']);
+$routes->get('/pengguna/(:any)', 'Pengguna::index', ['filter' => 'role:admin']);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

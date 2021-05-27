@@ -61,7 +61,7 @@ class Karyawan extends BaseController
         return redirect()->to('/karyawan');
     }
 
-    public function delete($id_karyawan)
+    public function delete($id_karyawan)    
     {
         $this->karywanModel->delete($id_karyawan);
 

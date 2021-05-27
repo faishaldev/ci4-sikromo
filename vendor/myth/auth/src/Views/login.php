@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-sm-6 offset-md-4 offset-sm-1 pt-5">
 
-			<div class="card">
+			<div class="card" style="border-radius: 25px;">
 				<h2 class="card-header text-center"><?= lang('Auth.loginTitle') ?></h2>
 				<div class="card-body">
 

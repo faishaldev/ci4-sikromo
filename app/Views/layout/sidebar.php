@@ -7,7 +7,7 @@
             <li class="nav-item">
                 <img class="mb-2 rounded mx-auto d-block" src="<?= base_url('logo/User_font_awesome.svg') ?>" alt="" width="72" height="57">
             </li>
-            <h5 class="text-center">Admin</h5>
+            <h5 class="text-center"><?= in_groups('admin') ? 'Admin' : 'User'; ?></h5>
             <hr>
             <!-- Akhir Admin Logo -->
 
@@ -71,15 +71,19 @@
             <hr>
             <!-- Akhir Tombol Menu Laporan -->
 
-            <!-- Tombol Menu Pengguna -->
-            <li class="nav-item">
-                <a href="/karyawan" class="nav-link <?= ($currentMenu == 'karyawan') ? 'active' : ''; ?>">
-                    <span data-feather="users"></span>
-                    Pengguna
-                </a>
-            </li>
-            <hr>
-            <!-- Akhir Tombol Menu Pengguna -->
+            <?php if (in_groups('admin')) : ?>
+
+                <!-- Tombol Menu Pengguna -->
+                <li class="nav-item">
+                    <a href="/pengguna" class="nav-link <?= ($currentMenu == 'pengguna') ? 'active' : ''; ?>">
+                        <span data-feather="users"></span>
+                        Pengguna
+                    </a>
+                </li>
+                <hr>
+                <!-- Akhir Tombol Menu Pengguna -->
+
+            <?php endif; ?>
 
         </ul>
     </div>
