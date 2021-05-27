@@ -18,7 +18,8 @@
                 <h1 class="h2">Pengeluaran</h1>
                 <div class="btn btn-sm btn-outline-secondary">
                     <span data-feather="calendar"></span>
-                    <?php echo date('l, d F Y'); ?>
+                    <?php date_default_timezone_set("Asia/Bangkok");
+                    echo date('l, d F Y'); ?>
                 </div>
             </div>
             <!-- Akhir Judul -->
