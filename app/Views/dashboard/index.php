@@ -37,6 +37,7 @@
 
                 <?= $this->include('dashboard/chart/barChart'); ?>
                 <?= $this->include('dashboard/chart/doughnutChart'); ?>
+                <?= $this->include('dashboard/editStatusModal'); ?>
 
             </div>
             <div class="row">
@@ -45,11 +46,11 @@
 
                         <!-- Judul -->
                         <div class="card-header" style="border-top-left-radius: 25px; border-top-right-radius: 25px">
-                            <h6 class="m-0 font-weight-bold">Daftar Hutang</h6>
+                            <h6 class="m-0 font-weight-bold">Daftar Hutang Belum Lunas</h6>
                         </div>
                         <!-- Akhir Judul -->
 
-                        <!-- Tabel Hutang -->
+                        <!-- Tabel Hutang Belum Lunas -->
                         <div class="table-responsive">
                             <table class="table table-striped table-sm text-center">
                                 <thead>
@@ -64,14 +65,16 @@
                                 </thead>
                                 <tbody>
                                     <?php $i = 1;
-                                    foreach ($hutang as $h) : ?>
+                                    foreach ($hutangBelumLunas as $h) : ?>
                                         <tr>
                                             <td><?= $i++; ?></td>
                                             <td><?= date('d/m/Y', strtotime($h['tgl_hutang'])); ?></td>
                                             <td><?= $h['jumlah']; ?></td>
                                             <td><?= $h['penghutang']; ?></td>
                                             <td><?= $h['keterangan']; ?></td>
-                                            <td>Belum Lunas</td>
+                                            <td>
+                                                <button type="button" class="<?= $h['status'] == "Lunas" ? "btn btn-success" : "btn btn-danger"; ?>" data-bs-toggle="modal" data-bs-target="#editStatusModal<?= $h['id_hutang']; ?>" id="btn-edit"><?= $h['status']; ?></button>
+                                            </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -79,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Akhir Tabel Hutang -->
+                <!-- Akhir Tabel Hutang Belum Lunas -->
 
             </div>
         </main>

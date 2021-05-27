@@ -8,6 +8,7 @@
                 <th scope="col">Jumlah</th>
                 <th scope="col">Penghutang</th>
                 <th scope="col">Keterangan</th>
+                <th scope="col">Status</th>
                 <th scope="col">Aksi</th>
             </tr>
         </thead>
@@ -20,6 +21,9 @@
                     <td><?= $h['jumlah']; ?></td>
                     <td><?= $h['penghutang']; ?></td>
                     <td><?= $h['keterangan']; ?></td>
+                    <td>
+                        <button type="button" class="<?= $h['status'] == "Lunas" ? "btn btn-success" : "btn btn-danger"; ?>" data-bs-toggle="modal" data-bs-target="#editStatusModal<?= $h['id_hutang']; ?>" id="btn-edit"><?= $h['status']; ?></button>
+                    </td>
                     <td>
                         <button type="button" class="fa fa-edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#editHutangModal<?= $h['id_hutang']; ?>" id="btn-edit"></button>
                     </td>

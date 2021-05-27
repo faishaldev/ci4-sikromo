@@ -26,9 +26,25 @@ class Dashboard extends BaseController
 			'pengeluaranPerBulan'		=> $this->pengeluaranModel->getPengeluaranPerBulan(),
 			'pengeluaranPerTahun'		=> $this->pengeluaranModel->getPengeluaranPerTahun(),
 
-			'hutang'					=> $this->hutangModel->getHutang()
+			'hutangBelumLunas'			=> $this->hutangModel->getHutangBelumLunas()
 		];
 
 		return view('dashboard/index', $data);
+	}
+
+	public function update($id_hutang)
+	{
+		$this->hutangModel->save([
+			'id_hutang'     => $id_hutang,
+			'tgl_hutang'    => $this->request->getVar('tgl_hutang'),
+			'penghutang'    => $this->request->getVar('penghutang'),
+			'jumlah'        => $this->request->getVar('jumlah'),
+			'keterangan'    => $this->request->getVar('keterangan'),
+			'status'        => $this->request->getVar('status')
+		]);
+
+		session()->setFlashdata('pesan', 'Data berhasil diubah!');
+
+		return redirect()->to('/dashboard');
 	}
 }

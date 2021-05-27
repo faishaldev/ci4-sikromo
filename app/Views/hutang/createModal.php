@@ -35,6 +35,13 @@
                         <label for="inputKeterangan" class="">Keterangan :</label>
                         <input type="text" id="inputKeterangan" class="form-control" name="keterangan" required autofocus>
                     </div>
+                    <div class="form-group pt-4" style="display: none;">
+                        <select name="status" id="inputStatus" class="form-select">
+                            <option value="">Status</option>
+                            <option value="Lunas">Lunas</option>
+                            <option value="Belum Lunas" selected="selected">Belum Lunas</option>
+                        </select>
+                    </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Tambah</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
