@@ -71,6 +71,16 @@
             <hr>
             <!-- Akhir Tombol Menu Laporan -->
 
+            <!-- Tombol Menu Pengguna -->
+            <li class="nav-item">
+                <a href="/karyawan" class="nav-link <?= ($currentMenu == 'karyawan') ? 'active' : ''; ?>">
+                    <span data-feather="users"></span>
+                    Pengguna
+                </a>
+            </li>
+            <hr>
+            <!-- Akhir Tombol Menu Karyawan -->
+
         </ul>
     </div>
 
