@@ -32,8 +32,9 @@ class Hutang extends Migration
 				'collation' => 'latin1_swedish_ci'
 			],
 			'status' => [
-				'type'			=> 'INT',
-				'constraint'	=> 1,
+				'type'			=> 'VARCHAR',
+				'constraint'	=> 11,
+				'collation'		=> 'latin1_swedish_ci'
 			],
 			'created_at' => [
 				'type'	=> 'DATETIME',

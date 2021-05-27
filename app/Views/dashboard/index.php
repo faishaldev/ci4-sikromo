@@ -40,8 +40,9 @@
                 <?= $this->include('dashboard/editStatusModal'); ?>
 
             </div>
+
             <div class="row">
-                <div class="col-md-8">
+                <div class="col" <?= empty($hutangBelumLunas) ? 'style="display: none;"' : ''; ?>>
                     <div class="card radius">
 
                         <!-- Judul -->
@@ -69,7 +70,7 @@
                                         <tr>
                                             <td><?= $i++; ?></td>
                                             <td><?= date('d/m/Y', strtotime($h['tgl_hutang'])); ?></td>
-                                            <td><?= $h['jumlah']; ?></td>
+                                            <td>Rp<?= number_format($h['jumlah'], 2, ',', '.'); ?></td>
                                             <td><?= $h['penghutang']; ?></td>
                                             <td><?= $h['keterangan']; ?></td>
                                             <td>
