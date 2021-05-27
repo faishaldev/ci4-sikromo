@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-sm-6 offset-md-4 offset-sm-1">
 
-            <div class="card">
+            <div class="card" style="border-radius: 25px; border: 0.5rem solid gray !important;">
                 <h2 class="card-header"><?= lang('Auth.resetYourPassword') ?></h2>
                 <div class="card-body">
 
