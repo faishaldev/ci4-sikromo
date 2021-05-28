@@ -30,7 +30,7 @@ juga menghasilkan laporan keuangan yang dapat disimpan atau dicetak.
 
 1. `git clone https://github.com/Musshal/ci4-sikromo.git` atau unduh kode sumber Sikromo,
 2. kemudian jalankan server lokal serta basis bata XAMPP,
-3. Uncomment 'extension=pdo_sqlite' dan 'extension=sqlite3' pada file xampp/php/php.ini,
+3. Uncomment `extension=pdo_sqlite` dan `extension=sqlite3` pada file xampp/php/php.ini,
 3. Jalankan perintah `php spark migrate -all` untuk migrasi basis data yang dibutuhkan.
 4. Jalankan perintah `php spark db:seed AuthGroups` dan 'php spark db:seed AuthPermissions'
   untuk melakukan insert data level pengguna.
