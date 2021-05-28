@@ -16,8 +16,7 @@
                 <h1 class="h2">Dashboard</h1>
                 <div class="btn btn-sm btn-outline-secondary">
                     <span data-feather="calendar"></span>
-                    <?php date_default_timezone_set("Asia/Bangkok");
-                    echo date('l, d F Y'); ?>
+                    <?php echo date('l, d F Y'); ?>
                 </div>
             </div>
             <!-- Akhir Judul -->

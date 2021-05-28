@@ -116,8 +116,6 @@ class Laporan extends BaseController
         $dompdf->setPaper('A4', 'potrait');
         $dompdf->render();
 
-        date_default_timezone_set("Asia/Bangkok");
-
         $dompdf->stream(date("d-m-Y") . ' ' . "Income Statement CV Romo.pdf");
     }
 
@@ -130,8 +128,6 @@ class Laporan extends BaseController
         $dompdf->loadHtml($view);
         $dompdf->setPaper('A4', 'potrait');
         $dompdf->render();
-
-        date_default_timezone_set("Asia/Bangkok");
 
         $dompdf->stream(date("d-m-Y") . ' ' . "Income Statement CV Romo.pdf", array("Attachment" => 0));
     }
