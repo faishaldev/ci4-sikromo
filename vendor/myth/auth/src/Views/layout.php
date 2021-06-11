@@ -30,7 +30,6 @@
         body {
             background-image: url(<?= base_url('196-1963020_website-backgrounds-website-login-page-background.jpg'); ?>);
             background-repeat: no-repeat;
-            background-position: center;
             background-size: cover;
         }
     </style>
