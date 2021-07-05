@@ -1,5 +1,5 @@
 <!-- Doughnut Chart -->
-<div class="col-md-4">
+<div class="col-md-4 mb-4">
     <div class="card radius">
         <div class="row">
 
@@ -40,7 +40,7 @@
             <!-- Akhir Tombol Tahun -->
 
             <!-- Grafik Lingkaran -->
-            <canvas class="my-4 w-100" id="DoughnutChart" width="437" height="380"></canvas>
+            <canvas class="my-4 w-100" id="DoughnutChart" width="440" height="380"></canvas>
             <!-- Grafik Lingkaran -->
 
         </div>

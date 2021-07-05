@@ -13,7 +13,7 @@
 
                 <!-- Form Edit Pemasukan -->
                 <div class="modal-body">
-                    <form action="/pemasukan/update/<?= $pem['id_pemasukan']; ?>" method="post">
+                    <form action="/pemasukan/update/<?= $pem["id_pemasukan"]; ?>" method="post">
                         <?= csrf_field(); ?>
                         <div class="form-group">
                             <label for="inputTanggal" class="">Tanggal :</label>

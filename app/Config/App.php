@@ -23,7 +23,9 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://localhost:8080/';
+
+	// gunakan local ip address untuk menjalankan aplikasi dari perangkat lain secara lokal
+	public $baseURL = 'http://192.168.10.103/';
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -36,7 +38,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $indexPage = 'index.php';
+	public $indexPage = '';
 
 	/**
 	 * --------------------------------------------------------------------------

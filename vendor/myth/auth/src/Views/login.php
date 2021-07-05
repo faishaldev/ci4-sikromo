@@ -3,7 +3,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-6 offset-md-4 offset-sm-1 pt-5">
+		<div class="col-md-6 offset-md-3 pt-5">
 
 			<div class="card" style="border-radius: 25px; border: 0.5rem solid gray !important;">
 				<h2 class="card-header text-center"><?= lang('Auth.loginTitle') ?></h2>
@@ -11,7 +11,7 @@
 
 					<?= view('Myth\Auth\Views\_message_block') ?>
 
-					<form action="<?= route_to('login') ?>" method="post">
+					<form action="<?= base_url(route_to('login')) ?>" method="post">
 						<?= csrf_field() ?>
 
 						<?php if ($config->validFields === ['email']) : ?>
@@ -69,10 +69,10 @@
 					<?php if ($config->allowRegistration) : ?>
 						<hr>
 						<div class="row">
-							<p class="col text-center tombol"><a style="color:gray; text-decoration:none" href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a></p>
+							<p class="col text-center tombol"><a style="color:gray; text-decoration:none" href="<?= base_url(route_to('register')) ?>"><?= lang('Auth.needAnAccount') ?></a></p>
 						<?php endif; ?>
 						<?php if ($config->activeResetter) : ?>
-							<p class="col text-center tombol"><a style="color:gray; text-decoration:none" href="<?= route_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a></p>
+							<p class="col text-center tombol"><a style="color:gray; text-decoration:none" href="<?= base_url(route_to('forgot')) ?>"><?= lang('Auth.forgotYourPassword') ?></a></p>
 						</div>
 					<?php endif; ?>
 				</div>

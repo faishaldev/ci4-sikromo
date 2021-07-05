@@ -7,9 +7,10 @@
 <div class="container-fluid">
     <div class="row">
 
+        <?= $this->include('layout/sidebar'); ?>
+
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
-            <?= $this->include('layout/sidebar'); ?>
             <?= $this->include('pengguna/editModal'); ?>
 
             <!-- Judul -->

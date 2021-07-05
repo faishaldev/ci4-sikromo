@@ -45,6 +45,6 @@ class Dashboard extends BaseController
 
 		session()->setFlashdata('pesan', 'Data berhasil diubah!');
 
-		return redirect()->to('/dashboard');
+		return redirect()->to('/');
 	}
 }

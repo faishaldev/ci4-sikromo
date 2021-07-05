@@ -5,7 +5,7 @@
 
             <!-- Admin Logo -->
             <li class="nav-item">
-                <img class="mb-2 rounded mx-auto d-block" src="<?= base_url('logo/User_font_awesome.svg') ?>" alt="" width="72" height="57">
+                <img class="mb-2 rounded mx-auto d-block" src="public/logo/User_font_awesome.svg" alt="" width="72" height="57">
             </li>
             <h5 class="text-center"><?= in_groups('admin') ? 'Admin' : 'User'; ?></h5>
             <hr>
@@ -23,7 +23,7 @@
 
             <!-- Tombol Menu Pemasukan -->
             <li class="nav-item">
-                <a href="/pemasukan" class="nav-link <?= ($currentMenu == 'pemasukan') ? 'active' : ''; ?>">
+                <a href="pemasukan" class="nav-link <?= ($currentMenu == 'pemasukan') ? 'active' : ''; ?>">
                     <span data-feather="arrow-up"></span>
                     Pemasukan
                 </a>
@@ -33,7 +33,7 @@
 
             <!-- Tombol Menu Pengeluaran -->
             <li class="nav-item">
-                <a href="/pengeluaran" class="nav-link <?= ($currentMenu == 'pengeluaran') ? 'active' : ''; ?>">
+                <a href="pengeluaran" class="nav-link <?= ($currentMenu == 'pengeluaran') ? 'active' : ''; ?>">
                     <span data-feather="arrow-down"></span>
                     Pengeluaran
                 </a>
@@ -43,7 +43,7 @@
 
             <!-- Tombol Menu Hutang -->
             <li class="nav-item">
-                <a href="/hutang" class="nav-link <?= ($currentMenu == 'hutang') ? 'active' : ''; ?>">
+                <a href="hutang" class="nav-link <?= ($currentMenu == 'hutang') ? 'active' : ''; ?>">
                     <span data-feather="dollar-sign"></span>
                     Hutang
                 </a>
@@ -63,7 +63,7 @@
 
             <!-- Tombol Menu Laporan -->
             <li class="nav-item">
-                <a href="/laporan" class="nav-link <?= ($currentMenu == 'laporan') ? 'active' : ''; ?>">
+                <a href="laporan" class="nav-link <?= ($currentMenu == 'laporan') ? 'active' : ''; ?>">
                     <span data-feather="layers"></span>
                     Laporan
                 </a>
@@ -75,7 +75,7 @@
 
                 <!-- Tombol Menu Pengguna -->
                 <li class="nav-item">
-                    <a href="/pengguna" class="nav-link <?= ($currentMenu == 'pengguna') ? 'active' : ''; ?>">
+                    <a href="pengguna" class="nav-link <?= ($currentMenu == 'pengguna') ? 'active' : ''; ?>">
                         <span data-feather="users"></span>
                         Pengguna
                     </a>

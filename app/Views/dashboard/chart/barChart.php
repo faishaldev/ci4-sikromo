@@ -1,5 +1,5 @@
 <!-- Bar Chart -->
-<div class="col-md-8">
+<div class="col-md-8 mb-4">
     <div class="card radius">
         <div class="row">
 

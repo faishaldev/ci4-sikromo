@@ -37,7 +37,7 @@
                 <?= $this->include('dashboard/card pengeluaran/seluruhPengeluaran'); ?>
 
             </div>
-            <div class="row mb-4">
+            <div class="row">
 
                 <?= $this->include('dashboard/chart/barChart'); ?>
                 <?= $this->include('dashboard/chart/doughnutChart'); ?>

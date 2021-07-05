@@ -12,7 +12,7 @@
 
             <!-- Form Tambah Pemasukan -->
             <div class="modal-body">
-                <form action="/pemasukan/save" method="post">
+                <form action="pemasukan/save" method="post">
                     <?= csrf_field(); ?>
                     <div class="form-group">
                         <label for="inputTanggal" class="">Tanggal :</label>

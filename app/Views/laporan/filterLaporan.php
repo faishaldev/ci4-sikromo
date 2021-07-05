@@ -34,11 +34,11 @@
                     <div id="harian" style="<?php echo ($filter_tipe == 'harian' ? 'display: block;' : 'display: none;'); ?>">
                         <div class="row">
                             <div class="col form-group">
-                                <label for="inputMulaiTanggal" class="font-weight-bold">Mulai Tanggal :</label>
+                                <label for="inputMulaiTanggal" class="font-weight-bold">Mulai Tanggal:</label>
                                 <input type="date" id="inputMulaiTanggal" class="form-control" name="mulai_tanggal" value="<?php echo $mulai_tanggal ?>">
                             </div>
                             <div class="col form-group">
-                                <label for="inputSampaiTanggal" class="font-weight-bold">Sampai Tanggal :</label>
+                                <label for="inputSampaiTanggal" class="font-weight-bold">Sampai Tanggal:</label>
                                 <input type="date" id="inputSampaiTanggal" class="form-control" name="sampai_tanggal" value="<?php echo $sampai_tanggal ?>">
                             </div>
                             <button type="submit" class="col btn btn-success mt-3">Tampilkan</button>
@@ -47,11 +47,11 @@
                     <div id="bulanan" style="<?php echo ($filter_tipe == 'bulanan' ? 'display: block;' : 'display: none;'); ?>">
                         <div class="row">
                             <div class="col form-group">
-                                <label for="inputMulaiBulan" class="font-weight-bold">Mulai Bulan :</label>
+                                <label for="inputMulaiBulan" class="font-weight-bold">Mulai Bulan:</label>
                                 <input type="month" id="inputMulaiBulan" class="form-control" name="mulai_bulan" value="<?php echo $mulai_bulan ?>">
                             </div>
                             <div class="col form-group">
-                                <label for="inputSampaiTanggal" class="font-weight-bold">Sampai Bulan :</label>
+                                <label for="inputSampaiTanggal" class="font-weight-bold">Sampai Bulan:</label>
                                 <input type="month" id="inputSampaiBulan" class="form-control" name="sampai_bulan" value="<?php echo $sampai_bulan ?>">
                             </div>
                             <button type="submit" class="col btn btn-success mt-3">Tampilkan</button>

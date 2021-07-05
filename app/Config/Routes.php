@@ -31,29 +31,29 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Dashboard::index');
+$routes->get('', 'Dashboard::index');
 
-$routes->get('/pemasukan', 'Pemasukan::index');
-$routes->delete('/pemasukan/(:num)', 'Pemasukan::delete/$1');
-$routes->get('/pemasukan/(:any)', 'Pemasukan::index');
+$routes->get('pemasukan', 'Pemasukan::index');
+$routes->delete('pemasukan/(:num)', 'Pemasukan::delete/$1');
+$routes->get('pemasukan/(:any)', 'Pemasukan::index');
 
-$routes->get('/pengeluaran', 'Pengeluaran::index');
-$routes->delete('/pengeluaran/(:num)', 'Pengeluaran::delete/$1');
-$routes->get('/pengeluaran/(:any)', 'Pengeluaran::index');
+$routes->get('pengeluaran', 'Pengeluaran::index');
+$routes->delete('pengeluaran/(:num)', 'Pengeluaran::delete/$1');
+$routes->get('pengeluaran/(:any)', 'Pengeluaran::index');
 
-$routes->get('/hutang', 'Hutang::index');
-$routes->delete('/hutang/(:num)', 'Hutang::delete/$1');
-$routes->get('/hutang/(:any)', 'Hutang::index');
+$routes->get('hutang', 'Hutang::index');
+$routes->delete('hutang/(:num)', 'Hutang::delete/$1');
+$routes->get('hutang/(:any)', 'Hutang::index');
 
-$routes->get('/karyawan', 'Karyawan::index');
-$routes->delete('/karyawan/(:num)', 'Karyawan::delete/$1');
-$routes->get('/karyawan/(:any)', 'Karyawan::index');
+$routes->get('karyawan', 'Karyawan::index');
+$routes->delete('karyawan/(:num)', 'Karyawan::delete/$1');
+$routes->get('karyawan/(:any)', 'Karyawan::index');
 
-$routes->get('/laporan', 'Laporan::index');
+$routes->get('laporan', 'Laporan::index');
 
-$routes->get('/pengguna', 'Pengguna::index', ['filter' => 'role:admin']);
-$routes->delete('/pengguna/(:num)', 'Pengguna::delete/$1', ['filter' => 'role:admin']);
-$routes->get('/pengguna/(:any)', 'Pengguna::index', ['filter' => 'role:admin']);
+$routes->get('pengguna', 'Pengguna::index', ['filter' => 'role:admin']);
+$routes->delete('pengguna/(:num)', 'Pengguna::delete/$1', ['filter' => 'role:admin']);
+$routes->get('pengguna/(:any)', 'Pengguna::index', ['filter' => 'role:admin']);
 
 /*
  * --------------------------------------------------------------------

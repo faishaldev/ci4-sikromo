@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 offset-md-4 offset-sm-1 pt-5">
+        <div class="col-md-6 offset-md-3 pt-5">
 
             <div class="card" style="border-radius: 25px; border: 0.5rem solid gray !important;">
                 <h2 class="card-header text-center"><?= lang('Auth.register') ?></h2>
@@ -11,7 +11,7 @@
 
                     <?= view('Myth\Auth\Views\_message_block') ?>
 
-                    <form action="<?= route_to('register') ?>" method="post">
+                    <form action="<?= base_url(route_to('register')) ?>" method="post">
                         <?= csrf_field() ?>
 
                         <div class="form-group">
@@ -43,7 +43,7 @@
 
                     <hr>
 
-                    <p class="text-center"><?= lang('Auth.alreadyRegistered') ?> <a style="color:gray; text-decoration:none" href="<?= route_to('login') ?>" class="tombol"><?= lang('Auth.signIn') ?></a></p>
+                    <p class="text-center"><?= lang('Auth.alreadyRegistered') ?> <a style="color:gray; text-decoration:none" href="<?= base_url(route_to('login')) ?>" class="tombol"><?= lang('Auth.signIn') ?></a></p>
                 </div>
             </div>
 

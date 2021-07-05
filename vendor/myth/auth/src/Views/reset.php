@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 offset-md-4 offset-sm-1">
+        <div class="col-md-6 offset-md-3 pt-5">
 
             <div class="card" style="border-radius: 25px; border: 0.5rem solid gray !important;">
                 <h2 class="card-header"><?= lang('Auth.resetYourPassword') ?></h2>
@@ -13,7 +13,7 @@
 
                     <p><?= lang('Auth.enterCodeEmailPassword') ?></p>
 
-                    <form action="<?= route_to('reset-password') ?>" method="post">
+                    <form action="<?= base_url(route_to('reset-password')) ?>" method="post">
                         <?= csrf_field() ?>
 
                         <div class="form-group">
