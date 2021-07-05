@@ -16,15 +16,15 @@
                     <form action="/hutang/update/<?= $h['id_hutang']; ?>" method="post">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="id_hutang" value="<?= $h['id_hutang']; ?>">
-                        <div class=" form-group">
+                        <div class="form-group">
                             <label for="inputTanggal" class="">Tanggal :</label>
                             <input type="date" id="inputTanggal" class="form-control" name="tgl_hutang" value="<?= $h['tgl_hutang']; ?>" required autofocus>
                         </div>
-                        <div class=" form-group">
+                        <div class="form-group">
                             <label for="inputPenghutang" class="">Penghutang :</label>
                             <input type="text" id="inputPenghutang" class="form-control" name="penghutang" value="<?= $h['penghutang']; ?>" required autofocus>
                         </div>
-                        <div class=" form-group">
+                        <div class="form-group">
                             <label for="inputJumlah" class="">Jumlah :</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -33,16 +33,13 @@
                                 <input type="number" id="inputJumlah" class="form-control" name="jumlah" value="<?= $h['jumlah']; ?>" required autofocus>
                             </div>
                         </div>
-                        <div class=" form-group">
+                        <div class="form-group">
                             <label for="inputKeterangan" class="">Keterangan :</label>
                             <input type="text" id="inputKeterangan" class="form-control" name="keterangan" value="<?= $h['keterangan']; ?>" required autofocus>
                         </div>
-                        <div class="form-group pt-4" style="display: none;">
-                            <select name="status" id="inputStatus" class="form-select">
-                                <option value="">Status</option>
-                                <option value="Lunas">Lunas</option>
-                                <option value="Belum Lunas" selected="selected">Belum Lunas</option>
-                            </select>
+                        <div class="form-group" style="display: none;">
+                            <label for="inputStatus" class="">Status :</label>
+                            <input type="text" id="inputStatus" class="form-control" name="status" value="<?= $h['status']; ?>" required autofocus>
                         </div>
                         <div class=" modal-footer">
                             <button type="submit" class="btn btn-success">Ubah</button>
